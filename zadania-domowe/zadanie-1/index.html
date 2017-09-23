@@ -2,9 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Zadanie 1</title>
+    <title>Formularze</title>
 </head>
-<body>
-    <p>Zadanie 1</p>
+<body><!-- actrion to ścieżka do pliku-->
+    <form action="https://formspree.io/your@email.com"
+      method="POST">
+        <!-- pole tekstowe-->
+        <label for="name-surname">Imię i nazwisko</label><br>
+        <input type="text" id="name-surname"><br>
+        
+        <!-- pole numeryczne -->
+        
+        <label><input type="number"></label><br>
+        
+        <!-- jednokrotny wybór -->
+        <input type="radio" name="opcja" id="opcja1"><label for="opcja1">Opcja 1</label><br>
+        <input type="radio" name="opcja" id="opcja2"><label for="opcja2">Opcja 2</label><br>
+        
+        <!-- lista rozwijana -->
+        
+        <!-- select>option{Opcja $}*3 -->
+        
+        <select name="" id=""><br>
+            <option value="">Opcja 1</option>
+            <option value="">Opcja 2</option>
+            <option value="">Opcja 3</option>
+        </select>
+        
+        <!-- Pole tekstowe -->
+        
+        <textarea name="" id="" cols="30" rows="10"></textarea><br>
+        
+        <!-- wysyłąnie -->
+        <input type="submit" value="Wyślij formularz">
+    </form>
 </body>
 </html>
