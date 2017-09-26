@@ -18,12 +18,12 @@
    <input type="text" id="name" name="Imię"><br>
    
    <!-- Form surname -->
-   <label for="name">Nazwisko:</label><br>
-   <input type="text" id="name" name="Nazwisko"><br>
+   <label for="surname">Nazwisko:</label><br>
+   <input type="text" id="surname" name="Nazwisko"><br>
    
    <!-- Form mail -->
-   <label for="address">Adres email:</label><br>
-   <input type="address" id="address" name="Adres email"><br>
+   <label for="email">Adres email:</label><br>
+   <input type="email" id="email" name="Adres email"><br>
    
    <!-- Form phone -->
    <label for="tel">Numer Telefonu:</label><br>
@@ -31,18 +31,19 @@
    
    <!-- Form city -->
    <label for="city">Miejsce zameldowania:</label><br>
-   <select id="city" name="Miejsce zameldowania"><br>
+   <select id="city" name="Miejsce zameldowania">
        <option value="">Kraków</option>
        <option value="">Warszawa</option>
        <option value="">Gdańsk</option>
-   </select>
+   </select><br>
    
    <!-- Form sex -->
    <p>Wybierz płeć:</p>
-   <label for="male">Mężczyzna</label><br>
-   <input type="radio" id="male" name="Płeć">
-   <label for="female">Kobieta</label><br>
-   <input type="radio" id="female" name="Płeć">
+   <label for="male">Mężczyzna</label>
+   <input type="radio" id="male" name="Płeć"><br>
+   <label for="female">Kobieta</label>
+   <input type="radio" id="female" name="Płeć"><br>
+   <p style="line-height: 1cm; ">
    
    <!-- Form data privacy -->
    <label for="checkbox">Wyrazam zgodę na przetwarzanie moich danych osobowych</label>
@@ -50,7 +51,10 @@
    
    <!-- Form Textarea -->
    <label for="tekst">Treść wiadomości:</label><br>
-   <textarea name="Wiadomość" id="tekst" cols="30" rows="10"></textarea>
+   <textarea name="Wiadomość" id="tekst" cols="30" rows="10"></textarea><br>
+    
+    <!-- Sending -->
+    <input type="submit" value="Wyślij formularz">
     
     </form>
 </body>
