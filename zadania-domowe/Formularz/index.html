@@ -5,46 +5,51 @@
     <title>Formularz-html</title>
 </head>
 <body>
+   <section>
+       <h1>Formularz osobowy:</h1>
+       <p><strong>Proszę o wypełnienie zgodnie z prawdą</strong></p>
+   </section>
    
    <!-- Forms begin -->
    <form action="https://formspree.io/matt.olczyk@gmail.com" method="post">
    
    <!-- Form name -->
-   <label for="name">Imię:</label>
-   <input type="text" id="name" name="Imię">
+   <label for="name">Imię:</label><br>
+   <input type="text" id="name" name="Imię"><br>
    
    <!-- Form surname -->
-   <label for="name">Nazwisko:</label>
-   <input type="text" id="name" name="Nazwisko">
+   <label for="name">Nazwisko:</label><br>
+   <input type="text" id="name" name="Nazwisko"><br>
    
    <!-- Form mail -->
-   <label for="address">Adres email:</label>
-   <input type="address" id="address" name="Adres email">
+   <label for="address">Adres email:</label><br>
+   <input type="address" id="address" name="Adres email"><br>
    
    <!-- Form phone -->
-   <label for="tel">Numer Telefonu:</label>
-   <input type="tel" id="tel" name="Numer telefonu">
+   <label for="tel">Numer Telefonu:</label><br>
+   <input type="tel" id="tel" name="Numer telefonu"><br>
    
    <!-- Form city -->
-   <label for="city">Miejsce zameldowania:</label>
-   <select name="Miejsce zameldowania" id="city" id="">
+   <label for="city">Miejsce zameldowania:</label><br>
+   <select id="city" name="Miejsce zameldowania"><br>
        <option value="">Kraków</option>
        <option value="">Warszawa</option>
        <option value="">Gdańsk</option>
    </select>
    
    <!-- Form sex -->
-   <p>Wybierz płeć</p>
-   <label for="male female">Płeć:</label>
-   <input type="radio" id="male" name="Mężczyzna">
-   <input type="radio" id="female" name="Kobieta">
+   <p>Wybierz płeć:</p>
+   <label for="male">Mężczyzna</label><br>
+   <input type="radio" id="male" name="Płeć">
+   <label for="female">Kobieta</label><br>
+   <input type="radio" id="female" name="Płeć">
    
    <!-- Form data privacy -->
    <label for="checkbox">Wyrazam zgodę na przetwarzanie moich danych osobowych</label>
-   <input type="checkbox" id="checkbox" name="Zgoda na Przetwarzanie danych osobowych">
+   <input type="checkbox" id="checkbox" name="Zgoda na Przetwarzanie danych osobowych"><br>
    
    <!-- Form Textarea -->
-   <label for="tekst">Treść wiadomości:</label>
+   <label for="tekst">Treść wiadomości:</label><br>
    <textarea name="Wiadomość" id="tekst" cols="30" rows="10"></textarea>
     
     </form>
