@@ -1,11 +1,8 @@
-div {
-    margin: 10px auto;
-}
-
 .tranzycja{
     width: 150px;
     height: 150px;
     transition: all 3s;
+    margin: 10px auto;
 }
 
 #tranzycja1 {
