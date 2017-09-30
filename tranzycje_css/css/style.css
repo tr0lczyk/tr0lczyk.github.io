@@ -5,7 +5,7 @@ div {
 .tranzycja{
     width: 150px;
     height: 150px;
-    transition: all 1s;
+    transition: all 3s;
 }
 
 #tranzycja1 {
