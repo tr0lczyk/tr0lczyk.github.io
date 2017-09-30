@@ -52,8 +52,81 @@ li {
 }
 
 
-/* pseudoelementy before, after LL Nie ma elementu before after bez contentu tylko czysdty tekst*/
+/* pseudoelementy before, after LL Nie ma elementu before after bez contentu tylko czysty tekst Before i after należą do kontentu jezeli je zdefiniujemy.  wprzykłądzie z menu list, załączliśmy znaCZNIKI, MYSLNIKI DO PPOSZCZEGÓLNYCH WIERSZY*/
 
 #potomkowie p + span p::before {
-    content: '*';
+    content: 'L';
+}
+
+#potomkowie p + span p::after {
+    content: '=';
+}
+
+#uniwersalny #main-list .list-item::before {
+    content:'=';
+    margin: 5px;
+}
+
+#uniwersalny #main-list-2 .list-item::before {
+    content:'=';
+    margin: 5px;
+}
+
+/* pseudoelement first-letter */
+
+#potomkowie p + span p::first-letter {
+    color:red;
+}
+
+/* pseudoelement first-line */
+#potomkowie p + span p::first-line {
+    color: black;
+}
+
+/* PSEUDOKLASY linków */
+
+/* stan nieodwiedzony */
+
+#linki a:link {
+    color:red;
+}
+
+/* stan odwiedzony */
+
+#linki a:visited {
+    color: blue;
+}
+
+/* pseudoklasa hover */
+
+#linki a:hover {
+    color: #a31919;
+    text-decoration: none;
+}
+
+/* pseudoklasa active */
+#linki a:active {
+    color: pink;
+    text-decoration: none;
+}
+
+
+
+/* pseudoklasa focus */
+
+#focus input {
+    margin-top: 30px;
+}
+
+#focus input:focus {
+    border: 3px solid red;
+    background-color: blue;
+    color: #fff;
+    
+}
+
+/* pseudoklasa target - kotwica - można dopasować do kazdego elementu na kotwicy */
+
+:target {
+    border: 1px solid black;
 }
