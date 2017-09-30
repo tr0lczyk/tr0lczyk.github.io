@@ -236,3 +236,25 @@ div:empty {
     background-color: yellow;
     
 }
+
+#srodkowanie-elementu {
+    height: 100px;
+    background-color: green;
+    text-align: center;
+}
+
+/*#srodkowanie-elementu div{
+    width: 500px;
+    margin: 10px;/* wszystkie m */
+    margin: 10px 10px;/* góra dół */
+    margin: 10px 10px 10px; /* lewo góra prawo */
+    margin: 10px 10px 10px 10px; /* lewo górwa prawo dół */*/ 
+
+
+#srodkowanie-elementu div{
+    width: 500px;
+    margin: 10px auto;
+    background-color: beige;
+}
+
+

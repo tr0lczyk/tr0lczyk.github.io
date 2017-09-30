@@ -10,16 +10,16 @@ form p {
 h1 {
     color: white;
 }
-
+/* sidplay:block ; sprawia ze elementy zamieniają się w bklokowe */
 #container {
     background-color: #213b50;
-    width: 500px;
+    width: 50%;
     height: 760px;
     padding: 20px;
     font-family: sans-serif;
     border: 5px solid white;
 }
-
+/* Zamiast dokłądać klasę, do której wkłądam jakieś elementy , mogę zdefiniować za pomocą [] konkretny typ atrybutu który chcemy zmienić  */
 #container input, #container textarea, #container select {
     background-color: #2b4a64;
     margin-bottom: 10px;
