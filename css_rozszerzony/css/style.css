@@ -282,7 +282,7 @@ div:empty {
     /* tempo efektu przejścia */
 /*    transition-timing-function: ease-in-out;*/
     display:inline-block;
-    transition: all 0.4s;
+    transition: all 0.4s;ą
 }
 
 #tranzycje-2 {

@@ -1,0 +1,34 @@
+div {
+    margin: 10px auto;
+}
+
+.tranzycja{
+    width: 150px;
+    height: 150px;
+    transition: all 1s;
+}
+
+#tranzycja1 {
+    background-color: red;
+}
+
+#tranzycja2 {
+    background-color: blue;
+}
+
+#tranzycja3 {
+    background-color: green;
+}
+
+#tranzycja1:hover {
+    width: 300px;
+}
+
+#tranzycja2:hover {
+    height: 300px;
+}
+
+#tranzycja3:hover {
+    height: 300px;
+    width:  300px;
+}
