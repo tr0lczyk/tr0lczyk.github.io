@@ -161,10 +161,12 @@ div:lang(pl) {
 
 /* pseudoklasa empty - służy do targetowania elementu bez contentu */
 
+/*
 div:empty {
     width: 300px;
-/*    height: 300px;*/
+    height: 300px;
     background-color: red;
+*/
 }
 
 /* nth-child, nth-last-child */
@@ -295,3 +297,19 @@ div:empty {
     background-color: blue;
     width:  600px;
 }
+
+/* wlasciwosc dwuargumentowa,jezeliu nie podamy drugiej zawsze ustawione jets na center */
+#tlo {
+    width: 600px;
+    height: 600px;
+    background-image: url('http://dinoanimals.pl/wp-content/uploads/2015/01/Kot_zwislouchy_10-588x563.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* do efektów parallax uwywamyt background attachment:fixed */
+    background-attachment: fixed;
+    /* nia element grafika z zachowaniem proporcji, możliwa strata kilku pixeli */
+    background-size: cover;
+    /* background */
+    background: #000;
+}
+
