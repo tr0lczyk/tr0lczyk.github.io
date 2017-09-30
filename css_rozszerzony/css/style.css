@@ -1,0 +1,59 @@
+/* selektor uniwersalny gniazda * */
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*  elementom blokowym któe nie mają kontentu należy nadac wysokosc (automatycznie, jako ze sa to elementy blokowe, otrzymają 100% szerokości elementu nadrzednego) */
+
+/* selektor identyfikatora */
+
+#uniwersalny {
+    /* height: 50px; */
+    background: gray;
+} 
+
+/* Element selector */
+
+ul {
+    list-style: none; /* pozbywa się kropek przy list elementach */
+}
+
+li {
+    color: red;
+}
+
+/* selektor klasy  */
+
+.list-item {
+    color: pink;
+}
+
+/* selektor potomka, lapie wszystkie elementy bez różnicy na jakim poziomie zagnieżdzenia - budujemy za pomocą spacji */
+
+#potomkowie p {
+    font-size: 28px;
+    color: bisque;
+}
+
+/* selektor bezposredniego potomka, znak > lapie elementy ktore sa zagniezdzone bezposrednio pod elementem poprzedzajacym */
+
+#potomkowie > p {
+    color: red;
+}
+
+/* selektor rodzeństwa, znak + lapie element bezposrednio na tym samym poziomie zagniezdzenia co element poprzedzajacy*/
+
+#potomkowie p + span p{
+    color: green;
+}
+
+
+/* pseudoelementy before, after LL Nie ma elementu before after bez contentu tylko czysdty tekst*/
+
+#potomkowie p + span p::before {
+    content: '*';
+}
