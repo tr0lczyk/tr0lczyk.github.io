@@ -1,0 +1,58 @@
+
+p {
+    color: white;
+    
+}
+
+form p {
+    margin-bottom: 0px;
+}
+h1 {
+    color: white;
+}
+
+#container {
+    background-color: #213b50;
+    width: 500px;
+    height: 760px;
+    padding: 20px;
+    font-family: sans-serif;
+    border: 5px solid white;
+}
+
+#container input, #container textarea, #container select {
+    background-color: #2b4a64;
+    margin-bottom: 10px;
+    border: none;
+    color: white;
+}
+
+#container .input, #container select {
+    width: 50%;
+    height: 25px;
+}
+
+#container textarea {
+    width: 100%;
+}
+
+#container input:focus {
+    border: 1px solid #ffffff;
+    background-color: #4e708c;
+    color: white;
+}
+
+#container label {
+    color:white;
+    padding: 0px;
+}
+
+#container input[type="submit"] {
+    background-color: green;
+    width: 80px;
+    height: 40px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-top: 0px;
+}

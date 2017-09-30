@@ -1,61 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Formularz-html</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-   <section>
-       <h1>Formularz osobowy:</h1>
-       <p><strong>Proszę o wypełnienie zgodnie z prawdą</strong></p>
-   </section>
-   
-   <!-- Forms begin -->
-   <form action="https://formspree.io/matt.olczyk@gmail.com" method="post">
-   
-   <!-- Form name -->
-   <label for="name">Imię:</label><br>
-   <input type="text" id="name" name="Imię"><br>
-   
-   <!-- Form surname -->
-   <label for="surname">Nazwisko:</label><br>
-   <input type="text" id="surname" name="Nazwisko"><br>
-   
-   <!-- Form mail -->
-   <label for="email">Adres email:</label><br>
-   <input type="email" id="email" name="Adres email"><br>
-   
-   <!-- Form phone -->
-   <label for="tel">Numer Telefonu:</label><br>
-   <input type="tel" id="tel" name="Numer telefonu"><br>
-   
-   <!-- Form city -->
-   <label for="city">Miejsce zameldowania:</label><br>
-   <select id="city" name="Miejsce zameldowania">
-       <option value="">Kraków</option>
-       <option value="">Warszawa</option>
-       <option value="">Gdańsk</option>
-   </select><br>
-   
-   <!-- Form sex -->
-   <p>Wybierz płeć:</p>
-   <label for="male">Mężczyzna</label>
-   <input type="radio" id="male" name="Płeć"><br>
-   <label for="female">Kobieta</label>
-   <input type="radio" id="female" name="Płeć"><br>
-   <p style="line-height: 1cm; ">
-   
-   <!-- Form data privacy -->
-   <label for="checkbox">Wyrazam zgodę na przetwarzanie moich danych osobowych</label>
-   <input type="checkbox" id="checkbox" name="Zgoda na Przetwarzanie danych osobowych"><br>
-   
-   <!-- Form Textarea -->
-   <label for="tekst">Treść wiadomości:</label><br>
-   <textarea name="Wiadomość" id="tekst" cols="30" rows="10"></textarea><br>
-    
-    <!-- Sending -->
-    <input type="submit" value="Wyślij formularz">
-    
-    </form>
+    <div id="container">
+        <section>
+            <h1>Formularz osobowy:</h1>
+            <p><strong>Proszę o wypełnienie zgodnie z prawdą</strong></p>
+        </section>
+
+        <!-- Forms begin -->
+        <form action="https://formspree.io/matt.olczyk@gmail.com" method="post">
+
+            <!-- Form name -->
+            <label for="name">Imię:</label><br>
+            <input class="input" type="text" id="name" name="Imię"><br>
+
+            <!-- Form surname -->
+            <label for="surname">Nazwisko:</label><br>
+            <input class="input" type="text" id="surname" name="Nazwisko"><br>
+
+            <!-- Form mail -->
+            <label for="email">Adres email:</label><br>
+            <input class="input" type="email" id="email" name="Adres email"><br>
+
+            <!-- Form phone -->
+            <label for="tel">Numer Telefonu:</label><br>
+            <input class="input" type="tel" id="tel" name="Numer telefonu"><br>
+
+            <!-- Form city -->
+            <label for="city">Miasto:</label><br>
+            <select id="city" name="Miejsce zameldowania">
+            <option value="">Kraków</option>
+            <option value="">Warszawa</option>
+            <option value="">Gdańsk</option>
+            </select><br>
+
+            <!-- Form sex -->
+            <p>Płeć:</p>
+            <input type="radio" id="male" name="Płeć">
+            <label for="male">Mężczyzna</label><br>
+            <input type="radio" id="female" name="Płeć">
+            <label for="female">Kobieta</label><br><br>
+
+            <!-- Form Textarea -->
+            <label for="tekst">Wiadomość:</label><br>
+            <textarea name="Wiadomość" id="tekst" cols="30" rows="10"></textarea><br>
+
+            <!-- Form data privacy -->
+            <input type="checkbox" id="checkbox" name="Zgoda na Przetwarzanie danych osobowych">
+            <label for="checkbox">Wyrazam zgodę na przetwarzanie moich danych osobowych</label><br><br>
+
+            <!-- Sending -->
+            <input type="submit" value="SEND">
+
+        </form>
+    </div>
 </body>
+
 </html>
