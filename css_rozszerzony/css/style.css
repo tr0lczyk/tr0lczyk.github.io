@@ -105,6 +105,7 @@ li {
 }
 
 /* pseudoklasa active */
+/* przy przytrzymaniu LPM na elemencie */
 #linki a:active {
     color: pink;
     text-decoration: none;
@@ -113,10 +114,11 @@ li {
 
 
 /* pseudoklasa focus */
-
+/*  */
 #focus input {
     margin-top: 30px;
 }
+
 
 #focus input:focus {
     border: 3px solid red;
@@ -126,7 +128,13 @@ li {
 }
 
 /* pseudoklasa target - kotwica - można dopasować do kazdego elementu na kotwicy */
-
+/* lapie cel kotwicy(linku wewnetrznego - odnoszącego się do elementu na stronie) */
 :target {
-    border: 1px solid black;
+    border: 5px solid black;
+}
+
+/* pseudoelement lang */
+
+div:lang(pl) {
+    background-color: lightyellow;
 }
