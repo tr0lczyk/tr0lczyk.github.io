@@ -192,3 +192,47 @@ div:empty {
 #kontener .floated:nth-child(3n +3) {
     margin-right: 0;
 }
+
+/* SELEKTORY ATRYBUTÓW */
+
+/*  Po nazwie atrybutu */
+
+#selektory-atrybutow input[type] {
+    width: 99%;
+    margin-bottom: 10px;
+}
+
+/*  konkretna wartość atrybutu [att = wartosc]   */
+
+#selektory-atrybutow input[type="tel"] {
+    background-color: aqua;
+}
+
+
+/* atrybuit zawiera w sobie - sprawdza czy konkretna wartość występuje w atrybucie */
+
+#selektory-atrybutow input[title~="input"] {
+    background-color: red;
+    
+}
+
+/* atrybuit zawiera w sobie - sprawdza czy konkretna wartość występuje w atrybucie przynejmniej raz w jakiejkoliek formie*/
+
+#selektory-atrybutow input[title*="trzeci"] {
+    background-color: green;
+    
+}
+
+/* atrybuit zaczyna się konkretnym ciągiem znaków*/
+
+#selektory-atrybutow input[title^="input"] {
+    background-color: green;
+    
+}
+
+/* atrybuit kończy się się konkretnym ciągiem znaków - przydatne przy różnorakim stylowaniu linków odmiennego rodzaju*/
+
+#selektory-atrybutow input[title$="input"] {
+    background-color: yellow;
+    
+}
