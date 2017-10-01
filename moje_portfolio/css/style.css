@@ -87,7 +87,7 @@ header {
 /* Section about styles */
 
 #section-about{
-    height: 86vh;
+/*    height: 86vh;*/
 }
 
 #section-about h2 {
@@ -133,7 +133,7 @@ header {
 
 /* Section skills styles */
 #section-skills{
-    height: 120vh;
+/*    height: 80vh;*/
 }
 
 #section-skills h2 {
@@ -142,7 +142,6 @@ header {
 }
 
 #paragraph2 {
-    position: absolute;
     left: 10%;
     font-size: 25px;
     width: 80%;
@@ -153,7 +152,63 @@ header {
     width: 120px;
     height: auto;
     display: inline-block;
-    text-align: center;
     padding: 40px;
 }
+
+.jezyki-programowania {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 30%;
+}
+
+#podpis>p {
+    font-size: 25px;
+    padding: 60px;
+    display: inline-block;
+}
+
+#podpis {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 40%;
+}
+
+/* Section skills styles */
+#section-portfolio {
+/*    height: 86vh;*/
+    padding: 0 10%;
+}
+
+#section-portfolio h2 {
+    text-align: center;
+    font-size: 60px;
+}
+
+.photo-portfolio img{
+    width: 33%;
+    height: auto;
+    padding: 0;
+    display: inline-block;
+}
+
+.photo-portfolio {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
 /* Footer styles */
+
+footer {
+    background-color: #213b50;
+    height: 60vh;
+}
+
+.contact h2 {
+    text-align: left;
+    font-size: 60px;
+    color: white;
+    margin-top: 20px;
+}
+
