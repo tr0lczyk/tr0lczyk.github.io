@@ -166,8 +166,8 @@ div:empty {
     width: 300px;
     height: 300px;
     background-color: red;
-*/
 }
+*/
 
 /* nth-child, nth-last-child */
 
@@ -312,4 +312,40 @@ div:empty {
     /* background */
     background: #000;
 }
+
+/* przepełnienie lementu - scroll - działa tylko dla elementó blokowych z okresloną wysokością
+OVERFLOW*/
+
+#overflow {
+    width: 400px;
+    height: 300px;
+    border: 1px solid black;
+    /* nie pozwól na wyjscie contentu poza określone wymiary kontenera */
+    overflow: hidden;
+}
+
+#overflow p {
+    font-size: 26px;
+}
+
+/* overscrolle mogą być: visible auto,  */
+
+
+
+
+
+/* Box-sizing */
+
+#box-sizing {
+    width: 150px;
+    height: 150px;
+    padding: 30px;
+    border: 1px dashed black ;
+/* content box nie wlicza padding i border w wysść i szerokosc elementu. wartosc domyslna */
+/* border-box , wlicza padding i border w wysokość i szerokosc elementu */
+    box-sizing: border-box;
+}
+
+/* RWD- esponsywna strona internetowa */
+
 
