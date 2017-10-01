@@ -1,5 +1,39 @@
-@media all and (min-width: 800px) {
+@media all and (max-width: 480px) {
+    #uniwersalny #main-list .list-item {
+        color: violet;
+    }
+}
+
+/* landscape - szerokość większa niż wysokość
+portrait - wyokość większa niż szerokość */
+@media all and (orientation: landscape) {
+    #uniwersalny #main-list .list-item {
+        color: crimson;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    #uniwersalny {
+        background-color: red;
+    }
+}
+
+@media all and (max-width: 992px) {
     #uniwersalny {
         background-color: blue;
     }
 }
+
+@media all and (max-width: 768px) {
+    #uniwersalny {
+        background-color:green;
+    }
+}
+
+@media all and (max-width: 480px) {
+    #uniwersalny {
+        background-color: yellow;
+        
+    }
+}
+
