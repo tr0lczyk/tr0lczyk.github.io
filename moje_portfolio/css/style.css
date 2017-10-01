@@ -2,8 +2,22 @@
 body {
     margin: 0px;
     padding: 0px;
+    font-family: 'Lato';
+    color: black;
 }
 
+span {
+    color:limegreen;
+}
+
+section {
+    background-color: #f9fcfe;
+    position: relative;
+}
+
+.clear {
+    clear: both;
+}
 
 /* Header */
 
@@ -16,13 +30,24 @@ header {
     position: relative;
 }
 
-header>h1 {
-    left: 0;
-    right: 0;
-    bottom: 400px;
-    font-family: Roboto;
-    font-size: 100px;
+.main-title {
     position: absolute;
+    text-align: center;
+    bottom: 25%;
+    width: 100%;
+    font-weight: lighter;
+    color:white;
+}
+
+.title {
+    font-family: 'Roboto';
+    font-size: 200px;
+    margin-bottom: 0px;
+}
+
+.subtitle {
+    font-size: 60px;
+    margin-top: 0;
 }
 
 /* Menu styles */
@@ -34,6 +59,7 @@ header>h1 {
     background-color: #fff;
     width: 100%;
     top: 0px;
+    z-index: 1;
 }
 .menu-item {
     list-style: none;
@@ -58,9 +84,76 @@ header>h1 {
 }
 
 
-/* Header styles */
+/* Section about styles */
+
+#section-about{
+    height: 86vh;
+}
+
+#section-about h2 {
+    text-align: center;
+    font-size: 60px;
+}
+
+#photo>img {
+    width: 430px;
+    height: auto;
+    border: 20px solid white;
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius:20px ;
+    border-top-right-radius: 20px;
+}
 
 
+#paragraph>p {
+    font-size: 25px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    text-align: left;
+}
 
 
+.floated {
+    width: 49%;
+    display: inline-block;
+    margin-right: 0.5%;
+    float:left;
+}
+
+.clear {
+    clear: both;
+} 
+
+
+#aboutcontent {
+    text-align: center;
+}
+
+/* Section skills styles */
+#section-skills{
+    height: 120vh;
+}
+
+#section-skills h2 {
+    text-align: center;
+    font-size: 60px;
+}
+
+#paragraph2 {
+    position: absolute;
+    left: 10%;
+    font-size: 25px;
+    width: 80%;
+    height: auto;
+    text-align: center;
+}
+.jezyki-programowania img{
+    width: 120px;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+    padding: 40px;
+}
 /* Footer styles */
