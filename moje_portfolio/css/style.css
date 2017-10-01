@@ -7,7 +7,7 @@ body {
 }
 
 span {
-    color:limegreen;
+    color:#1ac056;
 }
 
 section {
@@ -61,6 +61,7 @@ header {
     top: 0px;
     z-index: 1;
 }
+
 .menu-item {
     list-style: none;
     display: inline-block;
@@ -83,14 +84,13 @@ header {
     text-align: right;
 }
 
-
 /* Section about styles */
 
-#section-about{
-/*    height: 86vh;*/
+#about{
+    padding: 0 10%;
 }
 
-#section-about h2 {
+#about h2 {
     text-align: center;
     font-size: 60px;
 }
@@ -104,7 +104,6 @@ header {
     border-top-left-radius:20px ;
     border-top-right-radius: 20px;
 }
-
 
 #paragraph>p {
     font-size: 25px;
@@ -132,11 +131,11 @@ header {
 }
 
 /* Section skills styles */
-#section-skills{
-/*    height: 80vh;*/
+#skills{
+ padding: 0 10%;
 }
 
-#section-skills h2 {
+#skills h2 {
     text-align: center;
     font-size: 60px;
 }
@@ -144,11 +143,12 @@ header {
 #paragraph2 {
     left: 10%;
     font-size: 25px;
-    width: 80%;
+    width: 100%;
     height: auto;
     text-align: center;
 }
-.jezyki-programowania img{
+
+.jezyki-programowania > figure{
     width: 120px;
     height: auto;
     display: inline-block;
@@ -156,32 +156,17 @@ header {
 }
 
 .jezyki-programowania {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    top: 30%;
-}
-
-#podpis>p {
-    font-size: 25px;
-    padding: 60px;
-    display: inline-block;
-}
-
-#podpis {
-    position: absolute;
     width: 100%;
     text-align: center;
     top: 40%;
 }
 
-/* Section skills styles */
-#section-portfolio {
-/*    height: 86vh;*/
+/* Section portfolio styles */
+#portfolio {
     padding: 0 10%;
 }
 
-#section-portfolio h2 {
+#portfolio h2 {
     text-align: center;
     font-size: 60px;
 }
@@ -198,17 +183,48 @@ header {
     text-align: center;
     margin: 0;
 }
+
 /* Footer styles */
 
-footer {
+#contact {
     background-color: #213b50;
-    height: 60vh;
+    padding: 0 10%;
 }
 
-.contact h2 {
+#contact h2 {
     text-align: left;
     font-size: 60px;
     color: white;
-    margin-top: 20px;
 }
+
+address {
+    font-family: 'Lato';
+    color: white;
+    font-size: 25px;
+    font-style: normal;
+    box-sizing: border-box;
+    
+}
+
+address a{
+    text-decoration: none;
+}
+
+#contact_content {
+    width: 100%;
+}
+
+#contact_content1 {
+    float: left;
+    width: 50%;
+}
+
+#contact_content2 {
+    float: right;
+    width: 50%;
+}
+
+.clear {
+    clear: both;
+} 
 
