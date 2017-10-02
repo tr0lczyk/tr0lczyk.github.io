@@ -87,7 +87,7 @@ header {
 /* Section about styles */
 
 #about{
-    padding: 0 10%;
+    padding: 0 5%;
 }
 
 #about h2 {
@@ -131,8 +131,9 @@ header {
 }
 
 /* Section skills styles */
+
 #skills{
- padding: 0 10%;
+ padding: 0 5%;
 }
 
 #skills h2 {
@@ -163,7 +164,7 @@ header {
 
 /* Section portfolio styles */
 #portfolio {
-    padding: 0 10%;
+    padding: 0 5%;
 }
 
 #portfolio h2 {
@@ -188,7 +189,7 @@ header {
 
 #contact {
     background-color: #213b50;
-    padding: 0 10%;
+    padding: 0 5%;
     position: relative;
     
 }
@@ -212,9 +213,22 @@ address a{
     text-decoration: none;
 }
 
+#contact input, 
+#contact textarea {
+    background-color: #294963;
+    margin-bottom: 10px;
+    border: none;
+    color: white;
+}
 #contact .input{
     width: 80%;
     height: 40px;
+    margin-top: 10px;
+}
+
+#contact textarea {
+    width: 79.5%;
+    
 }
 
 #contact input[type="submit"] {
@@ -256,5 +270,6 @@ address a{
     color:white;  
     margin: 0;
     padding:0 10%;
+    font-size: 20px;
 }
 
