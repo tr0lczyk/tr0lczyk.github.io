@@ -189,6 +189,8 @@ header {
 #contact {
     background-color: #213b50;
     padding: 0 10%;
+    position: relative;
+    
 }
 
 #contact h2 {
@@ -208,6 +210,21 @@ address {
 
 address a{
     text-decoration: none;
+}
+
+#contact .input{
+    width: 80%;
+    height: 40px;
+}
+
+#contact input[type="submit"] {
+    background-color: #1ac056;
+    width: 80px;
+    height: 40px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-top: 0px;
 }
 
 #contact_content {
@@ -231,7 +248,13 @@ address a{
 .logo i{
     color:white;
     margin-right: 40px;
+    margin-bottom: 40px;
+}    
+
+#paragraf p{
+    background-color: rgb(25, 42, 56);
+    color:white;  
+    margin: 0;
+    padding:0 10%;
 }
-
-
 
