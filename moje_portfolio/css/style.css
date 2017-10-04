@@ -4,6 +4,7 @@ body {
     padding: 0px;
     font-family: 'Lato';
     color: black;
+    font-weight: 300;
 }
 
 span {
@@ -13,6 +14,10 @@ span {
 section {
     background-color: #f9fcfe;
     position: relative;
+}
+
+h1,h2 {
+    font-weight: 100;
 }
 
 .clear {
@@ -35,9 +40,10 @@ header {
     text-align: center;
     bottom: 25%;
     width: 100%;
-    font-weight: lighter;
+    font-weight: 100;
     color:white;
 }
+
 
 .title {
     font-family: 'Roboto';
@@ -269,7 +275,7 @@ address a{
     background-color: rgb(25, 42, 56);
     color:white;  
     margin: 0;
-    padding:0 10%;
+    padding:0 5%;
     font-size: 20px;
 }
 
