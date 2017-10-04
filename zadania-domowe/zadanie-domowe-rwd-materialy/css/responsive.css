@@ -1,0 +1,48 @@
+.header {
+    height:80%;
+}
+
+@media all and (min-width: 1170px) {
+    .header img {
+        height: 100%;    
+    }
+    .header {
+    position:relative;
+    }
+    #header-title{
+    position:absolute;
+    top:40%;
+    color: #eee;
+    font-size: 30px;
+    }
+    
+    h2 {
+    text-align: left;  
+    }
+        
+}
+
+@media all and (max-width: 1169px) {
+    .header img {
+        height: 70%;    
+    }
+    .header {
+    position:relative;
+    }
+    #header-title{
+    position:absolute;
+    top:20%;
+    right:5%;
+    color: black;
+    font-size: 20px;
+    }
+    
+    h2 {
+        text-align: left;
+    }
+}
+
+@media all and (max-width: 991px) {
+    .header img {
+        height: 50%;
+    }
