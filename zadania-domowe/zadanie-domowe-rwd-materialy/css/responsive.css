@@ -2,6 +2,9 @@
     height:80%;
 }
 
+/* powyżej 1170px */
+
+
 @media all and (min-width: 1170px) {
     .header img {
         height: 100%;    
@@ -21,6 +24,9 @@
     }
         
 }
+
+/* poniżej 1170px */
+
 
 @media all and (max-width: 1169px) {
     .header img {
@@ -42,6 +48,8 @@
         text-align: left;
     }
 }
+
+/* poniżej 991px */
 
 @media all and (max-width: 991px) {
     .header img {
