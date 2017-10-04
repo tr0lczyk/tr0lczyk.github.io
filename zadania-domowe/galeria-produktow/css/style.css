@@ -1,2 +1,38 @@
 body {
     background-color: #98fb98;
+    ;
+}
+
+.produkt{
+    width: 22%;
+    height: 375px;
+    padding: 0;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin: 0px 10px;
+}
+
+#produkt1 {
+    background-image: url('img/product-1.jpg');
+}
+
+#produkt2 {
+    background-image: url('img/product-2.jpg');
+}
+
+#produkt3 {
+    background-image: url('img/product-3.jpg');
+}
+
+#produkt4 {
+    background-image: url('img/product-4.jpg');
+}
+
+.koszyk {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    margin-top: 15%;
+}
