@@ -1,6 +1,5 @@
 body {
     background-color: #98fb98;
-    ;
 }
 
 .produkt{
@@ -12,23 +11,7 @@ body {
     background-size: cover;
     background-position: center center;
     margin: 0px 10px;
-}
-
-
-#produkt1 {
-    background-image: url('img/product-1.jpg');
-}
-
-#produkt2 {
-    background-image: url('img/product-2.jpg');
-}
-
-#produkt3 {
-    background-image: url('img/product-3.jpg');
-}
-
-#produkt4 {
-    background-image: url('img/product-4.jpg');
+    
 }
 
 .koszyk {
@@ -38,6 +21,55 @@ body {
     margin-top: 15%;
 }
 
-#produkt1:hover {
+.produkt > div {
+    opacity: 1;
+    z-index: 2;
+}
+.produkt > .hover {
+  position:relative;
     background-color: #ff6f00;
+    background-size: contain;
+    width: 100%;
+    height:100%;
+    color: white;
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.5s;
+}
+
+.hover > img {
+    position:absolute;
+    width:25%;
+    height:25%;
+    top:37%;
+    left:37%;
+}
+
+
+#produkt1 {
+    background-image: url('http://zadania.akademia108.pl/attachments/download/675/product-1.jpg');
+}
+
+#produkt2 {
+    background-image: url('http://zadania.akademia108.pl/attachments/download/684/product-2.jpg');
+}
+
+#produkt3 {
+    background-image: url('http://zadania.akademia108.pl/attachments/download/708/product-3.jpg');
+}
+
+#produkt4 {
+    background-image: url('http://zadania.akademia108.pl/attachments/download/714/product-4.jpg');
+}
+
+
+
+.produkt > div:hover {
+    opacity: 0;
+    z-index: 1;
+}
+
+.produkt > .hover:hover {
+  opacity: 0.5;
+  z-index: 2;
 }
