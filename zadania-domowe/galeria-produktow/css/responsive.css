@@ -1,0 +1,15 @@
+/* poniżej 992px */
+
+@media all and (max-width: 992px) {
+    .produkt > div {
+        width: 50%;    
+    }
+}
+
+/* poniżej 480px */
+
+@media all and (max-width: 480px) {
+    .produkt > div  {
+        width: 100%;
+    }
+}
