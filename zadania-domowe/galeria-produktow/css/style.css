@@ -3,7 +3,7 @@ body {
 }
 
 .produkt{
-    width: 22%;
+    width: 375px;
     height: 375px;
     padding: 0;
     display: inline-block;
@@ -26,7 +26,7 @@ body {
     z-index: 2;
 }
 .produkt > .hover {
-  position:relative;
+    position:relative;
     background-color: #ff6f00;
     background-size: contain;
     width: 100%;
@@ -39,26 +39,27 @@ body {
 
 .hover > i {
     position:absolute;
-    top:37%;
-    left:37%;
+    top:38%;
+    left:0;
+    right:0;
     color:white;
 }
 
 
 #produkt1 {
-    background-image: url('http://zadania.akademia108.pl/attachments/download/675/product-1.jpg');
+    background-image: url('img/product-1.jpg');
 }
 
 #produkt2 {
-    background-image: url('http://zadania.akademia108.pl/attachments/download/684/product-2.jpg');
+    background-image: url('img/product-2.jpg');
 }
 
 #produkt3 {
-    background-image: url('http://zadania.akademia108.pl/attachments/download/708/product-3.jpg');
+    background-image: url('img/product-3.jpg');
 }
 
 #produkt4 {
-    background-image: url('http://zadania.akademia108.pl/attachments/download/714/product-4.jpg');
+    background-image: url('img/product-4.jpg');
 }
 
 
