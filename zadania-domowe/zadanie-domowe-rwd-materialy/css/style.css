@@ -12,10 +12,17 @@ body {
 
 figure {
     margin: 0;
+    
 }
 header img {
     width:100%;
     height: auto;
+}
+
+div {
+    background-image: url(man-2.jpg);
+    background-size: cover;
+    
 }
 
  h1,h2 {

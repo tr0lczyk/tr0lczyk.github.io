@@ -30,7 +30,8 @@
 
 @media all and (max-width: 1169px) {
     .header img {
-        height: 70%;    
+        height: 70%;
+        opacity:0;
     }
     .header {
     position:relative;
@@ -54,6 +55,7 @@
 @media all and (max-width: 991px) {
     .header img {
         height: 50%;
+        opacity:1;
     }
    .header {
     position:static;
