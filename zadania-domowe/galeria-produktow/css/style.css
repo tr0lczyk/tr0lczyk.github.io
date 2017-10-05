@@ -71,10 +71,6 @@ body {
 }
 
 .produkt > .hover:hover {
-    opacity: 0.7;
+    opacity: 0.8;
     z-index: 2;
-}
-
-i:hover {
-    opacity: 1;
 }
