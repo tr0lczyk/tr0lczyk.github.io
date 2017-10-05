@@ -3,19 +3,20 @@
 }
 
 
-@media all and (min-width:992) {
-    .koszyk > .produkt {
-        width: 20%;
+@media only and (min-width: 993px) {
+    .produkt {
+        width: 22%;
     }
 }
 
-@media all and (min-width:481, max-width: 992px) {
-    .koszyk > .produkt {
-        width: 30%;
+@media only and (max-width: 992px) {
+    .produkt {
+        width: 50%;
+    }
 }
 
-@media all and (max-width: 480px) {
-    .koszyk > .produkt {
+@media only and (max-width: 480px) {
+    .produkt {
         width: 100%;
     }
 }
