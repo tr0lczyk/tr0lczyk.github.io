@@ -19,12 +19,6 @@ header img {
     height: auto;
 }
 
-div {
-    background-image: url(man-2.jpg);
-    background-size: cover;
-    
-}
-
  h1,h2 {
     left:0;
     right:0;
