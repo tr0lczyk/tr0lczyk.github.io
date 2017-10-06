@@ -2,8 +2,6 @@
 	box-sizing: border-box;
 }
 
-
-
 body {
     background-color: #98fb98;
 }
@@ -14,9 +12,9 @@ body {
     padding: 0;
     display: inline-block;
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center center;
     margin: 0px 10px;
+    background-size: cover;
 }
 
 .koszyk {
