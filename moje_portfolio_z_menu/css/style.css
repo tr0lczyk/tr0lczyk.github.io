@@ -107,11 +107,12 @@ ol > li >a:hover  {
 
 ol > li > ul > li:hover {
     background-color:#DDD;
+    display:none;
 }
 
-ol > li > ul > li:active a {
+ol > li > ul > li:hover a {
     color:#09C;
-    display:none;
+    
 }
 
 ol > li:hover > ul {
