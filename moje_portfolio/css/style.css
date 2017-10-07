@@ -1,4 +1,7 @@
 /* General styles */
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0px;
     padding: 0px;
@@ -277,7 +280,6 @@ address {
     font-size: 25px;
     font-style: normal;
     box-sizing: border-box;
-    transform: translateY(25%)
 }
 
 address a{
@@ -304,12 +306,16 @@ address a{
 
 #contact input[type="submit"] {
     background-color: #1ac056;
-    width: 80px;
-    height: 40px;
+    width: 15%;
+    height: 50px;
     color: #fff;
     text-transform: capitalize;
-    font-weight: bold;
+    font-weight: 300;
+    font-size: 20px;
     margin-top: 0px;
+    position:relative;
+    left: 65%;
+    border: 1px solid white;
 }
 
 #contact_content1 {
@@ -324,7 +330,6 @@ address a{
 #contact > .clear {
     clear: both;
 }
-
 
 .logo i{
     color:white;
