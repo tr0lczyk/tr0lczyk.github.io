@@ -109,8 +109,9 @@ ol > li > ul > li:hover {
     background-color:#DDD;
 }
 
-ol > li > ul > li:hover a {
+ol > li > ul > li:active a {
     color:#09C;
+    display:none;
 }
 
 ol > li:hover > ul {
