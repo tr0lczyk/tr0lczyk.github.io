@@ -172,11 +172,9 @@ header {
 }
 
 
-
-
-
-
 /* Section portfolio styles */
+
+
 #portfolio {
     padding: 0 5%;
     overflow: hidden;
@@ -300,7 +298,7 @@ address a{
 }
 
 #contact textarea {
-    width: 79.5%;
+    width: 80%;
     margin-top: 10px;
 }
 
@@ -310,7 +308,7 @@ address a{
     height: 50px;
     color: #fff;
     text-transform: capitalize;
-    font-weight: 300;
+    font-weight: 200;
     font-size: 20px;
     margin-top: 0px;
     position:relative;

@@ -1,0 +1,23 @@
+@media all and (min-width: 992px) and (max-width: 1200px) {
+    #picture1,
+    #picture2 {
+        width: 50%;    
+    }
+    
+    #picture3 {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 992px) {
+    .pictures {
+        width: 100%;
+    }
+    
+    #contact_content1,
+    #contact_content2,
+    .logo {
+        width: 100%;
+    }
+}
+
