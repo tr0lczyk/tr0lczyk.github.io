@@ -11,6 +11,10 @@
 
 @media all and (max-width: 992px) {
     
+    .header >h1,.header >h2 {
+        width: 100%;
+    }
+    
     
     #aboutcontent > #photo {
         width:100%;
