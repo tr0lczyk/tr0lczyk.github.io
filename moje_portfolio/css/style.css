@@ -177,6 +177,7 @@ header {
 #portfolio {
     padding: 0 5%;
     overflow: hidden;
+    margin-bottom: 10%;
 }
 
 #portfolio h2 {
@@ -217,7 +218,7 @@ header {
     z-index: 1;
     transition: all 0.5s;
     outline: thin solid white;
-    outline-offset: -20px;
+    outline-offset: -10px;
 }
 
 .hover > .wypelniacz {
@@ -261,7 +262,7 @@ header {
     background-color: #213b50;
     padding: 0 5%;
     position: relative;
-    
+    overflow: hidden;
 }
 
 #contact h2 {
@@ -276,6 +277,7 @@ address {
     font-size: 25px;
     font-style: normal;
     box-sizing: border-box;
+    transform: translateY(25%)
 }
 
 address a{
@@ -297,7 +299,7 @@ address a{
 
 #contact textarea {
     width: 79.5%;
-    
+    margin-top: 10px;
 }
 
 #contact input[type="submit"] {
@@ -310,23 +312,19 @@ address a{
     margin-top: 0px;
 }
 
-#contact_content {
-    width: 100%;
-}
-
 #contact_content1 {
-    float: left;
     width: 50%;
+    float: left
 }
-
 #contact_content2 {
-    float: right;
     width: 50%;
+    float: left
 }
 
-.clear {
+#contact > .clear {
     clear: both;
-} 
+}
+
 
 .logo i{
     color:white;
