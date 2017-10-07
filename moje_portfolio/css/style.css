@@ -105,7 +105,7 @@ header {
 }
 
 #photo>img {
-    width: 430px;
+    width: 80%;
     height: auto;
     border: 20px solid white;
     border-bottom-left-radius:20px ;

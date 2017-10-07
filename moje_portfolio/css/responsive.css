@@ -12,10 +12,19 @@
 @media all and (max-width: 992px) {
     
     
+    #aboutcontent > #photo {
+        width:100%;
+    }
     
+    #aboutcontent > #paragraph {
+        width: 100%;
+    }
+    #paragraph > p {
+        width: 100%;
+        text-align: center;
+    }
     
-    
-    #paragraph2 >p {
+    #paragraph2 > p {
         width: 100%;
         text-align: center;
     }
