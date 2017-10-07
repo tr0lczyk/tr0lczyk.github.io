@@ -66,7 +66,7 @@ header {
 .menu {
     position: fixed;
     text-align: right;
-    height: 80px;
+    height: auto;
     background-color: #fff;
     width: 100%;
     top: 0px;
