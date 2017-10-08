@@ -17,10 +17,10 @@ img {
 
 }
 
-.translate img {
+.translate img:hover {
     /* Przesuwa element w pionie i/lub poziomie względem swoich własności- wysokości i szerokości */
 /*    transform: translate(200px,100px);*/
-    transform: translate(50%,50%);
+    transform: translate(1%,50%);
     
     /* sposoby na wycentrowanie obrazka względem strony, ponad stroną */
 /*
@@ -42,3 +42,34 @@ img {
 */
 }
 
+/* SKalowanie obiektu, bez jednostek, po prostu zapis liczby */
+.scale img:hover { 
+    transform: scale(1.5);
+}
+
+
+/* ANIMACJE */
+
+.animation img{
+    animation-name: puls;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+/* bez przecinkó między dodawanymi kolejnymi animacjami na danym obiekcie */
+@keyframes puls {
+    0% {
+        transform:scale(1) rotate(0d);
+        opacity: 1;
+    }
+    
+    50% {
+        transform: scale(0.5) rotate(180deg);
+        opacity:0.6;
+    }
+    
+    100% {
+        transform:scale(1) rotate(360deg);
+        opacity: 1;
+    }
+}
