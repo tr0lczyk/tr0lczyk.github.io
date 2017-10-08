@@ -20,7 +20,7 @@ img {
 .translate img:hover {
     /* Przesuwa element w pionie i/lub poziomie względem swoich własności- wysokości i szerokości */
 /*    transform: translate(200px,100px);*/
-    transform: translate(1%,50%);
+    transform: translate(50%,50%);
     
     /* sposoby na wycentrowanie obrazka względem strony, ponad stroną */
 /*
