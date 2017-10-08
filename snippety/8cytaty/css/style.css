@@ -1,0 +1,20 @@
+.tekst {
+    width: 100%;
+    height: auto;
+}
+
+q[lang*="en"]::before, q[lang*="en"]::after {
+    content: "*";
+}
+
+blockquote[lang*="en"]::before, blockquote[lang*="en"]::after {
+    content: "*";
+}
+
+q:not([lang*="en"])::before, q:not([lang*="en"])::after {
+    content: """;
+}
+
+blockquote:not([lang*="en"])::before, blockquote:not([lang*="en"])::after {
+    content: "''";
+}
