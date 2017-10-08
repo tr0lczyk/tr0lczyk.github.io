@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .outer {
     width: 400px;
     height: 50vh;
@@ -11,11 +15,29 @@
     background-size:  cover;
     background-position: center;
     width: 100%;
-    height: 50vh;
+    height: 100%;
     transition: all 0.5s;
 }
 
 .bgimg:hover {
     
+    transform: scale(1.5);
+}
+
+figure {
+    height: 300px;
+    width: 300px;
+    border: 10px solid red;
+    overflow:hidden;    
+}
+
+figure img {
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    transition: all 0.5s;
+}
+
+figure img:hover {
     transform: scale(1.5);
 }
