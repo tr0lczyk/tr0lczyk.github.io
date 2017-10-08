@@ -9,9 +9,11 @@ div {
     text-align: center;
     font-size: 60px;
     font-family: fantasy;
+    height: auto;
 }
 
 .animation img {
+    width: 100%;
     animation-name: puls;
     animation-duration: 2s;
     animation-iteration-count: infinite;
