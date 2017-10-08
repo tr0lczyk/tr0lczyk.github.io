@@ -1,0 +1,44 @@
+body {
+    text-align: center;
+} /* wszystkie elementy w srodku są wysrodkowane */
+
+
+img {
+    height: 300px;
+}
+
+/* Obraca się zawsze z ruchem wskazówek zegara */
+.rotate img:hover {
+    /*    transform:rotate(45deg);*/
+    /* Obraca się zawsze z ruchem wskazówek zegara */
+    transform: rotate(45deg);
+    /* Lustrzane odbicie */
+    transform: rotateY(180deg);
+
+}
+
+.translate img {
+    /* Przesuwa element w pionie i/lub poziomie względem swoich własności- wysokości i szerokości */
+/*    transform: translate(200px,100px);*/
+    transform: translate(50%,50%);
+    
+    /* sposoby na wycentrowanie obrazka względem strony, ponad stroną */
+/*
+    position:absolute;
+    transform: translateY(-50%);
+    left:0;
+    right:0;
+    margin:auto;
+    top:50%;
+*/
+    
+    
+/*  Kolejny sposób ::
+    
+    position:absolute;
+    width: 100%;
+    top: 50%;
+    transform:translateY(-50%;
+*/
+}
+
