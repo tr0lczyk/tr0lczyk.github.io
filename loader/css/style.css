@@ -14,7 +14,7 @@ body {
 }
 
 .path {
-    border: 2px solid white;
+/*    border: 2px solid white;*/
     height: 150px;
     width: 150px;
     position: absolute;
@@ -30,22 +30,20 @@ body {
     width: 25px;
     background-color: #fff;
     position:absolute;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 
 .square:nth-child(1) {
     left:0;
     top:0;
     animation-name: preload;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
 }
 
 .square:nth-child(2) {
     bottom:0;
     right: 0;
     animation-name: preload2;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
 }
 
 @Keyframes preload {
