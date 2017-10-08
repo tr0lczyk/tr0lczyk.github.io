@@ -1,0 +1,29 @@
+body{
+    margin:0;
+    padding: 0;
+}
+
+.circle {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: #adc9e6;
+    text-align: center;
+    position: relative;
+}
+.font {
+    color:white;
+    position:absolute;
+    left:0;
+    right:0;
+    top:30%;
+}
+
+.circle:hover .font {
+    color: #adc9e6;
+}
+
+.circle:hover {
+    background-color: white;
+    border: 3px solid #adc9e6;
+}

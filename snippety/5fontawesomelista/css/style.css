@@ -1,0 +1,9 @@
+ul {
+    list-style: none;
+}
+
+li::before {
+    content: "\f1b9"; 
+    font-family: FontAwesome;
+    margin: 1px;
+}
