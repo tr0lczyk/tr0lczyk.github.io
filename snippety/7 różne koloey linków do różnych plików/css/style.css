@@ -1,0 +1,11 @@
+a {
+    text-decoration: none;
+}
+
+a[href*=".doc"] {
+    color: red;
+}
+
+a[href$=".docx"] {
+    color: orange;
+}
