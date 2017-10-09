@@ -29,68 +29,86 @@ body {
     text-align: center;
     font-size: 100px;
     background-color: black;
-/*    transition:all 0.5s;*/
 }
+
+.tekst p {
+    text-align: center;
+    font-size: 50px;
+    font-family: fantasy;
+    height: auto;
+    margin-top:0;
+}
+.serce img{
+    width: 100%;
+}
+
 
 #liczba10 {
     animation-name: countdown10;
-    animation-duration: 10s;
+    animation-duration: 11s;
     animation-iteration-count: infinite;
 }
 
 #liczba9 {
     animation-name: countdown9;
-    animation-duration: 10s;
+    animation-duration: 11s;
     animation-iteration-count: infinite;
 }
 
 #liczba8 {
-    animation-name: countdown9;
-    animation-duration: 10s;
+    animation-name: countdown8;
+    animation-duration: 11s;
     animation-iteration-count: infinite;
 }
 
 #liczba7 {
-    animation-name: countdown9;
-    animation-duration: 10s;
+    animation-name: countdown7;
+    animation-duration: 11s;
     animation-iteration-count: infinite;
 }
 
 #liczba6 {
-    animation-name: countdown9;
-    animation-duration: 10s;
+    animation-name: countdown6;
+    animation-duration: 11s;
     animation-iteration-count: infinite;
 }
 
 #liczba5 {
-    animation-name: countdown9;
-    animation-duration: 10s;
+    animation-name: countdown5;
+    animation-duration: 11s;
     animation-iteration-count: infinite;
 }
 
 #liczba4 {
-    animation-name: countdown9;
-    animation-duration: 10s;
+    animation-name: countdown4;
+    animation-duration: 11s;
     animation-iteration-count: infinite;
 }
 
 #liczba3 {
-    animation-name: countdown9;
-    animation-duration: 10s;
+    animation-name: countdown3;
+    animation-duration: 11s;
     animation-iteration-count: infinite;
 }
 
 #liczba2 {
-    animation-name: countdown9;
-    animation-duration: 10s;
+    animation-name: countdown2;
+    animation-duration: 11s;
     animation-iteration-count: infinite;
 }
 
 #liczba1 {
-    animation-name: countdown9;
-    animation-duration: 10s;
+    animation-name: countdown1;
+    animation-duration: 11s;
     animation-iteration-count: infinite;
 }
+
+#i-love {
+    animation-name: countdown0;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+}
+
 
 @Keyframes countdown10 {
     
@@ -531,7 +549,7 @@ body {
     }
     
     10% {
-        opacity:1;
+        opacity:0;
     }
     
     20% {
@@ -568,6 +586,54 @@ body {
     
     100% {
         opacity:0;
+    }
+
+}
+
+@Keyframes countdown0 {
+    
+    0% {
+        opacity:0;
+    }
+    
+    10% {
+        opacity:0;
+    }
+    
+    20% {
+        opacity:0;
+    }
+    
+    30% {
+        opacity:0;
+    }
+    
+    40% {
+        opacity:0;
+    }
+    
+    50% {
+        opacity:0;
+    }
+    
+    60% {
+        opacity:0;
+    }
+    
+    70% {
+        opacity:0;
+    }
+    
+    80% {
+        opacity:0;
+    }
+    
+    90% {
+        opacity:0;
+    }
+    
+    100% {
+        opacity:1;
     }
 
 }
