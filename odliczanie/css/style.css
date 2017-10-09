@@ -10,7 +10,6 @@ body {
 }
 
 .animacja {
-    border: 2px solid white;
     height: 500px;
     width: 500px;
     position: absolute;
@@ -30,9 +29,9 @@ body {
     text-align: center;
     font-size: 100px;
     background-color: black;
-    animation-duration: 11s;
+    animation-duration: 10s;
     animation-iteration-count: 1;
-    animation-play-state: 
+    animation-fill-mode:forwards;
 }
 
 .tekst p {
@@ -45,10 +44,9 @@ body {
 .serce img{
     width: 100%;
     animation-name: puls;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
-    animation-delay: 2s;
 }
 
 @keyframes puls {
@@ -74,64 +72,53 @@ body {
 
 #liczba9 {
     animation-name: countdown9;
-    
-    
 }
 
 #liczba8 {
     animation-name: countdown8;
-    
 }
 
 #liczba7 {
     animation-name: countdown7;
-    
 }
 
 #liczba6 {
     animation-name: countdown6;
-    
 }
 
 #liczba5 {
     animation-name: countdown5;
-    
 }
 
 #liczba4 {
     animation-name: countdown4;
-    
 }
 
 #liczba3 {
     animation-name: countdown3;
-   
 }
 
 #liczba2 {
     animation-name: countdown2;
-    
 }
 
 #liczba1 {
     animation-name: countdown1;
-    
 }
 
 #i-love {
     animation-name: countdown0;
-    
 }
 
 
 @Keyframes countdown10 {
     
-    0% {
+    0%,9% {
         opacity:1;
     }
     
     10% {
-        display:0;
+        opacity:0;
     }
     
     20% {
@@ -178,7 +165,7 @@ body {
         opacity:0;
     }
     
-    10% {
+    10%,19% {
         opacity:1;
     }
     
@@ -230,7 +217,7 @@ body {
         opacity:0;
     }
     
-    20% {
+    20%,29% {
         opacity:1;
     }
     
@@ -282,7 +269,7 @@ body {
         opacity:0;
     }
     
-    30% {
+    30%,39% {
         opacity:1;
     }
     
@@ -334,7 +321,7 @@ body {
         opacity:0;
     }
     
-    40% {
+    40%,49% {
         opacity:1;
     }
     
@@ -386,7 +373,7 @@ body {
         opacity:0;
     }
     
-    50% {
+    50%,59% {
         opacity:1;
     }
     
@@ -438,7 +425,7 @@ body {
         opacity:0;
     }
     
-    60% {
+    60%,69% {
         opacity:1;
     }
     
@@ -490,7 +477,7 @@ body {
         opacity:0;
     }
     
-    70% {
+    70%,79% {
         opacity:1;
     }
     
@@ -542,7 +529,7 @@ body {
         opacity:0;
     }
     
-    80% {
+    80%,89% {
         opacity:1;
     }
     
@@ -594,7 +581,7 @@ body {
         opacity:0;
     }
     
-    90% {
+    90%,99% {
         opacity:1;
     }
     
