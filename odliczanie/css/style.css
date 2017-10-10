@@ -35,7 +35,6 @@ body {
     background-color: black;
     animation-duration: 10s;
     animation-iteration-count: 1;
-    animation-fill-mode:forwards;
 }
 
 .tekst p {

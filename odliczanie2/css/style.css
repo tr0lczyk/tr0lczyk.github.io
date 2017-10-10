@@ -1,0 +1,128 @@
+/* General rules */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding:0;
+    background-color: black;
+}
+
+.container {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* Elementy wspólne */
+
+.love, .liczby {
+    position: absolute;
+    margin: auto;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    color:white;
+    background-color: black;
+}
+/* Napis końcowy */
+.love {
+    height: 400px;
+    width: 400px;
+}
+
+.tekst p {
+    text-align: center;
+    font-size: 50px;
+    font-family: fantasy;
+    height: auto;
+    margin:0;
+}
+.serce img{
+    width: 100%;
+    animation-name: puls;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-delay:10s;
+}
+
+
+/* wyswietlane liczby */
+
+.liczby {
+    height: 500px;
+    width: 500px;
+    text-align: center;
+    font-size: 26em;
+    opacity:1;
+    animation-name: countdown;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+}
+
+#liczba10 {
+    animation-delay: 0s;
+}
+#liczba9 {
+    animation-delay: 1s;
+}
+#liczba8 {
+    animation-delay: 2s;
+}
+#liczba7 {
+    animation-delay: 3s;
+}
+#liczba6 {
+    animation-delay: 4s;
+}
+#liczba5 {
+    animation-delay: 5s;
+}
+#liczba4 {
+    animation-delay: 6s;
+}
+#liczba3 {
+    animation-delay: 7s;
+}
+#liczba2 {
+    animation-delay: 8s;
+}
+#liczba1 {
+    animation-delay: 9s;
+}
+
+/* Animacje */
+
+@Keyframes countdown {
+    
+    0%,99% {
+        opacity:1;
+    }
+    
+    100% {
+        opacity:0;
+    }
+}
+
+@keyframes puls {
+    0% {
+        transform:scale(1) ;
+        opacity: 1;
+    }
+    
+    50% {
+        transform: scale(0.5) ;
+        opacity:0.6;
+    }
+    
+    100% {
+        transform:scale(1) ;
+        opacity: 1;
+    }
+}
