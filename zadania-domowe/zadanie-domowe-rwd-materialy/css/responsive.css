@@ -1,7 +1,7 @@
 /* poniżej 1170px */
 @media all and (max-width: 1169px) {
     .header {
-      height: 80vh;
+      height: 100vh;
       width:100%;
       background-image: url('https://tr0lczyk.github.io/zadania-domowe/zadanie-domowe-rwd-materialy/obrazy/man-2.jpg');
     }
