@@ -226,3 +226,36 @@ console.log(Math.floor(rozna));
 rozna.toString(36);
 console.log(typeof rozna);
 console.log(rozna);
+
+
+//OPERATORY ARYTMETYCZNE----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//modulo % -zwraca resztę z dzielenia
+
+var new_int = 6 % 4;
+console.log(new_int);
+
+// pre/post inkrementacja/dekrementacja
+liczba = 20;
+console.log(liczba); 
+++liczba;
+console.log(liczba); 
+liczba++;
+console.log(liczba); 
+liczba--;
+liczba--;
+console.log(liczba); 
+
+//* , / , ++ , -- , + , -
+
+
+//operatory przypisania +/=---------------------------------------
+console.log(liczba); 
+liczba += liczba;
+console.log(liczba); 
+liczba -= liczba;
+console.log(liczba); 
+
+
+OPERATORY LOGICZNE --------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+
