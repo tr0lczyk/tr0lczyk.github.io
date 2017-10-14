@@ -255,7 +255,242 @@ console.log(liczba);
 liczba -= liczba;
 console.log(liczba); 
 
+//skrócony zapis if - z lewej strony warunek, znak zapytania? po znaku zapytania instrukcja jezeli prawda, dwukropek, instrukcja jeżeli znak zapytania
 
-OPERATORY LOGICZNE --------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------------
+('2' == 2)? console.log('prawda'): console.log('nieprawda');
 
+if ('2' == 2) {
+    console.log('prawda');
+} else {
+    console.log('fałsz');
+}
+
+('3' != 4)? console.log('fałsz'): console.log('prawda');
+
+
+if ('2' === 2) {
+    console.log('prawda');
+} else {
+    console.log('fałsz');
+}
+
+
+//OPERATORY LOGICZNE ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- and = &&, zwraca true tylko i tylko wtedy, gdy or = ||, not = ! 
+
+if (('2' == 2) && (2>5)) {
+    console.log('prawda');
+} else {
+    console.log('fałsz');
+}
+
+if (('2' == 2) || (2>5)) {
+    console.log('prawda');
+} else {
+    console.log('fałsz');
+}
+
+if (!(('2' !== 2) && (8<4))) {
+    console.log('prawda');
+} else {
+    console.log('fałsz');
+}
+
+
+//Instrukcje warunkowe---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//if else else if
+
+if (2>5) {
+    console.log('2 jest wieksze od 5');
+} else if (3>5) {
+    console.log('3 jest wieksze od 5');
+}  else if (4>5) {
+    console.log('4 jest wieksze od 5');
+}  else if (5==5) {
+    console.log('5 równe 5');
+} else {
+    console.log('nie ma większej od 5');
+}
+
+
+
+//SWITCH
+
+var kolor = 'zielony';
+
+switch(kolor) {
+    case 'czerwony':
+        console.log('kolor czerwony');
+        break;
+    case 'zielony':
+        console.log('kolor zielony');
+        break;
+    case 'niebieski':
+        console.log('kolor niebieski');
+        break;
+    default:
+        console.log('inny kolor');       
+}
+
+
+//PĘTLE-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------for i while
+
+//petla for
+console.log('elementy tablicy:')
+for(var i=0; i < imiona.length; i++){
+    console.log('index: ' + i + 'element' + imiona[i]);
+}
+
+
+//petla forEach - skrócony for
+//miejsca element i index mają znaczenie
+
+imiona.forEach(function(element, index) {
+    console.log('Element z Indexem: ' + index +  'ma wartość ' + element);
+});
+
+
+//Petla while od for róźni się tym , ze stosujemy ja kiedy nie nzamy liczby elementów tablicy. dopóki wartunek jest mozliwy do spełnienia, będzie odbywał się test (true false)
+
+var z = 100;
+while(z>1) {
+    console.log(z);
+    z--;
+    
+    if (z==50) {
+        console.log(z);
+        break; /* petle możemy zatrzymać tak naprawdę poprzez zastosowanie sformułowania break*/
+    }
+}
+
+//continue pozwala na przeskok w iteracji do kolejnej zmiennej.
+
+for (var i = 0; i <10; ++i) {
+    if (i ==5){
+        continue;
+    } else {
+        console.log(i);
+    }
+    
+    console.log('++');
+}
+
+//Petla Do while - jezeli w warunku ma fałsz, wykona się raz, jezeli w warunku ma prawdę wykona się do spełnienia okreslonego warunku
+
+var iter = 20;
+do {
+    console.log(iter);
+    iter--;
+} while (iter > 10);
+
+
+//JSON-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Javascript object natation 
+
+
+var jsonOsoby = {
+    'osoby': [
+        {
+            imie: 'Krystian', 
+            nazwisko: 'Dziopa',
+            wzrost: 180,
+            oczy: 'niebieskie',
+            zainteresowania: [
+                {nazwa: 'programowanie'},
+                {nazwa: 'podróze'},
+                {nazwa: 'jezyki'}
+                
+            ]
+        },
+        {
+            imie: 'Łukasz', 
+            nazwisko: 'Badocha',
+            wzrost: 160,
+            oczy: 'niebieskie',
+            zainteresowania: [
+                {nazwa: 'programowanie'},
+                {nazwa: 'podróze'},
+                {nazwa: 'jezyki'}
+            ]
+        },
+        {
+            imie: 'John', 
+            nazwisko: 'Smith',
+            wzrost: 120,
+            oczy: 'brązowe',
+            zainteresowania: [
+                {nazwa: 'programowanie'},
+                {nazwa: 'podróze'},
+                {nazwa: 'jezyki'}
+            ]   
+        
+        },
+    ]
+}
+
+console.log(jsonOsoby);
+console.log(jsonOsoby.osoby[0].imie);
+
+//for (var i=0; i<jsonOsoby.osoby.length; i++) {
+//    console.log(jsonOsoby.osoby[i].imie);
+//}
+
+//jsonOsoby.osoby[2].zainteresowania.forEach(function(element,index){
+//    console.log(element.nazwa)
+//})
+
+for( var i=0; i < jsonOsoby.osoby.length; i++) {
+    jsonOsoby.osoby[i].zainteresowania.forEach(function(element,index){
+    console.log(element.nazwa)
+})
+}
+
+
+function iloczyn(par1,par2,par3) {
+    var wynik = par1*par2*par3;
+    return wynik;
+}
+
+var i = iloczyn(1,2,3)
+console.log(i);
+
+
+//funkcja do odwracania wyrazów
+
+function wez(wyraz) {
+    var splitWyraz = wyraz.split("");
+    var reverseWyraz = splitWyraz.reverse();
+    var joinWyraz = reverseWyraz.join("");
+    var wynik = joinWyraz;
+    return wynik;
+}
+
+var odwrot = wez("akademia108")
+console.log(odwrot);
+
+//funkcja do sortowania elementów wyrazu
+
+function sortowanie(i) {
+    return i.split("").sort().join("");
+}
+
+var o = sortowanie("akademia108");
+console.log(o);
+
+
+
+var jsonPracownicy = {
+  "pracownicy":[
+    {"firstName": "Krystian", "lastName": "Dziopa"},
+    {"firstName": "Anna", "lastName": "Szapiel"},
+    {"firstName": "Piotr", "lastName": "Żmuda"}
+   ]
+}
+
+for( var i=0; i < jsonPracownicy.pracownicy.length; i++) {
+    jsonPracownicy.pracownicy[i].forEach(function(element,index){
+    console.log(element.nazwa)
+})
+}
