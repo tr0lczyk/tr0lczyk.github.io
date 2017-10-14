@@ -145,3 +145,84 @@ console.log(imiona);
 var tablica_liczb = [10,1,1234,234055, 8329243.89, 187.90, 345];
 tablica_liczb.sort();
 console.log(tablica_liczb);
+
+
+
+//OBIEKTY --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//this - odwołuje się do obiektu jezeli jest umiejscowione w jego wnętrzu klucz podajemy po kropce lub w nawiasach kwadratowych
+
+var object = {
+    name: "mateusz",
+    height: 186,
+    print: function() {
+        console.log(this.name);
+    }
+}
+
+console.log(object.name);
+
+console.log(`${object.name} to jest swietny gość, ma ${object.height} cm wzrostu.`);
+
+object.print();
+
+object.weight = 82;
+object.printDetail = function() { // dodawanie metody
+console.log(this.name + " " + this.height + " " + this.weight);
+}
+
+console.log(object);
+object.printDetail();
+
+
+
+//KLASY-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+class Osoba {
+    constructor(imie, nazwisko, wzrost) {
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.wzrost = wzrost;
+    }
+    wyswietlInfo() {
+        console.log( "Imię: " + this.imie + ", " + "Nazwisko: " + this.nazwisko + ", wzrost " + this.wzrost);
+    }
+}
+
+var krystian = new Osoba('Krystian', 'Dziopa','186');
+krystian.wyswietlInfo();
+
+
+var lukasz= new Osoba('Lukasz','Badocha',175);
+lukasz.wyswietlInfo();
+
+krystian.imie = 'Pawel';
+console.log(krystian.imie);
+console.log(krystian);
+
+
+class gry {
+    constructor(tytuł,gatunek,wydawca) {
+        this.tytuł = tytuł;
+        this.gatunek = gatunek;
+        this.wydawca = wydawca;
+    }
+    displayInfo() {
+        console.log("Nazwa: " + this.tytuł + ", Gatunek: " + this.gatunek + ", wydawca: " + this.wydawca);
+    }
+}
+
+var mass_effect = new gry('Mass effect', 'RPG', 'EA');
+mass_effect.displayInfo();
+
+//OBIEKT MATH-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Math.random - wypisuje różne wartości w przedziale od 0-1. Jezeli dodatkowo zanczymy *x to przedział liczbowy od do, zmieni się na maxymalnie x.
+
+var rozna = Math.random()*100;
+console.log(typeof rozna);
+console.log(Math.floor(rozna));
+
+rozna.toString(36);
+console.log(typeof rozna);
+console.log(rozna);
