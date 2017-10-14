@@ -489,8 +489,8 @@ var jsonPracownicy = {
    ]
 }
 
-for( var i=0; i < jsonPracownicy.pracownicy.length; i++) {
-    jsonPracownicy.pracownicy[i].forEach(function(element,index){
+//for( var i=0; i < jsonPracownicy.pracownicy.length; i++) {
+    jsonPracownicy.pracownicy.forEach(function(element,index){
     console.log(element.nazwa)
 })
-}
+//}
