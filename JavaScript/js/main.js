@@ -479,7 +479,7 @@ function sortowanie(i) {
 var o = sortowanie("akademia108");
 console.log(o);
 
-
+//funkcja do wyśwuietlania własciwości każdego z elementów
 
 var jsonPracownicy = {
   "pracownicy":[
@@ -491,6 +491,9 @@ var jsonPracownicy = {
 
 //for( var i=0; i < jsonPracownicy.pracownicy.length; i++) {
     jsonPracownicy.pracownicy.forEach(function(element,index){
-    console.log(element.nazwa)
+    console.log('Element z Indexem: ' + index + ' nazywa się ' +element.firstName,element.lastName)
 })
 //}
+
+
+
