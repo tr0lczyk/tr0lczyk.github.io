@@ -108,10 +108,12 @@ console.log(classAtr);
 //dodajemy wezeł do body
 
 document.body.appendChild(btn);
+//document.getElementById('sectionFirst').appendChild(btn);
+
 btn.appendChild(textBtn); //dodaj tekst do utworzonego button
 btn.setAttributeNode(classAtr); // dodaw wezeł atrybutu
 btn.setAttribute('href', '#'); //nowy atrybut wraz z zawartością
-document.getElementById('sectionFirst').appendChild(btn);
+document.getElementById('parSecond').insertBefore(btn, document.getElementById('parSecond').firstElementChild);
 
 //STQORZENIE PARAGRAFU
 
@@ -125,7 +127,43 @@ par.setAttribute('id','para1');
 var inpoot = document.createElement('input');
 document.body.appendChild(inpoot);
 inpoot.setAttribute('type','textarea');
-inpoot.setAttribute('placeholder', 'dupa')
+inpoot.setAttribute('placeholder', 'dupa');
+
+var inpoot2 = document.createElement('input');
+document.body.appendChild(inpoot2);
+inpoot2.setAttribute('type','textarea');
+inpoot2.setAttribute('placeholder', 'zopa');
+
+document.body.replaceChild(inpoot2, inpoot);
+
+var inpoot3 = document.createElement('input');
+document.body.appendChild(inpoot3);
+inpoot3.setAttribute('type','textarea');
+inpoot3.setAttribute('placeholder', 'mopa');
+inpoot3.setAttribute('class', 'form');
+
+inpoot2.removeAttribute('placeholder');
+
+
+
+var inpoot4 = document.createElement('input');
+document.body.appendChild(inpoot4);
+ var attributes = ['type', 'placeholder','class'];
+ var values = ['textarea','jopa','form'];
+
+for(var i=0; i<attributes.length; i++) {
+    inpoot4.setAttribute(attributes[i],values[i])
+}
+
+
+//USUWANIE WĘZŁÓW
+
+console.log(document.getElementById('sectionFirst').childNodes[9]);
+document.getElementById('sectionFirst').removeChild(document.getElementById('sectionFirst').childNodes[9]);
+
+
+
+
 
 
 
