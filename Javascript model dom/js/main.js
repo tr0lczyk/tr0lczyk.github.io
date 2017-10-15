@@ -215,9 +215,9 @@ document.addEventListener( "DOMContentLoaded", function() {
     
 //    Obsługa eventów------------------------------------------------------------------------------------------------------------------------------------------=
     
-    document.getElementById('btn_2').onclick = function czyDziała() {
-        console.log('Działa');
-    }
+//    document.getElementById('btn_2').onclick = function czyDziała() {
+//        console.log('Działa');
+//    }
     
     document.getElementById('parFirst').addEventListener('click',czyDziała);
     document.getElementById('parFirst').removeEventListener('click',czyDziała);
@@ -234,10 +234,17 @@ document.addEventListener( "DOMContentLoaded", function() {
         e.preventDefault();
     });
     
+//    przyisanie funkcji do określonego zadania
+    document.getElementById('btn_2').addEventListener('click', czyDziała2);
     
 //KONIEC EVENTÓW--------------------------------------
 });
 
 function czyDziała() {
    console.log('click');
+}
+
+function czyDziała2(e) {
+    e.stopPropagation(); //blokuje działanie innych funkcji powyzej, innych już nie blokuje
+   console.log('czydziałą2');
 }
