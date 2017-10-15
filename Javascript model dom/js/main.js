@@ -222,6 +222,19 @@ document.addEventListener( "DOMContentLoaded", function() {
     document.getElementById('parFirst').addEventListener('click',czyDziała);
     document.getElementById('parFirst').removeEventListener('click',czyDziała);
     
+//    za pomocą removeEventListener nie mozna usunać wywołąnia funkcji z html
+    document.getElementById('parSecond').removeEventListener('click',czyDziała);
+    
+    document.getElementById( "link" ).addEventListener( 'click', function(e){
+        if (!e) var e = window.event; // dla IE
+        console.log(e.type);
+    } );
+    document.getElementById('last_last_anchor').addEventListener('click',function(e){
+        console.log('123');
+        e.preventDefault();
+    });
+    
+    
 //KONIEC EVENTÓW--------------------------------------
 });
 
