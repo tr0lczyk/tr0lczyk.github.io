@@ -66,6 +66,9 @@ console.log(elementParent);
 var parSecondChilds = document.getElementById('parSecond').childNodes;
 console.log(parSecondChilds);
 
+var parSecondChilds2 = document.getElementById('parSecond').children;
+console.log(parSecondChilds);
+
 var firstNodeOfParSecond = document.getElementById('parSecond').childNodes[0];
 console.log(firstNodeOfParSecond);
 
@@ -77,3 +80,53 @@ console.log(pierwszyDiv.children);
 
 console.log(pierwszyDiv.firstchild);
 console.log(pierwszyDiv.lastchild);
+
+////DOstęp do wczesniejszego/następnego rodzeństwa danego elementu
+
+console.log(pierwszyDiv.nextSibling);
+console.log(pierwszyDiv.previousSibling);
+
+//aby zobaczyć jakiego typu jest węzeł, uzywamy nodeType
+
+console.log(pierwszyDiv.firstChild.nextSibling.nodeType);
+
+pierwszyDiv.childNodes.forEach(function(element) {
+    if(element.nodeType == 3) {
+        console.log(element);
+    }
+})
+
+//Tworzymy węzły i dodajemy je do drzewka dodawanie atrybutó, dodawanie wartości za pomocą odpowiednich komend 
+
+var btn = document.createElement('button'); //tworzy element button
+var textBtn = document.createTextNode('Click me'); //tworzy tekst
+var classAtr = document.createAttribute('class'); //ustawiamy klasę tego atrybutu
+classAtr.value = 'btn'; //ustawia wartość atrybutu
+console.log(classAtr);
+
+
+//dodajemy wezeł do body
+
+document.body.appendChild(btn);
+btn.appendChild(textBtn); //dodaj tekst do utworzonego button
+btn.setAttributeNode(classAtr); // dodaw wezeł atrybutu
+btn.setAttribute('href', '#'); //nowy atrybut wraz z zawartością
+document.getElementById('sectionFirst').appendChild(btn);
+
+//STQORZENIE PARAGRAFU
+
+var par = document.createElement('p');
+var parText = document.createTextNode('Lorem Ipsum');
+
+document.body.appendChild(par);
+par.appendChild(parText);
+par.setAttribute('id','para1');
+
+var inpoot = document.createElement('input');
+document.body.appendChild(inpoot);
+inpoot.setAttribute('type','textarea');
+inpoot.setAttribute('placeholder', 'dupa')
+
+
+
+
