@@ -12,6 +12,7 @@ body {
     display:inline-block;
     color:white;
     text-align: center;
+    width:100%;
 }
 
 #added .prepend h1:empty {
@@ -54,4 +55,10 @@ body {
     width: 600px;
     height: 600px;
     overflow:hidden;
+}
+
+#akordeon .acordian {
+    background-color: red;
+    border: 1px solid black;
+    box-sizing: border-box;
 }

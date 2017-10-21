@@ -1,7 +1,7 @@
 //$ = jQuery
 
 $(document).ready(function() {
-    hideShow();
+//    hideShow();
     showNumberOfP();
     changeClassColor();
     showText();
@@ -15,6 +15,9 @@ $(document).ready(function() {
     changeLinksColor();
     dontRefresh();
     onMethod();
+//    hidePoKolei();
+    fadeOutFadeIn();
+    acordian()
 });
 
 
@@ -28,22 +31,22 @@ $(window).scroll(function() {
 });
 
 
-function showFirst() {
-    $('#first').show(3000);
-}
-
-
-//zmienia css, ukrywa i pokazuje element
-function hideShow() {
-//    $('#first').css('background-color','red').hide('slow').show(3000);
-       $('#first').css('background-color','red').hide('slow',showFirst);
-    //metoda .css, jeżeli zmieniamy więcej niż jedną włąsciwość to pary włąsciwość: wartość , muszą znaleźć się w nawiasie klamrowym{}.
-    /*$('#first').css({
-        'background-color' : 'red',
-        'height' : '70vh',
-        'width' : '50%'
-    });*/
-}
+//function showFirst() {
+//    $('#first').show(3000);
+//}
+//
+//
+////zmienia css, ukrywa i pokazuje element
+//function hideShow() {
+////    $('#first').css('background-color','red').hide('slow').show(3000);
+//       $('#first').css('background-color','red').hide('slow',showFirst);
+//    //metoda .css, jeżeli zmieniamy więcej niż jedną włąsciwość to pary włąsciwość: wartość , muszą znaleźć się w nawiasie klamrowym{}.
+//    /*$('#first').css({
+//        'background-color' : 'red',
+//        'height' : '70vh',
+//        'width' : '50%'
+//    });*/
+//}
 
 /*
 function hideShow() {
@@ -55,7 +58,7 @@ document.getElementById('first').style.background = 'red';
 
 //rejestrujemy zdarzenie "DOMContentLoad" za pomocą addEventlistener na obiekcie document
 document.addEventListener('DOMContentLoad',function() {
-    hideShow();
+//    hideShow();
 })
 
 //pokazuje liczbę elementów [ w kontenerze #first
@@ -181,3 +184,36 @@ function onMethod() {
         },
     })
 }
+
+function hidePoKolei() {
+    $( "#hide" ).click( function() {
+        $('p').hide(300);
+    });
+}
+
+//poniższa funkcja sprawia ze zmniejsza si idocznośc wziętego pod uwagę obiektu, ale dodatkowo kiedy zejdzie do zera obiekt staje się display none. kiedy natomiast opacity podskoczy do jakiejś wartości na plusie, wchodzi display block
+
+function fadeOutFadeIn() {
+    $( "#hide" ).click( function() {
+        $('#first p:eq(1)').fadeOut('slow');
+    });
+    $( "#show" ).click( function() {
+        $('#first p:eq(1)').fadeIn('slow');
+    });
+
+}
+
+function acordian() {
+    $('#akordeon #hide_2').click(function() {
+        $('#akordeon .acordian').slideUp(3000);
+    });
+    
+    $('#akordeon #show_2').click(function() {
+        $('#akordeon .acordian').slideDown(3000);
+    });
+}
+    
+
+
+
+
