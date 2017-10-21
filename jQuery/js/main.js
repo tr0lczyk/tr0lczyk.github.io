@@ -8,7 +8,12 @@ $(document).ready(function() {
     showHTML();
     addText();
     deleteContent();
-    emptyContent()
+    emptyContent();
+    showInputValue();
+    addClassToNav();
+    scrolled();
+    changeLinksColor();
+    dontRefresh();
 });
 
 
@@ -17,6 +22,7 @@ $(window).resize(function() {
 });
 
 $(window).scroll(function() {
+    scrolled();
     
 });
 
@@ -89,3 +95,65 @@ function deleteContent() {
 function emptyContent() {
     $('#added .prepend h1').empty();
 } 
+
+//METODA VAL
+// bez parametrów - zwraca wartość z input formularza
+//z parametrem - ustawia wartość input formularza
+
+function showInputValue() {
+    $('#form form input').val('Tekst')
+    $('#form form input').each(function() {
+        $(this).change(function() {
+            console.log($(this).val());
+        });
+    });
+}
+
+//addClass dodaje klasę/y
+//removeClass - usuwa klasę/y
+function addClassToNav() {
+    $('#main-nav').addClass('blue-background');
+}
+
+function removeClassToNav() {
+    $('#main-nav').removeClass('blue-background');
+}
+
+function scrolled() {
+    var windowPosition = $(window).scrollTop();
+    var navHeight = $('#main-nav').height();
+    console.log($(window).scrollTop());
+    console.log($('#main-nav').height());
+    if(windowPosition  > navHeight) {
+        $('#main-nav').addClass('blue-background');
+    } else {
+        $('#main-nav').removeClass('blue-background');
+    }
+}
+
+//Metoda find posiada !!!!wymagany parametr!!!!!
+
+
+function changeLinksColor() {
+    var parent = $('#main-nav ul .list-item');
+    parent.each(function() {
+        $(this).mouseenter(function() {
+            $(this).find('a').css('color','gray');
+        }).mouseleave(function() {
+            $(this).find('a').css('color','white');
+        });
+    });
+}
+
+function dontRefresh() {
+    var parent = $('#main-nav ul .list-item a');
+    parent.each(function() {
+        $(this).click(function(event) {
+//            event.preventDefault();
+//            console.log($(this).attr('href'));
+            if ($(this).attr('href') == '' || $(this).attr('href') == '#' ){
+                event.preventDefault();
+            }
+        });
+    });
+}

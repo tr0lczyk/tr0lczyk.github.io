@@ -6,7 +6,6 @@ body {
     padding: 0;
     margin: 0;
 }
-
 #first {
     background-color: green;
     height: 50vh;
@@ -19,4 +18,34 @@ body {
     width: 50%;
     height: 20vh;
     background-color: aqua;
+}
+
+/*nawigacja*/
+/*przy zmianie pozycji blok dopasowuje się do kontentu nalezy pamiętać o rozciągnięciu*/
+#main-nav {
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index:1;
+    background-color: black;
+    height:50px;
+    text-align: right;
+    transition: all 0.4s;
+}
+
+#main-nav.blue-background {
+    background-color: blue;
+}
+#main-nav ul {
+    list-style-type: none;
+}
+
+#main-nav ul .list-item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#main-nav ul .list-item a {
+    color:white;
+    text-decoration: none;
 }
