@@ -14,6 +14,7 @@ $(document).ready(function() {
     scrolled();
     changeLinksColor();
     dontRefresh();
+    onMethod();
 });
 
 
@@ -26,9 +27,16 @@ $(window).scroll(function() {
     
 });
 
+
+function showFirst() {
+    $('#first').show(3000);
+}
+
+
 //zmienia css, ukrywa i pokazuje element
 function hideShow() {
-    $('#first').css('background-color','red').hide('slow').show(3000);
+//    $('#first').css('background-color','red').hide('slow').show(3000);
+       $('#first').css('background-color','red').hide('slow',showFirst);
     //metoda .css, jeżeli zmieniamy więcej niż jedną włąsciwość to pary włąsciwość: wartość , muszą znaleźć się w nawiasie klamrowym{}.
     /*$('#first').css({
         'background-color' : 'red',
@@ -156,4 +164,20 @@ function dontRefresh() {
             }
         });
     });
+}
+
+//metoda .on, złuzy do podpinania więcej niż jednego zdarzenia
+
+function onMethod() {
+    $('#onMethod img').on({
+        'click' : function() {
+            alert('kliknales obrazek');
+        },
+        'mouseenter': function() {
+            $(this).css('transform','scale(1.2)');
+        },
+        'mouseleave': function() {
+            $(this).css('transform','scale(1)');
+        },
+    })
 }

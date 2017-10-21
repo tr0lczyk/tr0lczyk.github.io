@@ -49,3 +49,9 @@ body {
     color:white;
     text-decoration: none;
 }
+
+#onMethod {
+    width: 600px;
+    height: 600px;
+    overflow:hidden;
+}
