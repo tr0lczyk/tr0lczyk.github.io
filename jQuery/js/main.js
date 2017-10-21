@@ -4,6 +4,8 @@ $(document).ready(function() {
     hideShow();
     showNumberOfP();
     changeClassColor();
+    showText();
+    showHTML();
 });
 
 
@@ -50,4 +52,16 @@ function changeClassColor() {
         'color': 'green',
         'font-size': '30px'
     });
+}
+//bez parametru - pokazuje zawartość tekstową elementów o klasie green 
+//z podanym parametrem - zmienia zawartość tekstową elementów
+function showText() {
+    console.log($('.green').text());
+    $('.green').text(' ');
+}
+
+
+function showHTML() {
+    console.log($('.green').html());
+    $('.green').html('<h2>tekst</h2>');
 }
