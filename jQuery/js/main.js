@@ -6,6 +6,9 @@ $(document).ready(function() {
     changeClassColor();
     showText();
     showHTML();
+    addText();
+    deleteContent();
+    emptyContent()
 });
 
 
@@ -65,3 +68,24 @@ function showHTML() {
     console.log($('.green').html());
     $('.green').html('<h2>tekst</h2>');
 }
+
+//metody dodające treść
+//append() , prepend(), before(), after() 
+//próćz tekstu można wstrzykiwać zawartość html
+function addText() {
+    $('#added .append').append('<h1>What will we do with a drunkin sailor?</h1>');
+    $('#added .prepend').prepend('<h1>What will we do with a drunkin sailor??</h1>');
+    $('#added .before').before('<h1>What will we do with a drunkin sailor???</h1>');
+    $('#added .after').after('<h1>early in the morning!</h1>');
+}
+
+//remove() empty()
+//remove usuwa znacznik z HTML
+//empty usuwa treść ze znacznika, pozostawiając sam znacznik
+function deleteContent() {
+    $('#added .append').remove();
+} 
+
+function emptyContent() {
+    $('#added .prepend h1').empty();
+} 

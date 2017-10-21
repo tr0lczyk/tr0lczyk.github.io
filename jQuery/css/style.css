@@ -14,3 +14,9 @@ body {
     color:white;
     text-align: center;
 }
+
+#added .prepend h1:empty {
+    width: 50%;
+    height: 20vh;
+    background-color: aqua;
+}
