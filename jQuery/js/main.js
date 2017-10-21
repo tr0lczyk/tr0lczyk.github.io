@@ -203,16 +203,29 @@ function fadeOutFadeIn() {
 
 }
 
+
+//ANIMACJE BEZPOŚREDNIO W JQUERY
 function acordian() {
     $('#akordeon #hide_2').click(function() {
-        $('#akordeon .acordian').slideUp(3000);
+//        $('#akordeon .acordian').slideUp(3000);
+        $('#akordeon .acordian').animate({
+            'height' : '500px',
+            'width' : '50%',
+        }, 5000, function() {
+            $('#akordeon .acordian p').css('color', 'white');
+        });
     });
     
     $('#akordeon #show_2').click(function() {
-        $('#akordeon .acordian').slideDown(3000);
+//        $('#akordeon .acordian').slideDown(3000);
+        $('#akordeon .acordian').animate({
+            'height' : '200px',
+            'width' : '100%',
+        }, 5000);
     });
 }
     
+
 
 
 
