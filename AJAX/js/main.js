@@ -1,9 +1,9 @@
 
 function ajax(ajaxOptions) {
     var options = {
-        type: ajaxOptions.type || 'POST',
+        type: ajaxOptions.type || 'POST', 
         url: ajaxOptions.url || '',
-        onError: ajaxOPtions.onError || function () {},
+        onError: ajaxOptions.onError || function () {},
         onSuccess: ajaxOptions.onSuccess || function () {},
         dataType: ajaxOptions.dataType || 'text'
     };
@@ -39,12 +39,36 @@ function ajax(ajaxOptions) {
                 var returnData = (options.dataType == 'xml')? httpReq.responseXML : httpReq.responseText;
                 
                 options.onSuccess(returnData);
+                
+                //zeruj obiekt, aby nie utrzymać niepotrzebnego połączenia z serwerem
+                httpReq = null;
+            } else {
+                //jezeli blad
+                options.onError(httpReq.statusText)
             }
         }
     }
+    httpReq.send();
 }
 
-//ajax({
-//
-//
-//})
+ajax({
+    type:'GET', url :'http://echo.jsontest.com/userId/108/userName/Akademia108/userURL/akademia108.pl', onError:function(){
+        console.log('Nie udało się nawiązać połączenia');
+    },
+    onSuccess: function(response) {
+        console.log(response);
+        
+        var jsonObj = JSON.parse(response);
+        console.log(jsonObj.userId);
+        console.log(jsonObj.userName);
+        console.log(jsonObj.userURL);
+        console.log('User ID: '+jsonObj.userId+' User name: '+ jsonObj.userName+' User url: '+ jsonObj.userURL);
+        
+        var paragraf = document.createElement('p');
+//        var text = jsonObj.uderId;
+        paragraf.innerText = 'UserID: ' + jsonObj.userId;
+        document.getElementById('odebraneDane').appendChild(paragraf);
+        
+//        console.log('połączenie działa');
+    }
+})
