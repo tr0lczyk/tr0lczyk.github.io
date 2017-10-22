@@ -1,22 +1,3 @@
-$(document).ready(function(){
-    
-    
-    
-    
-    
-    
-    
-})
-
-$(window).onscroll(function(){
-    
-    
-    
-    
-    
-    
-    
-})
 
 function ajax(ajaxOptions) {
     var options = {
@@ -70,44 +51,21 @@ function ajax(ajaxOptions) {
     httpReq.send();
 }
 
+function pobierzDane(event) {
+    var event = ajax();
+}
 
-    ajax({
+
+
+
+ajax({
         type:'GET', url :'http://echo.jsontest.com/userId/108/userName/Akademia108/userURL/akademia108.pl', onError:function(){
             console.log('Nie udało się nawiązać połączenia');
         },
         onSuccess: function(response) {
             console.log(response);
 
-            var jsonObj = JSON.parse(response);
-            
-//            var paragraf = document.createElement('p');
-//    //        var text = jsonObj.uderId;
-//            paragraf.innerText = 'UserID: ' + jsonObj.userId;
-//            document.getElementById('odebraneDane1').appendChild(paragraf);
-//            
-//            var paragraf2 = document.createElement('p');
-//    //        var text = jsonObj.uderId;
-//            paragraf2.innerText = 'User Name: ' + jsonObj.userName;
-//            document.getElementById('odebraneDane2').appendChild(paragraf2);
-//            
-//            var paragraf3 = document.createElement('p');
-//    //        var text = jsonObj.uderId;
-//            paragraf3.innerText = 'UserURL: ' + jsonObj.userURL;
-//            document.getElementById('odebraneDane3').appendChild(paragraf3);
-
-    //        console.log('połączenie działa');
-            
-            var paragraf = document.createElement('p');
-            var paragraf2 = document.createElement('p');
-            var paragraf3 = document.createElement('p');
-            
-            paragraf.innerText = 'UserID: ' + jsonObj.userId;
-            paragraf2.innerText = 'User Name: ' + jsonObj.userName;
-            paragraf3.innerText = 'UserURL: ' + jsonObj.userURL;
-   
-            document.getElementById('odebraneDane1').appendChild(paragraf);
-            document.getElementById('odebraneDane1').appendChild(paragraf2);
-            document.getElementById('odebraneDane1').appendChild(paragraf3);
-
-        }
+             }
     })
+
+            
