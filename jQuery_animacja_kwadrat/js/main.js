@@ -9,9 +9,16 @@ function przesunTo(){
             left:'100px',
             width: '100px',
             height: '100px'
-        },3000);
-    });
-}
+        },3000,function(){
+            $('div').css({
+                'background-color': 'blue',
+                'transition': 'all 5s'
+            }, function(){
+                $('div').after('<h2>Animacja Zakończona</h2>')
+            })
+        })}
+                     )} 
+
 
 function wyswietl(){
     $('button').click(function(){
