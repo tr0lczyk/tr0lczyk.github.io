@@ -1,6 +1,5 @@
 $(document).ready(function() {
     przesunTo();
-    wyswietl();
 });
 
 function przesunTo(){
@@ -13,15 +12,8 @@ function przesunTo(){
             $('div').css({
                 'background-color': 'blue',
                 'transition': 'all 5s'
-            }, function(){
-                $('div').after('<h2>Animacja Zakończona</h2>')
-            })
+            }), function(){ 
+                $("div").append('<h2>Animacja Zakończona</h2>');
+            }
         })}
-                     )} 
-
-
-function wyswietl(){
-    $('button').click(function(){
-        console.log('nacisniete');
-    });
-}
+                     )}

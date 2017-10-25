@@ -2,10 +2,11 @@
   width: 200px;
   height:200px;
   background-color: red;
-  position: absolute;
+  position: relative;
 }
 
-#kwadrat h2 {
-    color:white;
+h2 {
     text-align: center;
+    color:white;
+    display:none;
 }
