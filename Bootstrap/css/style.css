@@ -9,16 +9,18 @@ body {
 
 .pierwszy {
     background-color: red;
-    overflow:hidden;
+    overflow: hidden;
     height: 150px;
 }
 
 .drugi {
-    background-color: green;
-    
+    background-color: coral;
 }
 
 .blue {
     background-color: blue;
-    
+}
+
+button {
+    cursor: pointer;
 }
