@@ -3,14 +3,13 @@ body {
 }
 
 .pierwszy {
-    height: 60px;
+    
     margin-bottom: 10px;
 }
 
 .pierwszy {
     background-color: red;
-    overflow: hidden;
-    height: 150px;
+    
 }
 
 .drugi {
@@ -23,4 +22,14 @@ body {
 
 button {
     cursor: pointer;
+}
+
+.myBtn {
+    background-color: red;
+    text-transform: uppercase;
+    transition: all 0.4s;
+}
+
+.myBtn:hover {
+    opacity: 0.4;
 }
