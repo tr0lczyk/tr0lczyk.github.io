@@ -5,10 +5,12 @@ body {
 .pierwszy {
     
     margin-bottom: 10px;
+    background-color: red;
+    overflow: hidden;
 }
 
 .pierwszy {
-    background-color: red;
+    
     
 }
 
@@ -33,3 +35,30 @@ button {
 .myBtn:hover {
     opacity: 0.4;
 }
+
+#carouselExampleControls {
+    height: 100vh;
+    
+}
+
+#carouselExampleControls .carousel-inner,
+#carouselExampleControls .carousel-inner .carousel-item,
+#carouselExampleControls .carousel-inner .carousel-item img {
+    height: 100%;
+}
+
+#carouselExampleControls .carousel-inner .carousel-item img {
+    object-fit: cover;
+}
+/*W karuzelni neikoniecznie musimy korzystać ze znacznika img(będzie przeszkadzał jezeli chodzi o skalowanie obrazków) możemy włozyćdiva i kazać mu zachowywać się jako tło (lepsza sterowność nad skalowaniem, wysokością i szerokością)*/
+
+/*obrazki można rozciągnac za pomocą object-fit; należy przy tym pamiętać ze obrazki muszą mieć określoną wysokość i szerokość*/
+
+.origin {
+    background: url('https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg') no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size:cover;
+}
+
+
