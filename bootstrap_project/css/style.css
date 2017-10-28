@@ -1,7 +1,7 @@
 body {
     margin: 0;
 }
-
+/* MENU NAWIGACYJNE START */
 #main-nav {
     background-color: transparent;
     transition: all 0.4s;
@@ -31,6 +31,12 @@ body {
     background-color:rgba(14,216,214,0.75);
 }
 
+/* MENU NAWIGACYJNE STOP */
+
+
+/* GŁÓWNY TYTUŁ START */
+
+
 #main-header{
     background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../img/header/pictures_on_the_wall.jpg');
     height: 100vh;
@@ -55,6 +61,11 @@ body {
     background-color: #0ed8d6;
 }
 
+
+/* GŁÓWNY TYTUŁ STOP */
+
+/* sekcja serwises1 start */
+
 .section_container {
     height: 20vh;
     display:flex;
@@ -63,6 +74,10 @@ body {
     margin-bottom: 60px;;
 }
 
+/* sekcja serwises1 stOP */
+
+
+/* SEKCJA SERWISES2 START */
 #section_container2 {
     height: 60vh;
 }
@@ -79,7 +94,18 @@ body {
     cursor:pointer;
     margin: 0 auto;
 }
+.font_awesome:hover {
+    background-color: white;
+    border: 3px solid #0ed8d6;
+}
+
+.font_awesome:hover i {
+    color:#0ed8d6;
+}
+
 
 .serwisy>h6 {
     margin:20px 0;
 }
+
+/* SEKCJA SERWISES2 STOP */
