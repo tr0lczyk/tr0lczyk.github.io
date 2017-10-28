@@ -2,19 +2,43 @@ body {
     margin: 0;
 }
 
-#main-header{
-    background-image: url('../img/header/pictures_on_the_wall.jpg');
-    height: 100vh;
-    color: white;
-    object-fit: cover;
-    justify-content: center;
-    align-items: center;
-    flex-wrap:nowrap;
-    display:flex;
+#main-nav {
+    background-color: transparent;
+    transition: all 0.4s;
 }
 
-.myButton {
-    align-self: auto;
+#main-nav .navbar-brand {
+    color: #FFF;
+    font-family: 'Droid Sarif', sans-serif;
+    font-size:2em;
+    transition:all 0.4s;
+}
+
+#main-nav .navbar-nav .nav-item .nav-link {
+    text-transform:uppercase;
+    color: #FFF;
+    font-family: 'Montserrat', 'sans-seriff';
+    font-weight: bold;
+    transition: all 0.4s;
+}
+
+#main-nav .navbar-brand:hover,
+#main-nav .navbar-nav .nav-item .nav-link:hover {
+    color: #0ED8D6;
+}
+
+#main-nav.transparent_blue {
+    background-color:rgba(14,216,214,0.75);
+}
+
+#main-header{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../img/header/pictures_on_the_wall.jpg');
+    height: 100vh;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    
 }
 
 .kursywa {
@@ -25,4 +49,37 @@ body {
 
 .pozostaly {
     font-family: RobotoSlab;
+}
+
+.myButton {
+    background-color: #0ed8d6;
+}
+
+.section_container {
+    height: 20vh;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 60px;;
+}
+
+#section_container2 {
+    height: 60vh;
+}
+
+.font_awesome {
+    height: 100px;
+    width: 100px;
+    border-radius:50%;
+    background-color:#0ed8d6;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    cursor:pointer;
+    margin: 0 auto;
+}
+
+.serwisy>h6 {
+    margin:20px 0;
 }

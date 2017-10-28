@@ -7,46 +7,84 @@
     <title>bootstrap_project</title>
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <!--    Navigation menu-->
-    <div class="container">
-        <nav id="main-nav" class="navbar fixed-top navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">Bootstrap Project</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav id="main-nav" class="navbar fixed-top navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Bootstrap Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
   		</button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav  ml-auto w-100 justify-content-end text-right">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#team">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ml-auto w-100 justify-content-end text-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
 
     <!--header-->
     <header id="main-header">
-        <div class="row">
-            <div class="col-lg-12">
-                <h4 id='kursywa' class="text-center">Nam libero tempore, cum soluta</h4>
-                <h1 id='pozostaly' class="text-center text-uppercase pozostaly">Lorem Ipsum Dolor</h1>
-                <button type="button" class="btn btn-primary btn-lg text-uppercase myButton">Primary</button>
-            </div>
+        <div class=" header_content text-center">
+            <h4 id='kursywa' class="text-center">Nam libero tempore, cum soluta</h4>
+            <h1 id='pozostaly' class="text-center text-uppercase pozostaly">Lorem Ipsum Dolor</h1>
+            <button type="button" class="btn btn-info btn-lg myButton">VIEW ME</button>
         </div>
     </header>
     <!--header stop-->
+
+    <!-- Sekcja z tytułem START-->
+
+    <section class="section_container">
+        <div class="section_content">
+            <h1 class="text-center">SERVICES</h1>
+            <h5 class="text-center">Praesentium voluptatum deleniti atque corrupti</h5>
+        </div>
+    </section>
+    <!--   Sekcja z tytułem STOP-->
+
+    <!--   Sekcja z serwisami i font awesome START-->
+    <section id='section_container2' class="container">
+        <div class="row">
+            <div class="col-sm-4 serwisy">
+                <div class='font_awesome'>
+                    <i class="fa fa-suitcase fa-3x" aria-hidden="true"></i>
+                </div>
+                <h6 class='text-center'>Web development</h6>
+                <p class='text-center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur quod quas omnis repudiandae, dolor labore sapiente voluptate nesciunt recusandae harum placeat expedita assumenda modi dolore aliquam, reprehenderit nulla adipisci corporis.</p>
+            </div>
+            <div class="col-sm-4 serwisy">
+                <div class='font_awesome text-center'>
+                    <i class="fa fa-cloud-download fa-3x" aria-hidden="true"></i>
+                </div>
+                <h6 class='text-center'>E-commerce</h6>
+                <p class='text-center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo et architecto, culpa ex. Pariatur, suscipit iste deleniti cum nobis, ut perferendis facere laboriosam ad aliquid repellendus obcaecati non laborum eaque?</p>
+            </div>
+            <div class="col-sm-4 serwisy">
+                <div class='font_awesome'>
+                    <i class="fa fa-comments fa-3x" aria-hidden="true"></i>
+                </div>
+                <h6 class='text-center'>Web design</h6>
+                <p class='text-center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, molestias officia id aspernatur accusantium molestiae odio fugiat quod possimus velit facilis, eius, ea iste facere. Fugiat aut ipsam accusamus, dolore!</p>
+            </div>
+        </div>
+    </section>
+
+    <!--   Sekcja z serwisami i font awesome STOP-->
+
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
