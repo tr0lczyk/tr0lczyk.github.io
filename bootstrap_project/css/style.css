@@ -1,6 +1,10 @@
 body {
     margin: 0;
 }
+
+section {
+    padding: 60px 30px;
+}
 /* MENU NAWIGACYJNE START */
 #main-nav {
     background-color: transparent;
@@ -80,32 +84,63 @@ body {
 /* SEKCJA SERWISES2 START */
 #section_container2 {
     height: 60vh;
+    text-align: center;
 }
 
-.font_awesome {
-    height: 100px;
+.info i {
     width: 100px;
+    height: 100px;
+    line-height: 95px;
+    background-color: #0ed8d6;
+    border:1px solid #0ed8d6;
     border-radius:50%;
-    background-color:#0ed8d6;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    color:white;
-    cursor:pointer;
-    margin: 0 auto;
+    transition: all 0.4s;
+    color: white;
 }
-.font_awesome:hover {
+
+.info i:hover {
     background-color: white;
-    border: 3px solid #0ed8d6;
-}
-
-.font_awesome:hover i {
     color:#0ed8d6;
+    transform: rotate(360deg);
 }
-
 
 .serwisy>h6 {
     margin:20px 0;
 }
 
 /* SEKCJA SERWISES2 STOP */
+
+/* SEKCJA PORTFOLIO START */
+.obrazek1 {
+    background-image: url('../img/portfolio/box_of_cookies.jpg');
+}
+
+.obrazek2 {
+    background-image: url('../img/portfolio/chaotic_paint.jpg');
+}
+
+.obrazek3 {
+    background-image: url('../img/portfolio/chestnut_on_bracket.jpg');
+}
+
+.obrazek4 {
+    background-image: url('../img/portfolio/child_with_blue_paint.jpg');
+}
+
+.obrazek5 {
+    background-image: url('../img/portfolio/house_with_blue_doors.jpg');
+}
+
+.obrazek6 {
+    background-image: url('../img/portfolio/typing_on_laptop.jpg');
+}
+
+.obrazek {
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* SEKCJA PORTFOLIO STOP */
