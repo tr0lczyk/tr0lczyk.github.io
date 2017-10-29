@@ -1,0 +1,72 @@
+@media all and (min-width: 992px) and (max-width: 1200px) {
+    #picture1,
+    #picture2 {
+        width: 50%;    
+    }
+    
+    #picture3 {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 992px) {
+    
+    .header >h1,.header >h2 {
+        width: 100%;
+    }
+    
+    
+    #aboutcontent > #photo {
+        width:100%;
+    }
+    
+    #aboutcontent > #paragraph {
+        width: 100%;
+    }
+    #paragraph > p {
+        width: 100%;
+        text-align: center;
+    }
+    
+    #paragraph2 > p {
+        width: 100%;
+        text-align: center;
+    }
+    
+    #skills >.jezyki-programowania >figure{
+        width: 100%;
+    }
+    
+    .pictures {
+        width: 100%;
+    }
+    
+    #contact-header>h2, #contact_content1>address{
+        position:relative;
+        text-align: center;
+        width: 100%;
+        left:0;
+        right:0;
+    }
+    #contact_content1{
+        width: 100%;
+        display: inline-block;
+    }
+    
+    #contact_content2 {
+        position:relative;
+        width: 100%;
+        left:10%;
+        right:10%;
+    }
+    
+    .logo{ 
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        left:0;
+        right:0;
+    }
+
+}
+
