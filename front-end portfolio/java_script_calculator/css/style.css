@@ -1,0 +1,67 @@
+body, div, a {
+    padding:0;
+    margin:0;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#calculator {
+    width: 310px;
+    height: 460px;
+    padding:5px;
+    margin:10px auto;
+    background-color:#999;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#total {
+    height: 70px;
+    width: 300px;
+    margin: 0px;
+    margin-bottom: 5px;
+    padding: 0 5px;
+    background-color: #2e0c0c;
+    text-align:right;
+    font-size: 60px;
+    border-radius: 10px;
+}
+
+#numbers a {
+    cursor:pointer;
+    margin: 0px;
+    display: block;
+    float: left;
+    text-align:center;
+    color:black;
+    font-size: 43px;
+    text-decoration:none;
+    height:50px;
+    width:50px;
+    padding:10px;
+    margin: 5px 15px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
+    background:-moz-linear-gradient(top, #EDEDED, #DCDCDC);
+    border-radius:10px;
+} 
+
+#operators a {
+    cursor:pointer;
+    display:block;
+    width:45px;
+    height: 45px;
+    float:left;
+    padding: 2px;
+    margin: 5px 6px;
+    text-align: center;
+    text-decoration: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
+    background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
+    border-radius: 10px;
+    font-size:43px;
+}
+
+a:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#DCDCDC), to(#EDEDED));
+    background: -moz-linear-gradient(top,  #DCDCDC,  #EDEDED);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DCDCDC', endColorstr='#EDEDED');
+}
