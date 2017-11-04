@@ -79,4 +79,56 @@ body {
 .header-form #main-form {
     background-color: #001D8A;
     padding: 10px;
+    overflow: hidden;
+}
+
+.header-form #main-form input, .header-form #main-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 5px;
+}
+
+.header-form #main-form input {
+    margin-bottom: 5px;
+}
+
+.header-form #main-form input[type="submit"] {
+    text-transform: uppercase;
+    float: left;
+    width: 25%;
+    background-color: #ECD407;
+    border: none;
+    font-family: "Open-sans", sans-serif;
+}
+
+.header-form #main-form input[type="submit"]:focus {
+    color: green;
+    border: green;
+    background-color: white;
+}
+
+footer {
+    background-color: #292929;
+    padding-top: 20px;
+    text-align: center;
+}
+
+footer .col-50 {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+footer .col-50 .fa {
+    background-color: #ECD407;
+    line-height: 50px;
+    height: 50px;
+    width: 50px;
+}
+
+footer p {
+    font-family: "Open-sans", sans-serif;
+    color: white;
 }

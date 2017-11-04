@@ -18,4 +18,31 @@
 .header-form #main-form {
     background-color: #001D8A;
     padding: 10px;
+    overflow: hidden;
+}
+
+.header-form #main-form input, .header-form #main-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 5px;
+}
+
+.header-form #main-form input {
+    margin-bottom: 5px;
+}
+
+.header-form #main-form input[type="submit"] {
+    text-transform: uppercase;
+    float: left;
+    width: 25%;
+    background-color: #ECD407;
+    border: none;
+    font-family: "Open-sans", sans-serif;
+}
+
+.header-form #main-form input[type="submit"]:focus {
+    color: green;
+    border: green;
+    background-color: white;
 }

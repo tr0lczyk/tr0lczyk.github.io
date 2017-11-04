@@ -19,5 +19,31 @@
     #main-form {
         background-color: $niebiesko-granatowy;
         padding:10px;
+        overflow:hidden;
+        
+        input,textarea {
+            width:100%;
+            box-sizing: border-box;
+            height: 100%;
+            padding: 5px;
+        }
+        input {
+            margin-bottom: 5px;
+            &[type="submit"] {
+                text-transform: uppercase;
+                float:left;
+                width: 25%;
+                background-color: $zolty;
+                border:none;
+                font-family:$font;
+                
+                &:focus{
+                    color:green;
+                    border:green;
+                    background-color: white;
+                }
+            }
+        }
     }
+    
 }
