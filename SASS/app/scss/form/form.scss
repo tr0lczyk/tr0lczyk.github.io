@@ -7,4 +7,17 @@
     transform:translateY(-50%);
     top:50%; 
     
+    h2{
+        color:$bialy;
+        font-family: $font;
+        
+        span {
+            color:$zolty;
+        }
+    }
+    
+    #main-form {
+        background-color: $niebiesko-granatowy;
+        padding:10px;
+    }
 }

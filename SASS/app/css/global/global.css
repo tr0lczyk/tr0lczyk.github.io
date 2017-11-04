@@ -66,3 +66,17 @@ body {
     transform: translateY(-50%);
     top: 50%;
 }
+
+.header-form h2 {
+    color: white;
+    font-family: "Open-sans", sans-serif;
+}
+
+.header-form h2 span {
+    color: #ECD407;
+}
+
+.header-form #main-form {
+    background-color: #001D8A;
+    padding: 10px;
+}
