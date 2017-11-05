@@ -1,0 +1,24 @@
+footer {
+    background-color: #292929;
+    padding-top: 20px;
+    text-align: center;
+}
+
+footer .col-50 {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+footer .col-50 .fa {
+    background-color: #ECD407;
+    line-height: 50px;
+    height: 50px;
+    width: 50px;
+}
+
+footer p {
+    font-family: "Open-sans", sans-serif;
+    color: white;
+}
