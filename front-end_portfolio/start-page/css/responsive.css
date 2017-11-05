@@ -1,0 +1,24 @@
+/*@media all and (max-width: 992px) {
+	
+	#main-nav label[for="responsive-menu"] {
+		color: #1ac056;
+		font-size: 2em;
+		padding: 15px;
+		display: inline-block;
+	}
+	
+	#main-nav ul {
+		display: none;
+	}
+	
+	#main-nav #responsive-menu:checked + ul {
+		display: block;
+	}
+	
+	
+	#main-nav ul .menu-item {
+		display: block;
+		padding: 15px;
+	}
+	
+}*/
