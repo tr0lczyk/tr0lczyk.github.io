@@ -1,0 +1,43 @@
+#koniec .container {
+    margin-bottom: 10px;
+}
+
+#koniec .container #copyright {
+    display: flex;
+    align-items: center;
+}
+
+#koniec .container .prywata {
+    font-weight: bold;
+}
+
+#koniec .container .prywata a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+#koniec .container .fonty {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+#koniec .container .fonty .fonty_kontener {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#koniec .container .fonty .fonty_kontener:hover {
+    background-color: #0ed8d6;
+}

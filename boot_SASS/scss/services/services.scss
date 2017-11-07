@@ -1,0 +1,26 @@
+.section_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#section_container2 {
+    text-align: center;
+    margin-bottom: 40px;
+    i {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        background-color: #0ed8d6;
+        border: 1px solid #0ed8d6;
+        border-radius: 50%;
+        transition: all 0.4s;
+        color: white;
+        margin-bottom: 20px;
+        &:hover {
+            background-color: white;
+            color: #0ed8d6;
+            transform: rotate(360deg);
+        }
+    }
+}

@@ -1,0 +1,82 @@
+#portfolio {
+    background-color: #f7f7f7;
+    
+    header{
+        margin-bottom: 60px;
+    }
+    
+    .portfolio_pic{
+        margin-bottom: 15px;
+        
+        .tlo {
+            background-color: white;
+            padding-bottom:10px;
+            
+            .podpisy {
+                margin-top: 20px;
+            }
+            
+            .container_mask_img {
+                overflow: hidden;
+                
+                .obrazek1 {
+                    background-image: url('../../img/portfolio/box_of_cookies.jpg');
+                }
+
+                .obrazek2 {
+                    background-image: url('../../img/portfolio/chaotic_paint.jpg');
+                }
+
+                .obrazek3 {
+                    background-image: url('../../img/portfolio/chestnut_on_bracket.jpg');
+                }
+
+                .obrazek4 {
+                    background-image: url('../../img/portfolio/child_with_blue_paint.jpg');
+                }
+
+                .obrazek5 {
+                    background-image: url('../../img/portfolio/house_with_blue_doors.jpg');
+                }
+
+                .obrazek6 {
+                    background-image: url('../../img/portfolio/typing_on_laptop.jpg');
+                }
+
+                
+                .obrazek {
+                    height: 300px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    transition: all 0.4s;
+                    &:hover {
+                        transform:scale(1.5);
+                    }
+                    
+                    
+                    .mask {
+                        height: 100%;
+                        background-color:rgba(14, 216, 214, 0.45);
+                        opacity:0;
+                        color:white;
+                        transition: all 0.4s;
+                        display:flex;
+                        align-items: center;
+                        justify-content: center;
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                    
+
+                }
+                
+                
+                
+            }
+        }
+    }
+    
+}
+

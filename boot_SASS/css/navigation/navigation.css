@@ -1,0 +1,28 @@
+#main-nav {
+    background-color: transparent;
+    transition: all 0.4s;
+}
+
+#main-nav .navbar-brand {
+    color: #FFF;
+    font-family: 'Droid Sarif', sans-serif;
+    font-size: 2em;
+    transition: all 0.4s;
+}
+
+#main-nav .navbar-brand .nav-item .nav-link {
+    text-transform: uppercase;
+    color: #FFF;
+    font-family: 'Montserrat', 'sans-seriff';
+    font-weight: bold;
+    transition: all 0.4s;
+}
+
+#main-nav .navbar-brand:hover,
+#main-nav .navbar-nav .nav-item .nav-link:hover {
+    color: #0ED8D6;
+}
+
+#main-nav.transparent_blue {
+    background-color: rgba(14, 216, 214, 0.75);
+}

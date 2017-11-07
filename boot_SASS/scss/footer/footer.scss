@@ -1,0 +1,46 @@
+#koniec {
+    
+    .container {
+        margin-bottom: 10px;
+        
+        #copyright {
+            display:flex;
+            align-items: center;
+        }
+        
+        .prywata {
+            font-weight: bold;
+            
+            a {
+                margin-left: 20px;
+                text-decoration: none;
+                color:black;
+            }
+
+        }
+        
+        .fonty {
+            display:flex;
+            justify-content: center;
+            color:white;
+            
+            .fonty_kontener {
+                height: 40px;
+                width: 40px;
+                border-radius:50%;
+                background-color: black;
+                margin:15px;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                transition:all 0.4s;
+                margin-left:5px;
+                margin-right: 5px;
+                cursor:pointer;
+                &:hover {
+                    background-color:#0ed8d6;
+                }
+            }
+        }
+    }
+}

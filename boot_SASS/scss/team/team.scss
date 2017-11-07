@@ -1,0 +1,66 @@
+#meet {
+    
+    p {
+       margin-top: 30px; 
+    }
+    
+    .team_cont {
+        
+        p{
+            margin:0px;
+        }
+        
+        #imie {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        #team_picture1 {
+            background-image: url('../../img/team/man-1.jpg');
+        }
+
+        #team_picture2 {
+            background-image: url('../../img/team/man-2.jpg');
+        }
+
+        #team_picture3 {
+            background-image: url('../../img/team/woman-1.jpg');
+        }
+        
+        .team_picture {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            background-position:center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 20px auto;
+            
+        }
+        
+        .fonty {
+            display:flex;
+            justify-content: center;
+            color:white;
+            
+            .fonty_kontener {
+                height: 40px;
+                width: 40px;
+                border-radius:50%;
+                background-color: black;
+                margin:15px;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                transition:all 0.4s;
+                margin-left:5px;
+                margin-right: 5px;
+                cursor:pointer;
+                &:hover {
+                    background-color:#0ed8d6;
+                }
+            }
+        }
+
+    }
+}

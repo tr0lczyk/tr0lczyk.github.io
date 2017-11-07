@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+body section {
+    padding: 60px 30px;
+}
+
+body h1 {
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body h3 {
+    font-family: 'Droid Serif', serif;
+}
+
+body h5 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body h6 {
+    font-family: 'Droid Serif', serif;
+    color: #777777;
+}
+
+body p {
+    font-family: 'Roboto Slab', serif;
+    color: #777777;
+}

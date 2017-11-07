@@ -1,0 +1,19 @@
+#main-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../img/header/pictures_on_the_wall.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#main-header .header_content h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#main-header .header_content .myButton {
+    background-color: #0ed8d6;
+}
