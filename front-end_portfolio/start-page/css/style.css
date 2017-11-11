@@ -76,7 +76,7 @@ p {
 /* Main header styles */
 #main-header {
 	background-image: url(../img/header-background.jpg);
-	height: 100vh;
+	height: 80vh;
 	background-position: center;
 	background-size: cover;
 	position: relative;
