@@ -30,7 +30,7 @@
 <body>
 <main>
 <h1>Privacy Policy — Light Sword</h1>
-<p><em>Last updated: 15 July 2026</em></p>
+<p><em>Last updated: 23 July 2026</em></p>
 
 <p>Thank you for using <strong>Light Sword</strong> (the “App”). This policy
 explains what data the App does and does not handle, and what choices you
@@ -47,7 +47,8 @@ have.</p>
   uploaded. There are no accounts and no analytics.</li>
   <li>The camera, motion sensors, flashlight and two-phone duel all work
   <strong>on-device or device-to-device</strong>, with no servers
-  involved.</li>
+  involved. Video clips you choose to record are saved <strong>only to your
+  device's gallery</strong>.</li>
 </ul>
 
 <h2>Advertising (Google AdMob)</h2>
@@ -94,9 +95,17 @@ training scores) in local storage on your device. This data:</p>
   training game. Readings are processed in real time, on device, and are
   never stored or transmitted.</li>
   <li><strong>Camera (optional):</strong> the saber screen has a camera mode
-  that uses a live preview as the backdrop. The camera image is
-  <strong>displayed only — nothing is captured, recorded, stored or
-  transmitted</strong>. The App works fully without camera permission.</li>
+  that uses a live preview as the backdrop, with the saber drawn over it.
+  Nothing is recorded until <strong>you</strong> tap the record button; a
+  recorded clip is saved <strong>only to your device's gallery</strong>
+  (Movies/Light Sword) and is never uploaded or transmitted by the App.
+  Sharing a clip is entirely your action, through the Android share menu.
+  The App works fully without camera permission.</li>
+  <li><strong>Microphone (optional):</strong> when you record a clip, you can
+  allow the microphone so the clip has sound. Audio is captured <strong>only
+  while you are recording</strong>, stays inside the clip file in your
+  gallery, and is never transmitted. If you decline, clips simply record
+  without sound.</li>
   <li><strong>Flashlight:</strong> brief LED pulses accompany ignition and
   clashes (can be turned off in the Hilt Workshop). This uses the flash
   hardware only.</li>
@@ -121,7 +130,9 @@ reads or derives your location.</p>
   <tr><td><code>AD_ID</code></td>
       <td>the advertising ID used by AdMob (added by the ads SDK)</td></tr>
   <tr><td><code>CAMERA</code> (optional)</td>
-      <td>live preview backdrop in camera mode — display only</td></tr>
+      <td>live backdrop in camera mode + clips you choose to record (saved locally)</td></tr>
+  <tr><td><code>RECORD_AUDIO</code> (optional)</td>
+      <td>sound for clips you record — captured only while recording, stored locally</td></tr>
   <tr><td><code>VIBRATE</code></td>
       <td>haptic feedback</td></tr>
   <tr><td>Bluetooth / Nearby / legacy location (optional)</td>
