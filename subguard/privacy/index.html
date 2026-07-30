@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SubGuard — Privacy Policy</title>
+<meta name="description" content="Privacy policy for SubGuard, the offline subscription tracker for Android.">
+<style>
+  :root {
+    --teal: #00696B; --teal-deep: #00393B; --mist: #F2F5F5; --card: #FFFFFF;
+    --ink: #171D1D; --ink-dim: rgba(23,29,29,.66); --line: rgba(23,29,29,.12);
+    --body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--mist); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.65; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  header { background: linear-gradient(140deg, #00797C, var(--teal-deep)); color: #fff; padding: 44px 0 48px; }
+  header a.back { color: rgba(255,255,255,.8); text-decoration: none; font-size: 14px; font-weight: 600; }
+  header h1 { margin-top: 14px; font-size: clamp(28px, 5vw, 40px); font-weight: 800; letter-spacing: -.02em; }
+  header p { margin-top: 8px; color: rgba(255,255,255,.8); font-size: 15px; }
+  main { padding: 40px 0 72px; }
+  section { background: var(--card); border-radius: 18px; padding: 26px 28px; margin-bottom: 18px; }
+  h2 { font-size: 19px; font-weight: 800; letter-spacing: -.01em; margin-bottom: 10px; color: var(--teal-deep); }
+  p + p, ul { margin-top: 10px; }
+  ul { padding-left: 22px; }
+  li + li { margin-top: 6px; }
+  a { color: var(--teal); font-weight: 600; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 14.5px; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-dim); }
+  .muted { color: var(--ink-dim); font-size: 14px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="back" href="/subguard/">&larr; SubGuard</a>
+    <h1>Privacy Policy</h1>
+    <p>Effective date: July 30, 2026 &middot; Applies to the Android app &ldquo;SubGuard&rdquo; (com.tr0lczyk.subguard)</p>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<section>
+  <h2>The short version</h2>
+  <ul>
+    <li>Your subscription data (names, prices, dates, notes) is stored <strong>only on your device</strong>. It is never uploaded anywhere.</li>
+    <li>SubGuard has <strong>no accounts, no sign-in, no e-mail collection and no access to your bank</strong>.</li>
+    <li>The app is free and shows ads (Google AdMob). Ads and anonymous diagnostics are the only reasons the app talks to the internet, and both respect the consent you give on first launch.</li>
+    <li>We never sell your data.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Who we are</h2>
+  <p>SubGuard is developed by Mateusz Olczyk, an independent developer. For any privacy question or request, contact <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a>.</p>
+</section>
+
+<section>
+  <h2>Data stored on your device only</h2>
+  <p>Everything you enter in SubGuard — subscription names, prices, billing cycles, renewal and trial dates, reminder settings, notes, the currency and theme you choose — is saved in a local database on your phone. This data:</p>
+  <ul>
+    <li>never leaves your device and is not accessible to us or to anyone else;</li>
+    <li>is deleted when you uninstall the app or clear its storage;</li>
+    <li>can be exported by you at any time as a CSV file. Exporting opens the Android share sheet — where the file goes from there (e-mail, cloud drive, etc.) is entirely your choice.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Advertising (Google AdMob)</h2>
+  <p>SubGuard is funded by ads served by Google AdMob (Google Mobile Ads SDK). To serve and measure ads, Google may process:</p>
+  <ul>
+    <li>your device's <strong>advertising ID</strong>,</li>
+    <li>coarse technical data (device model, OS version, approximate location derived from IP address),</li>
+    <li>ad interaction data (impressions, clicks).</li>
+  </ul>
+  <p>On first launch you are shown a consent form (Google User Messaging Platform). In the EEA/UK you can choose between personalised and non-personalised ads, and you can change your choice at any time via the privacy options entry point inside the app. How Google uses this data is described at <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
+  <p>Watching one optional rewarded ad unlocks the premium color themes; this uses the same AdMob SDK and consent settings.</p>
+</section>
+
+<section>
+  <h2>Analytics and crash reporting</h2>
+  <p>To understand which features are used and to fix crashes, the app uses Firebase Analytics and Firebase Crashlytics. Both are <strong>consent-gated</strong>: collection is switched off unless the consent you gave via the ads consent flow allows it, and every event is additionally filtered in the app before sending. What is collected:</p>
+  <ul>
+    <li>anonymous usage events (e.g. &ldquo;subscription added&rdquo;, &ldquo;reminder set&rdquo;) — <strong>never</strong> the names or prices of your subscriptions;</li>
+    <li>crash reports (stack trace, device model, OS version).</li>
+  </ul>
+  <p>The optional &ldquo;Export session log&rdquo; feature in Settings produces the same anonymised event list as a file you can inspect yourself — it contains no names and no prices.</p>
+</section>
+
+<section>
+  <h2>App permissions</h2>
+  <table>
+    <tr><th>Permission</th><th>Why SubGuard needs it</th></tr>
+    <tr><td><code>INTERNET</code></td><td>Loading ads and the consent form; sending consent-gated diagnostics. Nothing you typed into the app is transmitted.</td></tr>
+    <tr><td><code>POST_NOTIFICATIONS</code></td><td>Renewal and trial-end reminders. Requested at runtime on Android 13+; the app works fully if you decline — you just won't get reminders.</td></tr>
+  </table>
+  <p class="muted">SubGuard requests no access to your location, contacts, camera, microphone, files or SMS.</p>
+</section>
+
+<section>
+  <h2>Data sharing</h2>
+  <p>We do not sell, rent or trade any data. The only third parties that process data from the app are Google (AdMob, Firebase) as described above, acting under <a href="https://policies.google.com/privacy">Google's privacy policy</a>. There are no other SDKs, trackers or ad networks in the app.</p>
+</section>
+
+<section>
+  <h2>Data retention and deletion</h2>
+  <ul>
+    <li><strong>Your subscription data:</strong> stays on your device until you delete it or uninstall the app. We cannot delete it for you because we never have it.</li>
+    <li><strong>Ads and analytics data:</strong> retained by Google according to its retention policies. Withdrawing consent in the app stops further collection.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Children</h2>
+  <p>SubGuard is a general-audience utility and is not directed at children under 13. We do not knowingly collect personal information from children; the app collects no personal information you enter at all, and ads consent is handled by Google UMP.</p>
+</section>
+
+<section>
+  <h2>Changes to this policy</h2>
+  <p>If the app's data practices ever change (for example a new SDK), this page will be updated and the effective date above revised before the change ships.</p>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>Questions, concerns or requests: <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a></p>
+</section>
+
+</div>
+</main>
+
+</body>
+</html>

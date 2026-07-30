@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SubGuard — never pay for forgotten subscriptions</title>
+<meta name="description" content="SubGuard is a private, offline subscription tracker for Android: see your true monthly total, get reminded before every renewal and before free trials turn into paid plans.">
+<style>
+  :root {
+    --teal: #00696B;
+    --teal-bright: #00797C;
+    --teal-deep: #00393B;
+    --mist: #F2F5F5;
+    --card: #FFFFFF;
+    --ink: #171D1D;
+    --ink-dim: rgba(23, 29, 29, .64);
+    --amber: #7A5900;
+    --amber-bg: #FFDEA1;
+    --line: rgba(23, 29, 29, .12);
+    --body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--mist); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  /* hero */
+  .hero {
+    background: linear-gradient(140deg, var(--teal-bright), var(--teal-deep));
+    color: #fff;
+    padding: 72px 0 88px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero .shield-watermark {
+    position: absolute; right: -60px; top: -40px; width: 380px; opacity: .08;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 48px; }
+  .brand svg { width: 34px; height: 36px; }
+  .brand span { font-size: 22px; font-weight: 800; letter-spacing: -.01em; }
+  .hero h1 { font-size: clamp(34px, 6vw, 56px); font-weight: 800; line-height: 1.12; letter-spacing: -.02em; max-width: 620px; }
+  .hero p.sub { margin-top: 20px; font-size: 20px; max-width: 560px; color: rgba(255,255,255,.85); }
+  .hero .pill {
+    display: inline-block; margin-top: 26px; padding: 8px 16px; border-radius: 999px;
+    background: rgba(255,255,255,.14); font-size: 14px; font-weight: 600; letter-spacing: .02em;
+  }
+  .cta-row { margin-top: 36px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .cta {
+    display: inline-block; background: #fff; color: var(--teal-deep);
+    font-weight: 800; text-decoration: none; padding: 15px 30px; border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.25); transition: transform .15s ease;
+  }
+  .cta:hover { transform: translateY(-2px); }
+  .cta small { display: block; font-weight: 600; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; opacity: .7; }
+  .cta-note { font-size: 13px; color: rgba(255,255,255,.65); }
+
+  /* features */
+  section.features { padding: 72px 0; }
+  h2 { font-size: 13px; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; color: var(--teal); margin-bottom: 28px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .card {
+    background: var(--card); border-radius: 20px; padding: 26px 24px;
+  }
+  .card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; letter-spacing: -.01em; }
+  .card p { font-size: 15px; color: var(--ink-dim); }
+  .card .tag {
+    display: inline-block; margin-bottom: 14px; padding: 4px 10px; border-radius: 8px;
+    background: var(--amber-bg); color: var(--amber); font-size: 12px; font-weight: 700;
+  }
+  .card .tag.teal { background: rgba(0,105,107,.12); color: var(--teal); }
+
+  /* privacy strip */
+  .privacy-strip {
+    background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    padding: 48px 0;
+  }
+  .privacy-strip .inner { display: flex; gap: 20px; align-items: flex-start; }
+  .privacy-strip svg { width: 44px; height: 47px; flex-shrink: 0; }
+  .privacy-strip h3 { font-size: 20px; font-weight: 800; letter-spacing: -.01em; }
+  .privacy-strip p { margin-top: 6px; font-size: 15px; color: var(--ink-dim); max-width: 640px; }
+  .privacy-strip a { color: var(--teal); font-weight: 700; }
+
+  footer { padding: 44px 0 60px; font-size: 14px; color: var(--ink-dim); }
+  footer a { color: var(--teal); font-weight: 600; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer .links { display: flex; gap: 22px; flex-wrap: wrap; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="shield-watermark" viewBox="1.5 0.5 21 23" aria-hidden="true"><path fill="#fff" d="M12,1.5c0.14,0 0.28,0.03 0.41,0.09l7.5,3.33c0.36,0.16 0.59,0.52 0.59,0.91V11c0,5.31 -3.44,10.28 -8.19,11.9a1,1 0,0 1,-0.62 0C6.94,21.28 3.5,16.31 3.5,11V5.83c0,-0.39 0.23,-0.75 0.59,-0.91l7.5,-3.33c0.13,-0.06 0.27,-0.09 0.41,-0.09z"/></svg>
+  <div class="wrap">
+    <div class="brand">
+      <svg viewBox="1.5 0.5 21 23" aria-hidden="true"><path fill="#fff" d="M12,1.5c0.14,0 0.28,0.03 0.41,0.09l7.5,3.33c0.36,0.16 0.59,0.52 0.59,0.91V11c0,5.31 -3.44,10.28 -8.19,11.9a1,1 0,0 1,-0.62 0C6.94,21.28 3.5,16.31 3.5,11V5.83c0,-0.39 0.23,-0.75 0.59,-0.91l7.5,-3.33c0.13,-0.06 0.27,-0.09 0.41,-0.09zM15.88,8.71a1,1 0,0 1,1.41 1.41l-5.29,5.3a1,1 0,0 1,-1.42 0l-2.47,-2.47a1,1 0,1 1,1.41 -1.41l1.77,1.76 4.59,-4.59z"/></svg>
+      <span>SubGuard</span>
+    </div>
+    <h1>Never pay for forgotten subscriptions</h1>
+    <p class="sub">See your true monthly total, get reminded before every renewal — and before free trials quietly turn into paid plans.</p>
+    <span class="pill">100% offline &middot; no account &middot; no bank access</span>
+    <div class="cta-row">
+      <a class="cta" href="https://play.google.com/store/apps/details?id=com.tr0lczyk.subguard">
+        <small>Get it on</small>Google Play
+      </a>
+      <span class="cta-note">Free, ad-supported. No paywalls, no PRO tier.</span>
+    </div>
+  </div>
+</header>
+
+<section class="features">
+  <div class="wrap">
+    <h2>What SubGuard does</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="tag teal">Track</span>
+        <h3>Every subscription in one place</h3>
+        <p>Weekly, monthly, quarterly and yearly payments on one clean list, with your monthly total on a hero card and a 7-day renewal outlook.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Remind</span>
+        <h3>Warned before you're charged</h3>
+        <p>A notification before every renewal — you pick how many days ahead, per subscription. Anything due within 3 days gets a clear amber highlight.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Trials</span>
+        <h3>Free-trial guardian</h3>
+        <p>Add any trial with its end date and get warned before it converts into a paid plan. Cancel in time, keep your money.</p>
+      </div>
+      <div class="card">
+        <span class="tag teal">Quick add</span>
+        <h3>3 taps and it's tracked</h3>
+        <p>35 ready-made templates — Netflix, Spotify, YouTube Premium, Disney+ and more — plus custom entries for gym, rent or any recurring expense.</p>
+      </div>
+      <div class="card">
+        <span class="tag teal">At a glance</span>
+        <h3>Widget, dark mode, themes</h3>
+        <p>A home-screen widget with your next charge and monthly total, dark mode, unlockable color themes and 16 currencies.</p>
+      </div>
+      <div class="card">
+        <span class="tag teal">Yours</span>
+        <h3>Your data stays yours</h3>
+        <p>Everything is stored only on your device. Export to CSV anytime — no sign-up, no e-mail, no bank connection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="privacy-strip">
+  <div class="wrap inner">
+    <svg viewBox="1.5 0.5 21 23" aria-hidden="true"><path fill="#00696B" d="M12,1.5c0.14,0 0.28,0.03 0.41,0.09l7.5,3.33c0.36,0.16 0.59,0.52 0.59,0.91V11c0,5.31 -3.44,10.28 -8.19,11.9a1,1 0,0 1,-0.62 0C6.94,21.28 3.5,16.31 3.5,11V5.83c0,-0.39 0.23,-0.75 0.59,-0.91l7.5,-3.33c0.13,-0.06 0.27,-0.09 0.41,-0.09zM15.88,8.71a1,1 0,0 1,1.41 1.41l-5.29,5.3a1,1 0,0 1,-1.42 0l-2.47,-2.47a1,1 0,1 1,1.41 -1.41l1.77,1.76 4.59,-4.59z"/></svg>
+    <div>
+      <h3>Private by design</h3>
+      <p>SubGuard works completely offline. Your subscriptions never leave your phone; the app shows unobtrusive ads and uses consent-gated, anonymous diagnostics to stay free. The details are all in the <a href="/subguard/privacy/">privacy policy</a>.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="https://play.google.com/store/apps/details?id=com.tr0lczyk.subguard">Google Play</a>
+      <a href="/subguard/privacy/">Privacy policy</a>
+      <a href="mailto:matt.olczyk@gmail.com">Contact</a>
+    </div>
+    <p>&copy; 2026 Mateusz Olczyk &middot; SubGuard for Android</p>
+  </div>
+</footer>
+
+</body>
+</html>
