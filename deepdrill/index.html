@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeepDrill — deep-sea idle mining with no forced ads</title>
+<meta name="description" content="DeepDrill is a deep-sea idle mining game. Tap the drill, automate the abyss, earn while the app is closed. No forced ads, ever — every ad is a button you choose to press. Offline, no account.">
+<style>
+  :root {
+    --abyss: #06121F;
+    --surface: #0B1D2E;
+    --surface-high: #12293D;
+    --line: rgba(228, 242, 247, .12);
+    --ink: #E4F2F7;
+    --ink-dim: rgba(228, 242, 247, .62);
+    --biolume: #4FE3C1;
+    --sonar: #6FB3D8;
+    --ore: #FFB86B;
+    --body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --display: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--abyss);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.62;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--biolume); color: var(--abyss); }
+  a { color: var(--biolume); }
+
+  /* Light shafts fading into the dark, echoing the game's backdrop. */
+  .depth {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(120% 60% at 50% -10%, rgba(111, 179, 216, .18), transparent 60%),
+      radial-gradient(80% 40% at 20% 110%, rgba(255, 184, 107, .10), transparent 65%),
+      radial-gradient(70% 45% at 82% 95%, rgba(79, 227, 193, .10), transparent 60%);
+  }
+  main { position: relative; z-index: 1; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+  header { padding: 72px 0 40px; text-align: center; }
+  .icon {
+    width: 108px; height: 108px; border-radius: 24px; display: block; margin: 0 auto 26px;
+    box-shadow: 0 18px 50px rgba(79, 227, 193, .18);
+  }
+  h1 { font-family: var(--display); font-size: clamp(40px, 8vw, 68px); line-height: 1.02; letter-spacing: -.02em; }
+  .tagline { color: var(--ink-dim); font-size: clamp(17px, 2.6vw, 21px); margin-top: 16px; }
+
+  .wedge {
+    margin: 40px auto 0; max-width: 640px; padding: 22px 26px;
+    border: 1px solid rgba(79, 227, 193, .35); border-radius: 18px;
+    background: linear-gradient(180deg, rgba(79, 227, 193, .10), rgba(79, 227, 193, .02));
+  }
+  .wedge strong { color: var(--biolume); font-size: 20px; display: block; margin-bottom: 6px; font-family: var(--display); }
+  .wedge p { color: var(--ink-dim); font-size: 16px; }
+
+  .cta { margin-top: 36px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 14px; text-decoration: none;
+    padding: 12px 26px 12px 20px; border-radius: 14px;
+    background: var(--ink); color: var(--abyss); font-weight: 600;
+  }
+  .badge svg { width: 26px; height: 26px; }
+  .badge span small { display: block; font-size: 11px; font-weight: 500; opacity: .68; text-transform: uppercase; letter-spacing: .09em; }
+  .badge span b { font-size: 19px; font-family: var(--display); }
+  .status { color: var(--ink-dim); font-size: 14px; }
+  .status em { color: var(--ore); font-style: normal; }
+
+  section { padding: 64px 0; border-top: 1px solid var(--line); }
+  h2 { font-family: var(--display); font-size: clamp(26px, 4.4vw, 34px); margin-bottom: 28px; letter-spacing: -.01em; }
+
+  .features { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .feature { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+  .feature h3 { font-size: 17px; margin-bottom: 8px; color: var(--ink); }
+  .feature p { color: var(--ink-dim); font-size: 15.5px; }
+  .feature .mark { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--biolume); display: block; margin-bottom: 12px; }
+
+  .shots { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .shots img { width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--line); display: block; }
+
+  .depths { list-style: none; display: grid; gap: 10px; }
+  .depths li { display: flex; justify-content: space-between; gap: 18px; padding: 13px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+  .depths .m { color: var(--sonar); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .depths .n { color: var(--ink); }
+
+  footer { padding: 56px 0 72px; border-top: 1px solid var(--line); color: var(--ink-dim); font-size: 15px; text-align: center; }
+  footer a { text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .footlinks { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 18px; }
+</style>
+</head>
+<body>
+<div class="depth"></div>
+<main>
+
+  <header class="wrap">
+    <img class="icon" src="img/icon.png" alt="DeepDrill icon">
+    <h1>DeepDrill</h1>
+    <p class="tagline">A deep-sea idle mining game. Tap the drill, automate the abyss,<br>and keep earning ore while the app is closed.</p>
+
+    <div class="wedge">
+      <strong>No forced ads. Ever.</strong>
+      <p>No interstitial jumping in mid-tap, no “watch this to keep playing”. Every ad in DeepDrill is a button you choose to press, and it always pays you back.</p>
+    </div>
+
+    <div class="cta">
+      <a class="badge" href="https://play.google.com/store/apps/details?id=com.tr0lczyk.deepdrill">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#06121F" d="M3.6 1.8 13.4 12 3.6 22.2c-.4-.3-.6-.8-.6-1.4V3.2c0-.6.2-1.1.6-1.4Zm11.2 11.6 2.7 2.8-9.9 5.6 7.2-8.4Zm0-2.8L7.6 2.2l9.9 5.6-2.7 2.8Zm4.4 1.4 2.3 1.3c.7.4.7 1.4 0 1.8l-2.3 1.3-3-3.1 3-3.1Z"/></svg>
+        <span><small>Get it on</small><b>Google Play</b></span>
+      </a>
+      <p class="status">Currently in <em>closed testing</em> — the store page opens once the first release is public.</p>
+    </div>
+  </header>
+
+  <section class="wrap">
+    <h2>What you actually do</h2>
+    <div class="features">
+      <div class="feature">
+        <span class="mark">The loop</span>
+        <h3>Tap, buy, automate</h3>
+        <p>Start with a rusty hand drill and a lot of optimism. Buy generators, watch them pay for the next one, and stop tapping because the station runs itself.</p>
+      </div>
+      <div class="feature">
+        <span class="mark">Idle means idle</span>
+        <h3>It earns while you sleep</h3>
+        <p>Your station keeps drilling when the app is closed — up to four hours of production waiting when you come back. No energy timers, no “come back in 3 hours” gates.</p>
+      </div>
+      <div class="feature">
+        <span class="mark">Milestones</span>
+        <h3>Every 10th one counts double</h3>
+        <p>Owning 10, 25, 50, 100 and 200 of a generator doubles its output each time. There is always a next number worth reaching for.</p>
+      </div>
+      <div class="feature">
+        <span class="mark">Prestige</span>
+        <h3>Resurface for pearls</h3>
+        <p>Reset the run and keep pearls forever — each one adds 10% production to every future run. The second dive is always faster than the first.</p>
+      </div>
+      <div class="feature">
+        <span class="mark">Ads on your terms</span>
+        <h3>Three buttons, never a wall</h3>
+        <p>Double your offline haul, run a 15-minute Surge, or warp 30 minutes of production forward. All optional, all rewarded. One banner lives in settings, outside the game.</p>
+      </div>
+      <div class="feature">
+        <span class="mark">Private by default</span>
+        <h3>Offline, no account</h3>
+        <p>No sign-in, no cloud save, no profile. Your progress is a file on your phone. Analytics stay off unless you agree to them.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>Screens</h2>
+    <div class="shots">
+      <img src="img/shot-game.png" alt="The main game screen: ore counter, drill and the station list" loading="lazy">
+      <img src="img/shot-offline.png" alt="Offline earnings dialog offering a plain collect or a doubled collect" loading="lazy">
+      <img src="img/shot-generators.png" alt="The station list with ten generators and their production rates" loading="lazy">
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>How deep it goes</h2>
+    <ul class="depths">
+      <li><span class="n">Hand Drill</span><span class="m">10 m</span></li>
+      <li><span class="n">Scout ROV</span><span class="m">80 m</span></li>
+      <li><span class="n">Coastal Rig</span><span class="m">300 m</span></li>
+      <li><span class="n">Crab Harvesters</span><span class="m">900 m</span></li>
+      <li><span class="n">Vent Tap</span><span class="m">2 400 m</span></li>
+      <li><span class="n">Abyssal Dredger</span><span class="m">4 000 m</span></li>
+      <li><span class="n">Trench Excavator</span><span class="m">6 500 m</span></li>
+      <li><span class="n">Leviathan Driller</span><span class="m">8 500 m</span></li>
+      <li><span class="n">Hadal Station</span><span class="m">10 000 m</span></li>
+      <li><span class="n">The Core Bore</span><span class="m">11 000 m</span></li>
+    </ul>
+  </section>
+
+  <footer class="wrap">
+    <div class="footlinks">
+      <a href="privacy/">Privacy policy</a>
+      <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a>
+    </div>
+    <p>DeepDrill — made by Mateusz Olczyk.</p>
+  </footer>
+
+</main>
+</body>
+</html>
