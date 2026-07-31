@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeepDrill — Privacy Policy</title>
+<meta name="description" content="Privacy policy for the DeepDrill Android game: what it collects, what it does not, how ads and analytics consent work, and how to withdraw it.">
+<style>
+  :root {
+    --abyss: #06121F; --surface: #0B1D2E; --line: rgba(228,242,247,.12);
+    --ink: #E4F2F7; --ink-dim: rgba(228,242,247,.66); --biolume: #4FE3C1;
+    --body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--abyss); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.68; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 88px; }
+  a { color: var(--biolume); }
+  h1 { font-size: clamp(30px, 6vw, 42px); line-height: 1.1; letter-spacing: -.02em; }
+  .meta { color: var(--ink-dim); font-size: 15px; margin-top: 10px; }
+  h2 { font-size: 21px; margin: 42px 0 12px; }
+  h3 { font-size: 17px; margin: 24px 0 8px; }
+  p, li { color: var(--ink-dim); }
+  p { margin-bottom: 14px; }
+  ul { margin: 0 0 14px 22px; }
+  li { margin-bottom: 7px; }
+  strong { color: var(--ink); }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0 20px; font-size: 15.5px; }
+  th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--ink); font-weight: 600; }
+  td { color: var(--ink-dim); }
+  code { background: var(--surface); padding: 2px 6px; border-radius: 5px; font-size: 14px; }
+  .callout { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--biolume); border-radius: 10px; padding: 18px 20px; margin: 22px 0; }
+  .callout p:last-child { margin-bottom: 0; }
+  footer { margin-top: 52px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 15px; color: var(--ink-dim); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>DeepDrill — Privacy Policy</h1>
+  <p class="meta">Effective 31 July 2026 · applies to the Android app <code>com.tr0lczyk.deepdrill</code></p>
+
+  <p>DeepDrill is made by Mateusz Olczyk, an individual developer based in Poland. You can
+  reach me at <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a>.</p>
+
+  <div class="callout">
+    <p><strong>The short version.</strong> DeepDrill has no accounts and no server of its own.
+    Your game progress never leaves your phone. The only data that goes anywhere is what
+    Google's advertising and analytics SDKs collect — and analytics collection stays switched
+    off until you agree to it.</p>
+  </div>
+
+  <h2>1. What stays on your device</h2>
+  <p>All of the following is written to app-private storage and is never transmitted by DeepDrill:</p>
+  <ul>
+    <li><strong>Game progress</strong> — ore, lifetime ore, pearls, generators owned, boost timer and the timestamp used to calculate offline earnings.</li>
+    <li><strong>Feedback you type in Settings</strong> — the text is appended to a local file on your device. Pressing “Send” saves it locally; it is <em>not</em> transmitted to me. If you want me to see it, export the session log and email it.</li>
+    <li><strong>Exported session logs</strong> — a snapshot of your game state written to app-private storage when you tap “Export”, so you can attach it to a bug report yourself.</li>
+  </ul>
+  <p>Uninstalling the app deletes all of it. There is no cloud copy to delete, because none was ever made.</p>
+
+  <h2>2. Advertising</h2>
+  <p>DeepDrill shows ads through <strong>Google AdMob</strong>: optional rewarded video you
+  start yourself, and one banner on the Settings screen. Google acts as an independent
+  controller for this data. To serve and measure ads, the AdMob SDK may process your
+  <strong>advertising ID</strong>, approximate location derived from your IP address, device
+  and app information, and ad-interaction events.</p>
+  <p>Google's own policy explains what it does with that data:
+  <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a>.</p>
+
+  <h3>Consent and how to change it</h3>
+  <p>On first launch DeepDrill shows Google's consent form (the UMP SDK). In regions
+  covered by the GDPR and similar laws, that form is how you accept or refuse personalised
+  advertising. You can revisit the choice at any time: <strong>Settings → Privacy options</strong>.
+  Refusing personalised ads does not lock you out of anything in the game.</p>
+
+  <h2>3. Analytics and crash reporting</h2>
+  <p>DeepDrill uses <strong>Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong>
+  to see which features get used and to receive crash reports.</p>
+  <p><strong>Collection is off by default.</strong> Nothing is sent until your consent status is
+  resolved, and the app enables collection only if you agreed. When enabled, these SDKs may
+  process pseudonymous identifiers (including the advertising ID), device model, OS version,
+  app version, in-app events such as opening a screen or watching a rewarded ad, and — for
+  crashes — a stack trace with device state at the moment of the crash. Crash reports never
+  contain your feedback text or exported logs.</p>
+
+  <h2>4. Permissions</h2>
+  <table>
+    <tr><th>Permission</th><th>Why the app has it</th></tr>
+    <tr><td><code>INTERNET</code><br><code>ACCESS_NETWORK_STATE</code></td><td>Fetching ads and, with your consent, sending analytics and crash reports. The game itself works with no connection.</td></tr>
+    <tr><td><code>VIBRATE</code></td><td>Short haptic feedback when you tap the drill.</td></tr>
+    <tr><td><code>AD_ID</code></td><td>Access to the advertising ID, used by AdMob and Analytics. You can reset or delete it in Android's own settings.</td></tr>
+    <tr><td><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code>, <code>ACCESS_ADSERVICES_*</code>, <code>READ_BASIC_PHONE_STATE</code>, install-referrer</td><td>Added automatically by the Google Play services, AdMob and Firebase libraries for their own scheduling and attribution. DeepDrill does not use them directly.</td></tr>
+  </table>
+  <p>DeepDrill requests no sensitive permissions: no camera, no microphone, no location, no
+  contacts, no storage access outside its own sandbox.</p>
+
+  <h2>5. What DeepDrill never does</h2>
+  <ul>
+    <li>No account, sign-in, email address or name is ever requested.</li>
+    <li>No selling or sharing of personal data with data brokers.</li>
+    <li>No in-app purchases, so no payment data of any kind.</li>
+    <li>No ad tracking beyond what Google's SDKs do under the consent you gave.</li>
+  </ul>
+
+  <h2>6. Children</h2>
+  <p>DeepDrill is not directed at children under 13. It is not enrolled in Google Play's
+  Designed for Families programme. If you believe a child has provided personal data through
+  the app, contact me and I will help you get it removed from the relevant Google service.</p>
+
+  <h2>7. Retention and your rights</h2>
+  <p>I keep nothing, because I receive nothing — I have no server and no database. Data held
+  by Google follows Google's own retention schedules, described in the policy linked above.
+  Under the GDPR you may request access to, correction of, or deletion of personal data
+  concerning you; for data processed by Google in this app, exercise those rights through
+  Google, and write to me if you need help doing so.</p>
+
+  <h2>8. Changes</h2>
+  <p>If this policy changes, the effective date at the top changes with it, and material
+  changes will be noted in the app's release notes.</p>
+
+  <footer>
+    <p>Questions: <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a> · <a href="../">Back to DeepDrill</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
