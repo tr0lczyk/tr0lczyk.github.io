@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--
+  BRAND: "Pensjonat" is a working title — once the final brand is chosen, replace
+  occurrences in <title>, meta description, h1 and the first paragraph.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- BRAND --><title>Pensjonat — Privacy Policy</title>
+<meta name="description" content="Privacy policy for the Pensjonat housekeeping app (Android + web panel): what data we process, why, where it is stored and what your rights are.">
+<style>
+  :root {
+    --paper: #FAF6EF; --card: #FFFFFF; --line: rgba(61,48,35,.14);
+    --ink: #3D3023; --ink-dim: rgba(61,48,35,.70); --pine: #3E6B4F; --pine-deep: #2C5039;
+    --body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.68; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 88px; }
+  a { color: var(--pine-deep); }
+  h1 { font-size: clamp(30px, 6vw, 42px); line-height: 1.1; letter-spacing: -.02em; }
+  .meta { color: var(--ink-dim); font-size: 15px; margin-top: 10px; }
+  .lang { margin-top: 14px; font-size: 15px; }
+  h2 { font-size: 21px; margin: 42px 0 12px; }
+  h3 { font-size: 17px; margin: 24px 0 8px; }
+  p, li { color: var(--ink-dim); }
+  p { margin-bottom: 14px; }
+  ul { margin: 0 0 14px 22px; }
+  li { margin-bottom: 7px; }
+  strong { color: var(--ink); }
+  .tbl { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0 20px; font-size: 15.5px; }
+  th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--ink); font-weight: 600; }
+  td { color: var(--ink-dim); }
+  code { background: var(--card); border: 1px solid var(--line); padding: 2px 6px; border-radius: 5px; font-size: 14px; }
+  .callout { background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--pine); border-radius: 10px; padding: 18px 20px; margin: 22px 0; }
+  .callout p:last-child { margin-bottom: 0; }
+  footer { margin-top: 52px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 15px; color: var(--ink-dim); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- BRAND --><h1>Pensjonat — Privacy Policy</h1>
+  <p class="meta">Effective 5 August 2026 · applies to the Android app <code>com.tr0lczyk.pensjonat</code> and the owner's web panel</p>
+  <p class="lang"><a href="../">Wersja polska →</a></p>
+
+  <p>The app is made by Mateusz Olczyk, an individual developer based in Poland. Contact:
+  <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a>.</p>
+
+  <div class="callout">
+    <p><strong>The short version.</strong> This is a work tool for small lodging properties,
+    not an advertising product. There are no ads, we never sell any data, and we do not
+    process hotel guests' data. We process what is needed to organise housekeeping: rooms,
+    tasks, checklists, staff first names and room photos. Everything is stored in the
+    European Union. The app also collects basic telemetry (usage statistics and crash
+    reports) — it is <strong>enabled by default</strong>, which we state plainly in
+    section 4.</p>
+  </div>
+
+  <h2>1. Roles: who is responsible for what</h2>
+  <p>The app is a B2B tool used by a lodging property (guesthouse, villa, apartments) and its
+  staff. The roles are therefore as follows:</p>
+  <ul>
+    <li>The <strong>property owner</strong> is the <strong>data controller for their staff's
+    personal data</strong> (names in the staff roster, task assignments, photos taken as part
+    of work). The owner decides who is added to the roster and which tasks are assigned.</li>
+    <li><strong>We (the app developer)</strong> act in that respect as a
+    <strong>data processor</strong> — we store and process that data solely to make the app
+    work, on the property owner's behalf.</li>
+    <li>For the owner's account data (e-mail address) and for telemetry (section 4), we are
+    the data controller.</li>
+  </ul>
+  <p>If you are a staff member and want your data corrected or deleted, contact the property
+  owner first; you can also write to us.</p>
+
+  <h2>2. Accounts and sign-in</h2>
+  <ul>
+    <li><strong>Staff (Android app):</strong> no accounts are created. The phone receives an
+    <strong>anonymous technical account</strong> (a random Firebase Authentication identifier)
+    linked to the property after entering an invite code. We collect no staff e-mails,
+    passwords or phone numbers.</li>
+    <li><strong>Owner (web panel):</strong> signs in with an e-mail address and password or
+    with a Google account. We store the e-mail address and account identifier; passwords are
+    handled by Firebase Authentication (Google) — we never see them.</li>
+  </ul>
+
+  <h2>3. What data we process and why</h2>
+  <div class="tbl">
+  <table>
+    <tr><th>Category</th><th>What exactly</th><th>Why</th></tr>
+    <tr>
+      <td><strong>Property data</strong></td>
+      <td>Property name, rooms, cleaning tasks, checklist templates and states, issue reports,
+      invite codes.</td>
+      <td>The app's core function: organising and verifying housekeeping.</td>
+    </tr>
+    <tr>
+      <td><strong>Staff roster</strong></td>
+      <td>Staff member's first name or display name, link to the technical account, task
+      assignments.</td>
+      <td>So it is clear who cleans which room and whose phone to notify.</td>
+    </tr>
+    <tr>
+      <td><strong>Room photos</strong></td>
+      <td>Photos taken by staff as part of a checklist or an issue report
+      (Firebase Storage).</td>
+      <td>Proof of completed cleaning and issue documentation for the owner.</td>
+    </tr>
+    <tr>
+      <td><strong>Push notifications</strong></td>
+      <td>Device tokens (Firebase Cloud Messaging) stored in the user profile; stale tokens
+      are removed automatically.</td>
+      <td>Delivering notifications about new tasks and rework requests.</td>
+    </tr>
+    <tr>
+      <td><strong>Settings</strong></td>
+      <td>User role, link to the property, chosen app language.</td>
+      <td>Correct permissions and interface behaviour.</td>
+    </tr>
+  </table>
+  </div>
+  <p><strong>We do not process hotel guests' data.</strong> The app handles no bookings,
+  check-ins or any data about people staying at the property.</p>
+
+  <h2>4. Telemetry: usage statistics and crash reports</h2>
+  <p>The app uses <strong>Google Firebase Analytics</strong> (usage statistics) and
+  <strong>Firebase Crashlytics</strong> (crash reports). Collected data includes app usage
+  events, device model, OS and app version, and — on a crash — the state of the app at the
+  time of the error.</p>
+  <div class="callout">
+    <p><strong>Important: telemetry is enabled by default.</strong> The app is an ad-free B2B
+    tool — telemetry data is used solely for diagnosing errors and improving the product,
+    never for advertising or marketing profiling. The app does not show a telemetry consent
+    dialog; the legal basis for this processing is our legitimate interest
+    (Art. 6(1)(f) GDPR). If you do not accept telemetry, write to us — until then, the only
+    complete alternative is not to use the app.</p>
+  </div>
+  <p>The app contains <strong>no ads</strong> and does not use the advertising ID for
+  advertising purposes.</p>
+
+  <h2>5. Where data is stored</h2>
+  <p>The app's backend is Google Firebase (Firebase Authentication, Cloud Firestore,
+  Firebase Storage, Cloud Functions, Firebase Cloud Messaging), running on Google Cloud.
+  Property data, photos and server functions run in the <code>europe-central2</code> region
+  (Warsaw) / in the European Union. Google LLC acts as our sub-processor; data transfers are
+  governed by Google Cloud's standard contractual clauses.</p>
+
+  <h2>6. Android app permissions</h2>
+  <div class="tbl">
+  <table>
+    <tr><th>Permission</th><th>Why</th></tr>
+    <tr><td><code>INTERNET</code></td><td>Synchronising tasks, checklists and photos with the backend.</td></tr>
+    <tr><td><code>POST_NOTIFICATIONS</code></td><td>Notifications about new tasks and rework requests (Android 13+; the system consent prompt is shown, and declining does not block work).</td></tr>
+  </table>
+  </div>
+  <p>The app has <strong>no camera and no location permission</strong>. Photos are taken with
+  the system camera app; a photo is first saved to the app's private directory and linked to
+  the task only after a successful upload.</p>
+
+  <h2>7. How long we keep data</h2>
+  <ul>
+    <li><strong>Room photos:</strong> <strong>12 months</strong> from upload — then deleted
+    automatically (storage lifecycle rule).</li>
+    <li><strong>Property data</strong> (rooms, tasks, checklists, staff roster): for as long
+    as the property uses the app; deleted at the owner's request.</li>
+    <li><strong>Staff technical accounts:</strong> until unlinked from the roster (e.g. when
+    a phone is replaced, the old link is cleared) or removed from the roster.</li>
+    <li><strong>Push tokens:</strong> stale tokens are removed automatically after a failed
+    delivery.</li>
+    <li><strong>Telemetry:</strong> per Firebase Analytics and Crashlytics retention periods
+    (up to several months).</li>
+  </ul>
+
+  <h2>8. What we never do</h2>
+  <ul>
+    <li>No ads and no cooperation with ad networks.</li>
+    <li>No selling or sharing of personal data with third parties for marketing purposes.</li>
+    <li>No marketing profiling of users.</li>
+    <li>No processing of property guests' data.</li>
+    <li>No collection of location, contacts or phone contents.</li>
+  </ul>
+
+  <h2>9. Your rights</h2>
+  <p>Under the GDPR you have the right to access your data, rectify it, erase it, restrict
+  its processing, port it, and object to processing based on legitimate interest (including
+  telemetry). For staff data, the right addressee of a request is the property owner (the
+  controller); for the rest — us. You also have the right to lodge a complaint with your
+  data protection authority (in Poland: PUODO).</p>
+
+  <h2>10. Children</h2>
+  <p>The app is a work tool and is not intended for children under 16. We do not knowingly
+  collect children's data.</p>
+
+  <h2>11. Changes to this policy</h2>
+  <p>We will announce material changes in the app or on this page by updating the effective
+  date. The current version always lives at
+  <code>https://tr0lczyk.github.io/pensjonat/privacy/en/</code>.</p>
+
+  <footer>
+    <p>Questions? <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a> ·
+    <a href="../../">app page</a> · <a href="../">wersja polska</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

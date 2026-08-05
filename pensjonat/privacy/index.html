@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--
+  BRAND: „Pensjonat" to nazwa robocza — po wyborze docelowej nazwy podmień
+  wystąpienia w <title>, meta description, h1 i pierwszym akapicie.
+-->
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- BRAND --><title>Pensjonat — Polityka prywatności</title>
+<meta name="description" content="Polityka prywatności aplikacji Pensjonat (Android + panel www): jakie dane przetwarzamy, po co, gdzie są przechowywane i jakie masz prawa.">
+<style>
+  :root {
+    --paper: #FAF6EF; --card: #FFFFFF; --line: rgba(61,48,35,.14);
+    --ink: #3D3023; --ink-dim: rgba(61,48,35,.70); --pine: #3E6B4F; --pine-deep: #2C5039;
+    --body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.68; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 88px; }
+  a { color: var(--pine-deep); }
+  h1 { font-size: clamp(30px, 6vw, 42px); line-height: 1.1; letter-spacing: -.02em; }
+  .meta { color: var(--ink-dim); font-size: 15px; margin-top: 10px; }
+  .lang { margin-top: 14px; font-size: 15px; }
+  h2 { font-size: 21px; margin: 42px 0 12px; }
+  h3 { font-size: 17px; margin: 24px 0 8px; }
+  p, li { color: var(--ink-dim); }
+  p { margin-bottom: 14px; }
+  ul { margin: 0 0 14px 22px; }
+  li { margin-bottom: 7px; }
+  strong { color: var(--ink); }
+  .tbl { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0 20px; font-size: 15.5px; }
+  th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--ink); font-weight: 600; }
+  td { color: var(--ink-dim); }
+  code { background: var(--card); border: 1px solid var(--line); padding: 2px 6px; border-radius: 5px; font-size: 14px; }
+  .callout { background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--pine); border-radius: 10px; padding: 18px 20px; margin: 22px 0; }
+  .callout p:last-child { margin-bottom: 0; }
+  footer { margin-top: 52px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 15px; color: var(--ink-dim); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- BRAND --><h1>Pensjonat — Polityka prywatności</h1>
+  <p class="meta">Obowiązuje od 5 sierpnia 2026 · dotyczy aplikacji Android <code>com.tr0lczyk.pensjonat</code> oraz panelu właściciela w przeglądarce</p>
+  <p class="lang"><a href="en/">English version →</a></p>
+
+  <p>Aplikację tworzy Mateusz Olczyk, niezależny deweloper z Polski. Kontakt:
+  <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a>.</p>
+
+  <div class="callout">
+    <p><strong>W skrócie.</strong> To narzędzie pracy dla małych obiektów noclegowych, nie
+    produkt reklamowy. Nie ma w nim reklam, nie sprzedajemy żadnych danych i nie przetwarzamy
+    danych gości hotelowych. Przetwarzamy to, co jest potrzebne do organizacji sprzątania:
+    pokoje, zadania, checklisty, imiona personelu i zdjęcia pokoi. Wszystko przechowujemy
+    w Unii Europejskiej. Aplikacja zbiera też podstawową telemetrię (statystyki użycia
+    i raporty awarii) — jest ona <strong>włączona domyślnie</strong>, o czym piszemy wprost
+    w sekcji 4.</p>
+  </div>
+
+  <h2>1. Role: kto za co odpowiada</h2>
+  <p>Aplikacja jest narzędziem typu B2B — korzysta z niej obiekt noclegowy (pensjonat, willa,
+  apartamenty) i jego personel. Dlatego role wyglądają tak:</p>
+  <ul>
+    <li><strong>Właściciel obiektu</strong> jest <strong>administratorem danych osobowych
+    swojego personelu</strong> (imion/nazw z kartoteki, przypisań do zadań, zdjęć robionych
+    w ramach pracy). To on decyduje, kogo wpisać do kartoteki i jakie zadania przydzielić.</li>
+    <li><strong>My (deweloper aplikacji)</strong> działamy w tym zakresie jako
+    <strong>podmiot przetwarzający</strong> (procesor) — przechowujemy i przetwarzamy te dane
+    wyłącznie po to, żeby aplikacja działała, na zlecenie właściciela obiektu.</li>
+    <li>Dla danych konta właściciela (adres e-mail) oraz danych telemetrycznych
+    (sekcja 4) administratorem jesteśmy my.</li>
+  </ul>
+  <p>Jeśli jesteś członkiem personelu i chcesz sprostować lub usunąć swoje dane, w pierwszej
+  kolejności zwróć się do właściciela obiektu; możesz też napisać do nas.</p>
+
+  <h2>2. Konta i logowanie</h2>
+  <ul>
+    <li><strong>Personel (aplikacja Android):</strong> nie zakłada kont. Telefon otrzymuje
+    <strong>anonimowe konto techniczne</strong> (losowy identyfikator Firebase Authentication)
+    powiązane z obiektem po wpisaniu kodu zaproszenia. Nie zbieramy e-maili, haseł ani numerów
+    telefonu personelu.</li>
+    <li><strong>Właściciel (panel www):</strong> loguje się adresem e-mail i hasłem albo kontem
+    Google. Przechowujemy adres e-mail i identyfikator konta; hasła obsługuje Firebase
+    Authentication (Google) — my ich nie widzimy.</li>
+  </ul>
+
+  <h2>3. Jakie dane przetwarzamy i po co</h2>
+  <div class="tbl">
+  <table>
+    <tr><th>Kategoria</th><th>Co dokładnie</th><th>Po co</th></tr>
+    <tr>
+      <td><strong>Dane obiektu</strong></td>
+      <td>Nazwa obiektu, pokoje, zadania sprzątania, szablony i stany checklist, zgłoszenia
+      usterek, kody zaproszeń.</td>
+      <td>Podstawowa funkcja aplikacji: organizacja i rozliczanie sprzątania.</td>
+    </tr>
+    <tr>
+      <td><strong>Kartoteka personelu</strong></td>
+      <td>Imię lub nazwa wyświetlana członka personelu, powiązanie z kontem technicznym,
+      przypisania do zadań.</td>
+      <td>Żeby było wiadomo, kto sprząta który pokój i do kogo wysłać powiadomienie.</td>
+    </tr>
+    <tr>
+      <td><strong>Zdjęcia pokoi</strong></td>
+      <td>Zdjęcia robione przez personel w ramach checklisty lub zgłoszenia usterki
+      (Firebase Storage).</td>
+      <td>Potwierdzenie wykonania sprzątania i dokumentacja usterek dla właściciela.</td>
+    </tr>
+    <tr>
+      <td><strong>Powiadomienia push</strong></td>
+      <td>Tokeny urządzeń (Firebase Cloud Messaging) zapisane w profilu użytkownika;
+      nieaktualne tokeny są usuwane automatycznie.</td>
+      <td>Dostarczanie powiadomień o nowych zadaniach i poprawkach.</td>
+    </tr>
+    <tr>
+      <td><strong>Ustawienia</strong></td>
+      <td>Rola użytkownika, powiązanie z obiektem, wybrany język aplikacji.</td>
+      <td>Poprawne działanie uprawnień i interfejsu.</td>
+    </tr>
+  </table>
+  </div>
+  <p><strong>Nie przetwarzamy danych gości hotelowych.</strong> Aplikacja nie obsługuje
+  rezerwacji, meldunków ani żadnych danych osób nocujących w obiekcie.</p>
+
+  <h2>4. Telemetria: statystyki użycia i raporty awarii</h2>
+  <p>Aplikacja korzysta z <strong>Google Firebase Analytics</strong> (statystyki użycia)
+  oraz <strong>Firebase Crashlytics</strong> (raporty awarii). Zbierane są m.in. zdarzenia
+  użycia aplikacji, model urządzenia, wersja systemu i aplikacji oraz — przy awarii — stan
+  aplikacji w chwili błędu.</p>
+  <div class="callout">
+    <p><strong>Ważne: telemetria jest włączona domyślnie.</strong> Aplikacja jest narzędziem
+    B2B bez reklam — dane telemetryczne służą wyłącznie diagnozowaniu błędów i rozwojowi
+    produktu, nigdy do reklam ani profilowania marketingowego. Aplikacja nie wyświetla okna
+    zgody na telemetrię; podstawą przetwarzania jest nasz prawnie uzasadniony interes
+    (art. 6 ust. 1 lit. f RODO). Jeśli nie akceptujesz telemetrii, napisz do nas — a do tego
+    czasu jedyną pełną alternatywą jest niekorzystanie z aplikacji.</p>
+  </div>
+  <p>Aplikacja <strong>nie zawiera reklam</strong> i nie używa identyfikatora reklamowego
+  do celów reklamowych.</p>
+
+  <h2>5. Gdzie dane są przechowywane</h2>
+  <p>Backend aplikacji to Google Firebase (Firebase Authentication, Cloud Firestore,
+  Firebase Storage, Cloud Functions, Firebase Cloud Messaging), działający w ramach Google
+  Cloud. Dane obiektu, zdjęcia i funkcje serwerowe działają w regionie
+  <code>europe-central2</code> (Warszawa) / w Unii Europejskiej. Google LLC działa jako nasz
+  podpowierzający; transfer danych regulują standardowe klauzule umowne Google Cloud.</p>
+
+  <h2>6. Uprawnienia aplikacji Android</h2>
+  <div class="tbl">
+  <table>
+    <tr><th>Uprawnienie</th><th>Po co</th></tr>
+    <tr><td><code>INTERNET</code></td><td>Synchronizacja zadań, checklist i zdjęć z backendem.</td></tr>
+    <tr><td><code>POST_NOTIFICATIONS</code></td><td>Powiadomienia o nowych zadaniach i poprawkach (Android 13+; pytamy o zgodę systemową, odmowa nie blokuje pracy).</td></tr>
+  </table>
+  </div>
+  <p>Aplikacja <strong>nie ma uprawnienia do aparatu ani do lokalizacji</strong>. Zdjęcia
+  robione są systemową aplikacją aparatu; zdjęcie trafia najpierw do prywatnego katalogu
+  aplikacji, a po udanym przesłaniu na serwer jest powiązane z zadaniem.</p>
+
+  <h2>7. Jak długo przechowujemy dane</h2>
+  <ul>
+    <li><strong>Zdjęcia pokoi:</strong> <strong>12 miesięcy</strong> od przesłania — potem są
+    usuwane automatycznie (reguła cyklu życia magazynu).</li>
+    <li><strong>Dane obiektu</strong> (pokoje, zadania, checklisty, kartoteka personelu):
+    przez czas korzystania z aplikacji przez obiekt; usuwane na wniosek właściciela.</li>
+    <li><strong>Konta techniczne personelu:</strong> do odpięcia od kartoteki (np. przy zmianie
+    telefonu stare powiązanie jest czyszczone) lub usunięcia z kartoteki.</li>
+    <li><strong>Tokeny push:</strong> nieaktualne usuwane automatycznie po nieudanej wysyłce.</li>
+    <li><strong>Telemetria:</strong> zgodnie z okresami retencji Firebase Analytics
+    i Crashlytics (maksymalnie kilkanaście miesięcy).</li>
+  </ul>
+
+  <h2>8. Czego nie robimy</h2>
+  <ul>
+    <li>Nie wyświetlamy reklam i nie współpracujemy z sieciami reklamowymi.</li>
+    <li>Nie sprzedajemy ani nie udostępniamy danych osobowych stronom trzecim w celach
+    marketingowych.</li>
+    <li>Nie profilujemy użytkowników do celów marketingowych.</li>
+    <li>Nie przetwarzamy danych gości obiektów.</li>
+    <li>Nie zbieramy lokalizacji, kontaktów ani zawartości telefonu.</li>
+  </ul>
+
+  <h2>9. Twoje prawa</h2>
+  <p>Zgodnie z RODO masz prawo do dostępu do swoich danych, ich sprostowania, usunięcia,
+  ograniczenia przetwarzania, przenoszenia oraz sprzeciwu wobec przetwarzania opartego na
+  prawnie uzasadnionym interesie (w tym telemetrii). W sprawach danych personelu właściwym
+  adresatem wniosku jest właściciel obiektu (administrator); w pozostałych — my. Masz też
+  prawo wnieść skargę do Prezesa Urzędu Ochrony Danych Osobowych (PUODO).</p>
+
+  <h2>10. Dzieci</h2>
+  <p>Aplikacja jest narzędziem do pracy i nie jest przeznaczona dla dzieci poniżej 16 lat.
+  Świadomie nie zbieramy danych dzieci.</p>
+
+  <h2>11. Zmiany tej polityki</h2>
+  <p>O istotnych zmianach poinformujemy w aplikacji lub na tej stronie, aktualizując datę
+  „obowiązuje od". Aktualna wersja zawsze znajduje się pod adresem
+  <code>https://tr0lczyk.github.io/pensjonat/privacy/</code>.</p>
+
+  <footer>
+    <p>Pytania? <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a> ·
+    <a href="../">strona aplikacji</a> · <a href="en/">English version</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
