@@ -12,35 +12,43 @@
 <!-- BRAND --><meta name="description" content="Pokoyo to aplikacja housekeepingowa dla małych pensjonatów i obiektów noclegowych: lista zadań dla personelu, checklisty pokoi, zdjęcia jako potwierdzenie i panel właściciela w przeglądarce.">
 <style>
   :root {
-    --paper: #FAF6EF;
-    --card: #FFFFFF;
-    --line: rgba(61, 48, 35, .14);
-    --ink: #3D3023;
-    --ink-dim: rgba(61, 48, 35, .68);
-    --pine: #3E6B4F;
-    --pine-deep: #2C5039;
-    --terracotta: #C4643B;
+    --pk-primary: #1B5244;
+    --pk-on-primary: #FFFFFF;
+    --pk-primary-soft: #D6E9E0;
+    --pk-on-primary-soft: #0C2A23;
+    --pk-inverse: #123B31;
+    --pk-accent: #D99A2B;
+    --pk-accent-soft: #F8E8C7;
+    --pk-on-accent-soft: #3D2C00;
+    --pk-accent-text: #8F6400;
+    --pk-bg: #FBF8F1;
+    --pk-card: #FFFFFF;
+    --pk-card-2: #F5EFE3;
+    --pk-line: #EAE0CC;
+    --pk-fg: #1D2823;
+    --pk-fg-2: #4A5A52;
+    --pk-hint: #7C8B83;
     --body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --display: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    background: var(--paper);
-    color: var(--ink);
+    background: var(--pk-bg);
+    color: var(--pk-fg);
     font-family: var(--body);
     font-size: 17px;
     line-height: 1.62;
     overflow-x: hidden;
   }
-  ::selection { background: var(--pine); color: var(--paper); }
-  a { color: var(--pine-deep); }
+  ::selection { background: var(--pk-primary); color: var(--pk-bg); }
+  a { color: var(--pk-primary); }
 
   .glow {
     position: fixed; inset: 0; z-index: 0; pointer-events: none;
     background:
-      radial-gradient(110% 55% at 50% -10%, rgba(62, 107, 79, .10), transparent 60%),
-      radial-gradient(70% 40% at 85% 100%, rgba(196, 100, 59, .08), transparent 65%);
+      radial-gradient(110% 55% at 50% -10%, rgba(27, 82, 68, .10), transparent 60%),
+      radial-gradient(70% 40% at 85% 100%, rgba(217, 154, 43, .10), transparent 65%);
   }
   main { position: relative; z-index: 1; }
   .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
@@ -48,64 +56,64 @@
   header { padding: 72px 0 44px; text-align: center; }
   .mark-key {
     width: 88px; height: 88px; margin: 0 auto 24px; border-radius: 22px;
-    background: linear-gradient(160deg, var(--pine), var(--pine-deep));
+    background: linear-gradient(160deg, var(--pk-primary), var(--pk-inverse));
     display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 16px 40px rgba(62, 107, 79, .28);
+    box-shadow: 0 16px 40px rgba(18, 59, 49, .28);
   }
   .mark-key svg { width: 46px; height: 46px; }
   h1 { font-family: var(--display); font-size: clamp(40px, 8vw, 64px); line-height: 1.04; letter-spacing: -.02em; }
-  .tagline { color: var(--ink-dim); font-size: clamp(17px, 2.6vw, 21px); margin-top: 16px; }
+  .tagline { color: var(--pk-fg-2); font-size: clamp(17px, 2.6vw, 21px); margin-top: 16px; }
 
   .wedge {
     margin: 38px auto 0; max-width: 640px; padding: 22px 26px;
-    border: 1px solid rgba(62, 107, 79, .35); border-radius: 18px;
-    background: linear-gradient(180deg, rgba(62, 107, 79, .08), rgba(62, 107, 79, .02));
+    border: 1px solid rgba(27, 82, 68, .35); border-radius: 18px;
+    background: linear-gradient(180deg, rgba(27, 82, 68, .08), rgba(27, 82, 68, .02));
     text-align: left;
   }
-  .wedge strong { color: var(--pine-deep); font-size: 19px; display: block; margin-bottom: 6px; font-family: var(--display); }
-  .wedge p { color: var(--ink-dim); font-size: 16px; }
+  .wedge strong { color: var(--pk-primary); font-size: 19px; display: block; margin-bottom: 6px; font-family: var(--display); }
+  .wedge p { color: var(--pk-fg-2); font-size: 16px; }
 
   .cta { margin-top: 34px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
   .badge {
     display: inline-flex; align-items: center; gap: 14px; text-decoration: none;
     padding: 12px 26px 12px 20px; border-radius: 14px;
-    background: var(--ink); color: var(--paper); font-weight: 600;
+    background: var(--pk-fg); color: var(--pk-bg); font-weight: 600;
     opacity: .55; cursor: default;
   }
   .badge svg { width: 26px; height: 26px; }
   .badge span small { display: block; font-size: 11px; font-weight: 500; opacity: .72; text-transform: uppercase; letter-spacing: .09em; }
   .badge span b { font-size: 19px; font-family: var(--display); }
-  .status { color: var(--ink-dim); font-size: 14px; }
-  .status em { color: var(--terracotta); font-style: normal; font-weight: 600; }
+  .status { color: var(--pk-fg-2); font-size: 14px; }
+  .status em { color: var(--pk-accent-text); font-style: normal; font-weight: 600; }
 
-  section { padding: 60px 0; border-top: 1px solid var(--line); }
+  section { padding: 60px 0; border-top: 1px solid var(--pk-line); }
   h2 { font-family: var(--display); font-size: clamp(26px, 4.4vw, 34px); margin-bottom: 26px; letter-spacing: -.01em; }
 
   .steps { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); counter-reset: step; }
-  .step { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+  .step { background: var(--pk-card); border: 1px solid var(--pk-line); border-radius: 16px; padding: 22px; }
   .step::before {
     counter-increment: step; content: counter(step);
     display: inline-flex; align-items: center; justify-content: center;
     width: 32px; height: 32px; margin-bottom: 14px; border-radius: 50%;
-    background: var(--pine); color: var(--paper); font-weight: 700; font-size: 16px;
+    background: var(--pk-primary); color: var(--pk-bg); font-weight: 700; font-size: 16px;
   }
   .step h3 { font-size: 17px; margin-bottom: 8px; }
-  .step p { color: var(--ink-dim); font-size: 15.5px; }
+  .step p { color: var(--pk-fg-2); font-size: 15.5px; }
 
   .features { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-  .feature { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+  .feature { background: var(--pk-card); border: 1px solid var(--pk-line); border-radius: 16px; padding: 22px; }
   .feature h3 { font-size: 17px; margin-bottom: 8px; }
-  .feature p { color: var(--ink-dim); font-size: 15.5px; }
-  .feature .mark { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--terracotta); display: block; margin-bottom: 12px; font-weight: 600; }
+  .feature p { color: var(--pk-fg-2); font-size: 15.5px; }
+  .feature .mark { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--pk-accent-text); display: block; margin-bottom: 12px; font-weight: 600; }
 
   .privacy-box {
-    background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 26px;
+    background: var(--pk-card); border: 1px solid var(--pk-line); border-radius: 16px; padding: 26px;
   }
   .privacy-box ul { list-style: none; display: grid; gap: 10px; margin-top: 14px; }
-  .privacy-box li { display: flex; gap: 10px; color: var(--ink-dim); font-size: 15.5px; }
-  .privacy-box li::before { content: "✓"; color: var(--pine); font-weight: 700; }
+  .privacy-box li { display: flex; gap: 10px; color: var(--pk-fg-2); font-size: 15.5px; }
+  .privacy-box li::before { content: "✓"; color: var(--pk-primary); font-weight: 700; }
 
-  footer { padding: 52px 0 72px; border-top: 1px solid var(--line); color: var(--ink-dim); font-size: 15px; text-align: center; }
+  footer { padding: 52px 0 72px; border-top: 1px solid var(--pk-line); color: var(--pk-fg-2); font-size: 15px; text-align: center; }
   footer a { text-decoration: none; }
   footer a:hover { text-decoration: underline; }
   .footlinks { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 18px; }
@@ -119,8 +127,8 @@
     <div class="mark-key" aria-hidden="true">
       <!-- klucz hotelowy z zawieszką -->
       <svg viewBox="0 0 48 48" fill="none">
-        <circle cx="18" cy="18" r="9" stroke="#FAF6EF" stroke-width="3.4"/>
-        <path d="M24.5 24.5 36 36M36 36v-6M36 36h-6" stroke="#FAF6EF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="18" cy="18" r="9" stroke="#FBF8F1" stroke-width="3.4"/>
+        <path d="M24.5 24.5 36 36M36 36v-6M36 36h-6" stroke="#FBF8F1" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
     <!-- BRAND --><h1>Pokoyo</h1>
@@ -135,7 +143,7 @@
 
     <div class="cta">
       <span class="badge" aria-disabled="true">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#FAF6EF" d="M3.6 1.8 13.4 12 3.6 22.2c-.4-.3-.6-.8-.6-1.4V3.2c0-.6.2-1.1.6-1.4Zm11.2 11.6 2.7 2.8-9.9 5.6 7.2-8.4Zm0-2.8L7.6 2.2l9.9 5.6-2.7 2.8Zm4.4 1.4 2.3 1.3c.7.4.7 1.4 0 1.8l-2.3 1.3-3-3.1 3-3.1Z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#FBF8F1" d="M3.6 1.8 13.4 12 3.6 22.2c-.4-.3-.6-.8-.6-1.4V3.2c0-.6.2-1.1.6-1.4Zm11.2 11.6 2.7 2.8-9.9 5.6 7.2-8.4Zm0-2.8L7.6 2.2l9.9 5.6-2.7 2.8Zm4.4 1.4 2.3 1.3c.7.4.7 1.4 0 1.8l-2.3 1.3-3-3.1 3-3.1Z"/></svg>
         <span><small>Wkrótce w</small><b>Google Play</b></span>
       </span>
       <p class="status">Aplikacja jest <em>w przygotowaniu</em> — link do sklepu pojawi się tu po premierze.</p>
