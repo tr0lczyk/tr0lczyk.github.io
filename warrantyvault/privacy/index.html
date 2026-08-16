@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WarrantyVault — Privacy Policy</title>
+<style>
+  :root { --teal: #0B5D51; --ink: #171D1A; --dim: rgba(23,29,26,.7); --line: rgba(23,29,26,.12); }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: #F6FAF7; line-height: 1.65; font-size: 16px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-size: 32px; letter-spacing: -.01em; color: var(--teal); }
+  .meta { color: var(--dim); margin: 8px 0 32px; }
+  h2 { font-size: 21px; margin: 36px 0 10px; color: var(--teal); }
+  p, li { color: var(--ink); margin-bottom: 10px; }
+  ul { padding-left: 22px; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 15px; }
+  th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #EAF2ED; }
+  a { color: var(--teal); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>WarrantyVault — Privacy Policy</h1>
+  <p class="meta">Effective date: 16 August 2026 · Developer: Mateusz Olczyk (<a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a>)</p>
+
+  <h2>The short version</h2>
+  <p>WarrantyVault is an offline app. Your items, warranty dates and receipt photos are stored
+  <strong>only on your device</strong>, in the app's private storage. There is no account, no sign-in,
+  no cloud sync, and we never see, collect or sell the contents of your vault. The only data that
+  leaves your device is what the advertising and crash-reporting SDKs described below send —
+  and analytics/ads personalization run only with your consent.</p>
+
+  <h2>Data stored on your device (never sent to us)</h2>
+  <ul>
+    <li>Items you add: names, categories, purchase dates, warranty lengths, prices, stores, notes.</li>
+    <li>Receipt photos — copied into the app's private storage; no other app can read them.</li>
+    <li>Your settings (theme, reminder plan).</li>
+  </ul>
+  <p>Backup files you export (items + photos in one archive) are written to the location you choose
+  and are entirely under your control. Claim PDFs you generate are shared only where you send them.</p>
+
+  <h2>Data that leaves the device</h2>
+  <table>
+    <tr><th>Category</th><th>What</th><th>Purpose</th><th>Recipient</th></tr>
+    <tr>
+      <td>Advertising</td>
+      <td>Advertising ID, device info, coarse ad-request metadata</td>
+      <td>Showing ads (a banner, an occasional interstitial, an optional rewarded ad). Ad personalization depends on your consent choice.</td>
+      <td>Google AdMob (Google Mobile Ads SDK)</td>
+    </tr>
+    <tr>
+      <td>Analytics</td>
+      <td>Anonymous usage events (e.g. "item saved"), app version, device model</td>
+      <td>Understanding which features are used. <strong>Disabled until you give consent</strong> in the consent dialog.</td>
+      <td>Firebase Analytics</td>
+    </tr>
+    <tr>
+      <td>Crash reports</td>
+      <td>Stack traces, device model, OS version</td>
+      <td>Fixing crashes. Gated by the same consent.</td>
+      <td>Firebase Crashlytics</td>
+    </tr>
+  </table>
+  <p>We do not sell data. We do not share your vault contents with anyone — they never reach us
+  in the first place.</p>
+
+  <h2>Consent (GDPR / UMP)</h2>
+  <p>On first launch in regions where it is required, Google's User Messaging Platform asks for your
+  consent choices for ads. Analytics and crash reporting are enabled only after consent resolves
+  positively. You can change consent through the form shown at first launch (reinstalling resets it).</p>
+
+  <h2>Permissions</h2>
+  <table>
+    <tr><th>Permission</th><th>Why</th></tr>
+    <tr><td>INTERNET</td><td>Serving ads and sending consent-gated analytics/crash reports. The vault itself works fully offline.</td></tr>
+    <tr><td>POST_NOTIFICATIONS</td><td>Warranty-expiry reminders you configure. Deny it and the app still works — you just get no reminders.</td></tr>
+  </table>
+  <p>WarrantyVault does <strong>not</strong> request camera or storage permissions: receipt photos are
+  taken by your system camera app writing directly into WarrantyVault's private storage, and gallery
+  picks use Android's photo picker.</p>
+
+  <h2>Data retention and deletion</h2>
+  <p>Everything lives on your device: deleting an item deletes its photos, and uninstalling the app
+  deletes the entire vault. Backup files you exported remain wherever you saved them — delete them
+  yourself if you no longer want them. Ad, analytics and crash data are retained by Google according
+  to <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</p>
+
+  <h2>Children</h2>
+  <p>WarrantyVault is a general-audience utility and is not directed at children under 13.</p>
+
+  <h2>Changes</h2>
+  <p>Changes to this policy will be posted at this URL with an updated effective date.</p>
+
+  <h2>Contact</h2>
+  <p>Mateusz Olczyk · <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a></p>
+</div>
+</body>
+</html>
