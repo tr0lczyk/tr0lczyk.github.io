@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WarrantyVault — every receipt safe, every warranty on time</title>
+<meta name="description" content="WarrantyVault is a private, offline warranty and receipt keeper for Android: snap the receipt, get reminded before the warranty ends, export a claim PDF when something breaks.">
+<style>
+  :root {
+    --teal: #0B5D51;
+    --teal-bright: #0E6B5E;
+    --teal-deep: #00382F;
+    --mist: #F0F5F1;
+    --card: #F6FAF7;
+    --ink: #171D1A;
+    --ink-dim: rgba(23, 29, 26, .64);
+    --amber: #9A6A00;
+    --amber-bg: #FFDF9C;
+    --line: rgba(23, 29, 26, .12);
+    --body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--mist); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .hero { background: linear-gradient(140deg, var(--teal-bright), var(--teal-deep)); color: #fff; padding: 72px 0 88px; position: relative; overflow: hidden; }
+  .hero .shield-watermark { position: absolute; right: -60px; top: -40px; width: 380px; opacity: .08; }
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 48px; }
+  .brand svg { width: 34px; height: 38px; }
+  .brand span { font-size: 22px; font-weight: 800; letter-spacing: -.01em; }
+  .hero h1 { font-size: clamp(34px, 6vw, 56px); font-weight: 800; line-height: 1.12; letter-spacing: -.02em; max-width: 640px; }
+  .hero p.sub { margin-top: 20px; font-size: 20px; max-width: 560px; color: rgba(255,255,255,.85); }
+  .hero .pill { display: inline-block; margin-top: 26px; padding: 8px 16px; border-radius: 999px; background: rgba(255,255,255,.14); font-size: 14px; font-weight: 600; letter-spacing: .02em; }
+  .cta { margin-top: 36px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .cta img { height: 64px; }
+  .features { padding: 64px 0; }
+  .features h2 { font-size: 28px; font-weight: 800; letter-spacing: -.01em; margin-bottom: 28px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+  .card h3 { font-size: 18px; margin-bottom: 8px; }
+  .card p { color: var(--ink-dim); font-size: 15px; }
+  .card .tag { display: inline-block; margin-bottom: 12px; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; background: var(--amber-bg); color: #2A1D00; }
+  footer { border-top: 1px solid var(--line); padding: 32px 0 48px; font-size: 14px; color: var(--ink-dim); }
+  footer a { color: var(--teal); font-weight: 600; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <svg class="shield-watermark" viewBox="20 18 68 81" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" fill-rule="evenodd" d="M54,24 L82,34 L82,55 C82,74 70,88 54,93 C38,88 26,74 26,55 L26,34 Z M40,45 L68,45 L68,50.5 L40,50.5 Z M40,56 L68,56 L68,61.5 L40,61.5 Z M40,67 L57,67 L57,72.5 L40,72.5 Z"/></svg>
+  <div class="wrap">
+    <div class="brand">
+      <svg viewBox="20 18 68 81" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" fill-rule="evenodd" d="M54,24 L82,34 L82,55 C82,74 70,88 54,93 C38,88 26,74 26,55 L26,34 Z M40,45 L68,45 L68,50.5 L40,50.5 Z M40,56 L68,56 L68,61.5 L40,61.5 Z M40,67 L57,67 L57,72.5 L40,72.5 Z"/></svg>
+      <span>WarrantyVault</span>
+    </div>
+    <h1>Every receipt safe.<br>Every warranty on time.</h1>
+    <p class="sub">Snap the receipt when you buy, forget about it — WarrantyVault reminds you before the warranty runs out and hands you a claim PDF when something breaks.</p>
+    <span class="pill">100% offline · no account · your data stays on your phone</span>
+    <div class="cta">
+      <a href="https://play.google.com/store/apps/details?id=com.tr0lczyk.warrantyvault"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"></a>
+    </div>
+  </div>
+</header>
+
+<section class="features">
+  <div class="wrap">
+    <h2>Why WarrantyVault</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="tag">No camera permission</span>
+        <h3>Snap the receipt. Done.</h3>
+        <p>Photograph the receipt or pick it from your gallery. Photos are copied into the app's private storage — they survive gallery clean-ups and no other app can read them.</p>
+      </div>
+      <div class="card">
+        <span class="tag">7 / 30 / 60 days</span>
+        <h3>Reminded before it expires</h3>
+        <p>Pick how far ahead you want a heads-up. WarrantyVault checks daily and notifies you before each warranty ends — including a last-day alert.</p>
+      </div>
+      <div class="card">
+        <span class="tag">One tap</span>
+        <h3>Claim PDF when it breaks</h3>
+        <p>Item, dates, store, price and the receipt photos — exported as a single PDF you can email to the shop or service desk.</p>
+      </div>
+      <div class="card">
+        <span class="tag">You own the file</span>
+        <h3>Backup anywhere you like</h3>
+        <p>Export your whole vault (items + photos) into one file, store it wherever you trust, restore it on any device. No cloud in between.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Private by design</span>
+        <h3>No account. No sync. No tracking of your stuff.</h3>
+        <p>What you own is nobody's business. Your items never leave the phone unless you export them yourself.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Dark mode</span>
+        <h3>Calm, quick, searchable</h3>
+        <p>Instant search across items, stores and categories. A clear days-left countdown on every item. Full dark theme from day one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>WarrantyVault · <a href="privacy/">Privacy policy</a> · Contact: <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>
