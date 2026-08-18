@@ -193,6 +193,9 @@
   status (pending / approved / rejected / expired) and when it was sent. <strong>We do not ask for a
   surname, e-mail, phone number, address, document number or payment</strong> and there are no fields
   in which those could be entered.</p>
+  <p><strong>This data does not stay forever</strong>: 90 days after the slot the request was for,
+  the first name, the note and both technical markers from 5.2 are cleared automatically and
+  permanently (details in section 11).</p>
 
   <h3>5.2. Technical anti-spam markers</h3>
   <p>The form is public, so without safeguards it would flood the owner with junk. Along with the
@@ -330,14 +333,19 @@
     </tr>
     <tr>
       <td>Guest booking requests (first name, note, IP hash, device identifier)</td>
-      <td>A request whose time slot has passed automatically changes status to "expired", but the
-      record <strong>stays in the database until the property owner deletes it</strong> — as the
-      controller, the owner decides how long to keep that history. There is no automatic retention
-      period for these records yet; we are working on one and will update this policy once it ships.</td>
+      <td><strong>90 days</strong> after the slot the request was for — then an automated job (the
+      same one, once a day) <strong>permanently clears the first name, the note, the IP hash and the
+      device identifier</strong>. The record itself stays without that data: the owner still sees
+      that someone asked for that slot, from which room and how it ended, but no longer who it was.
+      This happens automatically, regardless of the request's status (pending, approved, rejected,
+      expired) and without any action from the owner.</td>
     </tr>
     <tr>
       <td>Wellness bookings entered in the panel</td>
-      <td>Until the owner deletes them. Cancelling changes the status, it does not delete the record.</td>
+      <td>The guest's name or note attached to a booking: <strong>90 days</strong> after the session
+      date — then the same automated job clears it (this also covers a name copied over from an
+      approved guest request). The booking itself (space, room, time, price, settlement) stays until
+      the owner deletes it; cancelling changes the status, it does not delete the record.</td>
     </tr>
     <tr>
       <td>Events from booking calendars</td>

@@ -195,6 +195,9 @@
   (oczekująca / zatwierdzona / odrzucona / wygasła) oraz moment wysłania. <strong>Nie pytamy
   o nazwisko, e-mail, telefon, adres, numer dokumentu ani o płatność</strong> i nie mamy pól,
   w które można by je wpisać.</p>
+  <p><strong>Te dane nie zostają na zawsze</strong>: 90 dni po terminie, którego prośba dotyczyła,
+  imię, uwaga i oba znaczniki techniczne z punktu 5.2 są automatycznie i trwale czyszczone
+  (szczegóły w punkcie 11).</p>
 
   <h3>5.2. Znaczniki techniczne przeciw spamowi</h3>
   <p>Formularz jest publiczny, więc bez zabezpieczeń zalałby właściciela śmieciami. Razem
@@ -335,15 +338,20 @@
     </tr>
     <tr>
       <td>Prośby gości o rezerwację (imię, uwaga, skrót IP, identyfikator urządzenia)</td>
-      <td>Prośba, której termin minął, automatycznie zmienia status na „wygasła", ale wpis
-      <strong>zostaje w bazie do czasu usunięcia go przez właściciela obiektu</strong> —
-      to on jako administrator decyduje, jak długo chce trzymać tę historię. Automatycznego
-      okresu retencji dla tych wpisów jeszcze nie ma; pracujemy nad nim i zaktualizujemy tę
-      politykę, gdy zostanie wdrożony.</td>
+      <td><strong>90 dni</strong> od terminu, którego prośba dotyczyła — potem automat (ten sam,
+      raz na dobę) <strong>trwale czyści imię, uwagę, skrót IP i identyfikator urządzenia</strong>.
+      Sam wpis zostaje bez tych danych: właściciel dalej widzi, że o dany slot ktoś prosił,
+      z którego pokoju i jak się to skończyło, ale nie widzi już, kto to był. Dzieje się to
+      automatycznie, niezależnie od statusu prośby (oczekująca, zatwierdzona, odrzucona, wygasła)
+      i nie wymaga działania właściciela.</td>
     </tr>
     <tr>
       <td>Rezerwacje wellness wpisane w panelu</td>
-      <td>Do usunięcia przez właściciela. Anulowanie zmienia status, nie kasuje wpisu.</td>
+      <td>Nazwisko lub notatka o gościu dopisana do rezerwacji: <strong>90 dni</strong> od terminu
+      sesji — potem czyści ją ten sam automat (dotyczy to również nazwiska przepisanego
+      z zatwierdzonej prośby gościa). Sama rezerwacja (przestrzeń, pokój, godzina, cena,
+      rozliczenie) zostaje do usunięcia przez właściciela; anulowanie zmienia status,
+      nie kasuje wpisu.</td>
     </tr>
     <tr>
       <td>Wydarzenia z kalendarzy rezerwacyjnych</td>
