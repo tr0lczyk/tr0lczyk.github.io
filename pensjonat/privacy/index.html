@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- BRAND --><title>Pokoyo — Polityka prywatności</title>
-<meta name="description" content="Polityka prywatności aplikacji Pokoyo (Android + panel www): jakie dane przetwarzamy, po co, gdzie są przechowywane i jakie masz prawa.">
+<meta name="description" content="Polityka prywatności Pokoyo (aplikacja Android, panel właściciela i portal gościa): jakie dane przetwarzamy, w tym dane gości, po co, gdzie są przechowywane i jakie masz prawa.">
 <style>
   :root {
     --pk-primary: #1B5244;
@@ -58,157 +58,375 @@
 <div class="wrap">
 
   <!-- BRAND --><h1>Pokoyo — Polityka prywatności</h1>
-  <p class="meta">Obowiązuje od 5 sierpnia 2026 · dotyczy aplikacji Android <code>com.tr0lczyk.pensjonat</code> oraz panelu właściciela w przeglądarce</p>
+  <p class="meta">Obowiązuje od 18 sierpnia 2026 · dotyczy aplikacji Android <code>com.tr0lczyk.pensjonat</code>,
+  panelu właściciela w przeglądarce oraz publicznego portalu gościa pod adresem <code>/g/…</code></p>
   <p class="lang"><a href="en/">English version →</a></p>
 
-  <p>Aplikację tworzy Mateusz Olczyk, niezależny deweloper z Polski. Kontakt:
+  <p>Pokoyo tworzy Mateusz Olczyk, niezależny deweloper z Polski. Kontakt:
   <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a>.</p>
 
   <div class="callout">
-    <p><strong>W skrócie.</strong> To narzędzie pracy dla małych obiektów noclegowych, nie
-    produkt reklamowy. Nie ma w nim reklam, nie sprzedajemy żadnych danych i nie przetwarzamy
-    danych gości hotelowych. Przetwarzamy to, co jest potrzebne do organizacji sprzątania:
-    pokoje, zadania, checklisty, imiona personelu i zdjęcia pokoi. Wszystko przechowujemy
-    w Unii Europejskiej. Aplikacja zbiera też podstawową telemetrię (statystyki użycia
-    i raporty awarii) — jest ona <strong>włączona domyślnie</strong>, o czym piszemy wprost
-    w sekcji 4.</p>
+    <p><strong>W skrócie.</strong> Pokoyo to narzędzie pracy dla małych obiektów noclegowych:
+    organizuje sprzątanie, grafik sauny i jacuzzi oraz prostą stronę informacyjną dla gości.
+    Nie ma w nim reklam, nie sprzedajemy danych i nikogo nie profilujemy.</p>
+    <p><strong>Tak, przetwarzamy dane gości</strong> — dokładnie tyle, ile gość sam wpisze
+    w formularzu prośby o rezerwację (imię, wybrany pokój, opcjonalna uwaga) plus techniczne
+    znaczniki chroniące formularz przed spamem. Opisujemy to szczegółowo w sekcji 5.
+    Danych meldunkowych, dokumentów, numerów kart ani płatności nie obsługujemy w ogóle.</p>
+    <p>Wszystko przechowujemy w Unii Europejskiej. Aplikacja Android zbiera też podstawową
+    telemetrię (statystyki użycia i raporty awarii) — jest ona <strong>włączona domyślnie</strong>,
+    o czym piszemy wprost w sekcji 8.</p>
   </div>
 
-  <h2>1. Role: kto za co odpowiada</h2>
-  <p>Aplikacja jest narzędziem typu B2B — korzysta z niej obiekt noclegowy (pensjonat, willa,
-  apartamenty) i jego personel. Dlatego role wyglądają tak:</p>
+  <h2>1. Czego dotyczy ta polityka</h2>
+  <p>Pokoyo składa się z trzech osobnych powierzchni i ta polityka opisuje wszystkie trzy:</p>
   <ul>
-    <li><strong>Właściciel obiektu</strong> jest <strong>administratorem danych osobowych
-    swojego personelu</strong> (imion/nazw z kartoteki, przypisań do zadań, zdjęć robionych
-    w ramach pracy). To on decyduje, kogo wpisać do kartoteki i jakie zadania przydzielić.</li>
-    <li><strong>My (deweloper aplikacji)</strong> działamy w tym zakresie jako
-    <strong>podmiot przetwarzający</strong> (procesor) — przechowujemy i przetwarzamy te dane
-    wyłącznie po to, żeby aplikacja działała, na zlecenie właściciela obiektu.</li>
-    <li>Dla danych konta właściciela (adres e-mail) oraz danych telemetrycznych
-    (sekcja 4) administratorem jesteśmy my.</li>
+    <li><strong>Aplikacja Android dla personelu</strong> (<code>com.tr0lczyk.pensjonat</code>) —
+    zadania sprzątania, checklisty, zdjęcia pokoi, zgłoszenia usterek.</li>
+    <li><strong>Panel właściciela w przeglądarce</strong> — konfiguracja obiektu, kartoteka personelu,
+    grafik sauny/jacuzzi/rowerów, kalendarze rezerwacji, treść portalu gościa.</li>
+    <li><strong>Publiczny portal gościa</strong> pod adresem <code>/g/{nazwa-obiektu}</code> —
+    strona bez logowania, którą gość otwiera z kodu QR lub linku od obiektu. To jedyne miejsce,
+    w którym dane wpisuje <em>gość</em>, a nie personel.</li>
   </ul>
-  <p>Jeśli jesteś członkiem personelu i chcesz sprostować lub usunąć swoje dane, w pierwszej
-  kolejności zwróć się do właściciela obiektu; możesz też napisać do nas.</p>
 
-  <h2>2. Konta i logowanie</h2>
+  <h2>2. Role: kto za co odpowiada</h2>
+  <p>Pokoyo jest narzędziem typu B2B: my dostarczamy oprogramowanie, a decyzje o tym, jakie dane
+  i po co trafiają do systemu, podejmuje obiekt noclegowy. Dlatego:</p>
+  <ul>
+    <li><strong>Właściciel obiektu</strong> jest <strong>administratorem danych osobowych swojego
+    personelu i swoich gości</strong>. To on zakłada kartotekę personelu, włącza (albo nie) portal
+    gościa, decyduje, jakie pola zbiera formularz prośby o rezerwację, i on ogląda te dane w panelu.</li>
+    <li><strong>My (deweloper Pokoyo)</strong> jesteśmy w tym zakresie <strong>podmiotem
+    przetwarzającym</strong> (procesorem): przechowujemy i przetwarzamy te dane wyłącznie po to,
+    żeby aplikacja działała, na polecenie właściciela obiektu. Nie używamy danych personelu ani
+    gości do własnych celów.</li>
+    <li>Administratorem jesteśmy my wyłącznie dla <strong>danych konta właściciela</strong>
+    (adres e-mail, identyfikator konta) oraz dla <strong>telemetrii aplikacji Android</strong>
+    (sekcja 8).</li>
+  </ul>
+  <p><strong>Podstawy prawnej dla danych gości i personelu nie ustalamy my</strong> — robi to
+  właściciel obiektu jako administrator, bo to on zna kontekst (umowa z gościem, obowiązki
+  obiektu, uzasadniony interes). My przetwarzamy te dane wyłącznie na jego polecenie i w zakresie
+  opisanym w tej polityce.</p>
+  <p>Jesteś gościem albo członkiem personelu i chcesz dostęp do swoich danych, ich sprostowanie
+  lub usunięcie? Zwróć się w pierwszej kolejności do obiektu, w którym nocujesz lub pracujesz —
+  to on jest administratorem. Możesz też napisać do nas, a my przekażemy sprawę obiektowi
+  i pomożemy ją wykonać technicznie.</p>
+
+  <h2>3. Konta i logowanie</h2>
   <ul>
     <li><strong>Personel (aplikacja Android):</strong> nie zakłada kont. Telefon otrzymuje
     <strong>anonimowe konto techniczne</strong> (losowy identyfikator Firebase Authentication)
-    powiązane z obiektem po wpisaniu kodu zaproszenia. Nie zbieramy e-maili, haseł ani numerów
-    telefonu personelu.</li>
+    powiązane z obiektem po wpisaniu 6-znakowego kodu zaproszenia. Nie zbieramy od personelu
+    e-maili, haseł ani numerów telefonu. Nazwę wyświetlaną („Ania", „pokojówka 1") wpisuje
+    właściciel w panelu — to on decyduje, czy jest to imię, pseudonim czy numer.</li>
     <li><strong>Właściciel (panel www):</strong> loguje się adresem e-mail i hasłem albo kontem
     Google. Przechowujemy adres e-mail i identyfikator konta; hasła obsługuje Firebase
     Authentication (Google) — my ich nie widzimy.</li>
+    <li><strong>Gość (portal):</strong> <strong>nie zakłada konta i nie loguje się w ogóle.</strong></li>
   </ul>
 
-  <h2>3. Jakie dane przetwarzamy i po co</h2>
+  <h2>4. Dane obiektu i personelu</h2>
   <div class="tbl">
   <table>
     <tr><th>Kategoria</th><th>Co dokładnie</th><th>Po co</th></tr>
     <tr>
       <td><strong>Dane obiektu</strong></td>
-      <td>Nazwa obiektu, pokoje, zadania sprzątania, szablony i stany checklist, zgłoszenia
-      usterek, kody zaproszeń.</td>
-      <td>Podstawowa funkcja aplikacji: organizacja i rozliczanie sprzątania.</td>
+      <td>Nazwa obiektu, pokoje i przestrzenie (sauna, jacuzzi, rowery), zadania sprzątania,
+      szablony i stany checklist, zgłoszenia usterek, kody zaproszeń, treść portalu gościa
+      wpisana przez właściciela.</td>
+      <td>Podstawowa funkcja: organizacja i rozliczanie sprzątania oraz grafik wellness.</td>
     </tr>
     <tr>
       <td><strong>Kartoteka personelu</strong></td>
-      <td>Imię lub nazwa wyświetlana członka personelu, powiązanie z kontem technicznym,
-      przypisania do zadań.</td>
+      <td>Nazwa wyświetlana członka personelu, powiązanie z kontem technicznym, przypisania
+      do zadań, ślad kto i kiedy odhaczył pozycję checklisty, komentarz właściciela do poprawki.</td>
       <td>Żeby było wiadomo, kto sprząta który pokój i do kogo wysłać powiadomienie.</td>
     </tr>
     <tr>
       <td><strong>Zdjęcia pokoi</strong></td>
       <td>Zdjęcia robione przez personel w ramach checklisty lub zgłoszenia usterki
-      (Firebase Storage).</td>
+      (Firebase Storage). Prosimy personel, żeby zdjęcia pokazywały pokój, nie ludzi.</td>
       <td>Potwierdzenie wykonania sprzątania i dokumentacja usterek dla właściciela.</td>
+    </tr>
+    <tr>
+      <td><strong>Rezerwacje wellness wpisane w panelu</strong></td>
+      <td>Opis gościa wpisany ręcznie przez właściciela (zwykle numer pokoju lub nazwisko),
+      godzina, cena, informacja o rozliczeniu.</td>
+      <td>Grafik sauny/jacuzzi i rozliczenie z gościem. Widzi to <strong>wyłącznie właściciel</strong>.</td>
     </tr>
     <tr>
       <td><strong>Powiadomienia push</strong></td>
       <td>Tokeny urządzeń (Firebase Cloud Messaging) zapisane w profilu użytkownika;
       nieaktualne tokeny są usuwane automatycznie.</td>
-      <td>Dostarczanie powiadomień o nowych zadaniach i poprawkach.</td>
+      <td>Powiadomienia o nowych zadaniach, poprawkach, usterkach i prośbach gości.</td>
     </tr>
     <tr>
       <td><strong>Ustawienia</strong></td>
-      <td>Rola użytkownika, powiązanie z obiektem, wybrany język aplikacji.</td>
+      <td>Rola użytkownika, powiązanie z obiektem, wybrany język, preferencje powiadomień.
+      Na telefonie personelu dodatkowo: nazwa wyświetlana i motyw, w pamięci aplikacji.</td>
       <td>Poprawne działanie uprawnień i interfejsu.</td>
     </tr>
   </table>
   </div>
-  <p><strong>Nie przetwarzamy danych gości hotelowych.</strong> Aplikacja nie obsługuje
-  rezerwacji, meldunków ani żadnych danych osób nocujących w obiekcie.</p>
+  <p><strong>Kto to widzi.</strong> Sprzątaczka widzi wyłącznie zadania, checklisty, usterki
+  i zdjęcia swojego obiektu oraz własną kartotekę. <strong>Nie widzi</strong> kartoteki reszty
+  personelu, kalendarzy rezerwacji, grafiku wellness ani żadnych danych gości. Dostęp znika
+  natychmiast po dezaktywacji w panelu.</p>
 
-  <h2>4. Telemetria: statystyki użycia i raporty awarii</h2>
-  <p>Aplikacja korzysta z <strong>Google Firebase Analytics</strong> (statystyki użycia)
-  oraz <strong>Firebase Crashlytics</strong> (raporty awarii). Zbierane są m.in. zdarzenia
-  użycia aplikacji, model urządzenia, wersja systemu i aplikacji oraz — przy awarii — stan
-  aplikacji w chwili błędu.</p>
+  <h2>5. Portal gościa — co zbieramy od gościa</h2>
+  <p>Portal gościa to publiczna strona bez logowania. Właściciel może ją włączyć lub zostawić
+  wyłączoną; domyślnie jest wyłączona. Strona ma znacznik <code>noindex</code>, więc nie trafia
+  do wyszukiwarek — jest dostępna dla każdego, kto zna jej adres.</p>
+
+  <h3>5.1. Co gość sam wpisuje</h3>
+  <p>Wyłącznie w jednym miejscu: w formularzu <strong>prośby o rezerwację</strong> sauny, jacuzzi
+  lub roweru. Gość podaje:</p>
+  <ul>
+    <li><strong>imię</strong> (pole tekstowe, do 80 znaków — może wpisać samo imię, inicjały,
+    cokolwiek pozwoli recepcji go rozpoznać);</li>
+    <li><strong>swój pokój</strong>, wybrany z listy pokoi obiektu;</li>
+    <li><strong>uwagę</strong> — opcjonalne pole tekstowe do 500 znaków (np. „przyjdziemy we dwoje").
+    Jest wolne, więc gość może wpisać w nie, co zechce; prosimy, żeby nie umieszczać tam danych
+    wrażliwych.</li>
+  </ul>
+  <p>Do tego zapisujemy kontekst prośby: jakiej przestrzeni dotyczy, datę i godzinę, status
+  (oczekująca / zatwierdzona / odrzucona / wygasła) oraz moment wysłania. <strong>Nie pytamy
+  o nazwisko, e-mail, telefon, adres, numer dokumentu ani o płatność</strong> i nie mamy pól,
+  w które można by je wpisać.</p>
+
+  <h3>5.2. Znaczniki techniczne przeciw spamowi</h3>
+  <p>Formularz jest publiczny, więc bez zabezpieczeń zalałby właściciela śmieciami. Razem
+  z prośbą zapisujemy dwie rzeczy, których gość nie wpisuje:</p>
+  <ul>
+    <li><strong>Skrót adresu IP</strong> — surowego adresu IP <strong>nie zapisujemy</strong>.
+    Liczymy z niego skrót SHA-256 i przechowujemy pierwsze 24 znaki. Służy wyłącznie do limitu
+    „maksymalnie 5 próśb na dobę". Mówimy wprost: jest to <strong>pseudonim, a nie anonimizacja</strong> —
+    skrót jest powiązany z konkretnym adresem IP i nie należy go traktować jak danych całkowicie
+    nieosobowych.</li>
+    <li><strong>Identyfikator urządzenia</strong> — losowy identyfikator (UUID) generowany
+    w przeglądarce gościa i zapisany w jej pamięci lokalnej pod kluczem
+    <code>pokoyo-portal-device</code>. Nie zawiera niczego o gościu ani o telefonie; służy
+    do tego samego limitu dziennego. W trybie prywatnym przeglądarki nie powstaje.</li>
+  </ul>
+  <p>W pamięci lokalnej przeglądarki gościa zapisujemy też, które prośby zostały już wysłane
+  (klucz <code>pokoyo-portal-sent-…</code>, kasowany po dwóch dniach) oraz wybrany język
+  (<code>pokoyo-portal-lang</code>). To nie są ciasteczka śledzące, nie wychodzą poza przeglądarkę
+  gościa poza wysłaniem samej prośby i nie służą do reklam.</p>
+
+  <h3>5.3. Co portal pokazuje publicznie</h3>
+  <p>Portal wyświetla: nazwę obiektu, telefon do recepcji, treści i zdjęcia wpisane przez
+  właściciela, mapę okolicy, listę <strong>nazw pokoi</strong> (potrzebną do wyboru w formularzu)
+  oraz grafik sauny/jacuzzi/rowerów jako <strong>wolne albo zajęte</strong>.</p>
+  <p>Portal <strong>nigdy nie pokazuje</strong>: imion ani uwag innych gości, kto zajmuje który
+  pokój, statusów sprzątania, cen, zdjęć pokoi z checklist ani czegokolwiek z części wewnętrznej.
+  Gość nie może też odczytać własnej wysłanej prośby — trafia ona wyłącznie do właściciela.</p>
+  <p>Zdjęcia, które właściciel wstawi do portalu (np. widok tarasu, menu), są z natury rzeczy
+  <strong>publicznie dostępne</strong> pod swoim adresem — tak jak każde zdjęcie na stronie www.</p>
+
+  <h3>5.4. Kto widzi prośby gości</h3>
+  <p>Wyłącznie <strong>właściciel obiektu</strong>, w swoim panelu. Personel sprzątający nie ma
+  do nich dostępu na poziomie reguł bezpieczeństwa bazy — nie chodzi o ukryty ekran, tylko
+  o brak uprawnień. Treść prośby (imię i godzina) trafia dodatkowo do <strong>powiadomienia
+  push</strong> wysyłanego właścicielowi, więc przechodzi przez infrastrukturę powiadomień
+  Google/przeglądarki, tak jak każde powiadomienie web push.</p>
+
+  <h3>5.5. Mapa</h3>
+  <p>Jeśli właściciel doda do portalu sekcję z mapą, kafelki mapy pobiera przeglądarka gościa
+  bezpośrednio z serwerów <strong>OpenStreetMap</strong>. Oznacza to, że adres IP gościa i to,
+  który fragment mapy ogląda, trafiają do OpenStreetMap Foundation — my tego nie pośredniczymy
+  i nie zapisujemy. Bez sekcji z mapą żadne zapytanie tam nie idzie.</p>
+
+  <h2>6. Kalendarze rezerwacji (Booking, Airbnb, Google Calendar)</h2>
+  <p>Właściciel może podać w panelu adres kalendarza iCal z serwisu rezerwacyjnego, żeby wyjazd
+  gościa sam zamieniał się w zadanie sprzątania. Z takiego kalendarza pobieramy i przechowujemy
+  <strong>wyłącznie</strong>: identyfikator techniczny wydarzenia oraz datę przyjazdu i wyjazdu.</p>
+  <p><strong>Imion i nazwisk gości z tych kalendarzy nie zapisujemy.</strong> Opis wydarzenia
+  jest wprawdzie odczytywany (żeby rozpoznać, czy to rezerwacja, czy blokada terminu), ale nie
+  trafia do bazy. Adres kalendarza jest traktowany jak sekret: widzi go tylko właściciel i nie
+  umieszczamy go w powiadomieniach ani w e-mailach alarmowych.</p>
+
+  <h2>7. Automatyczne tłumaczenie treści portalu</h2>
+  <p>Portal gościa działa w czterech językach: polskim, angielskim, ukraińskim i rosyjskim.
+  Treści wpisane przez właściciela tłumaczymy automatycznie przez <strong>Google Cloud
+  Translation</strong>. Do tłumaczenia wysyłamy <strong>wyłącznie teksty napisane przez
+  właściciela</strong> (tytuły sekcji, opisy atrakcji) i tylko te, które się zmieniły.
+  <strong>Imię gościa i jego uwaga nigdy nie są nikomu wysyłane do tłumaczenia.</strong>
+  Pozycje checklist personelu również nie są tłumaczone.</p>
+
+  <h2>8. Telemetria aplikacji Android</h2>
+  <p>Aplikacja Android korzysta z <strong>Google Firebase Analytics</strong> (statystyki użycia)
+  oraz <strong>Firebase Crashlytics</strong> (raporty awarii). Zbierane są automatyczne zdarzenia
+  Firebase (uruchomienie aplikacji, otwarte ekrany), model urządzenia, wersja systemu i aplikacji
+  oraz — przy awarii — stan aplikacji w chwili błędu. <strong>Nie wysyłamy do telemetrii żadnych
+  własnych zdarzeń</strong> z treścią zadań, nazwami pokoi, imionami ani danymi gości.</p>
   <div class="callout">
-    <p><strong>Ważne: telemetria jest włączona domyślnie.</strong> Aplikacja jest narzędziem
-    B2B bez reklam — dane telemetryczne służą wyłącznie diagnozowaniu błędów i rozwojowi
-    produktu, nigdy do reklam ani profilowania marketingowego. Aplikacja nie wyświetla okna
-    zgody na telemetrię; podstawą przetwarzania jest nasz prawnie uzasadniony interes
-    (art. 6 ust. 1 lit. f RODO). Jeśli nie akceptujesz telemetrii, napisz do nas — a do tego
-    czasu jedyną pełną alternatywą jest niekorzystanie z aplikacji.</p>
+    <p><strong>Ważne: telemetria jest włączona domyślnie.</strong> Aplikacja jest narzędziem B2B
+    bez reklam — dane telemetryczne służą wyłącznie diagnozowaniu błędów i rozwojowi produktu,
+    nigdy do reklam ani profilowania marketingowego. Aplikacja nie wyświetla okna zgody na
+    telemetrię; podstawą przetwarzania jest nasz prawnie uzasadniony interes (art. 6 ust. 1 lit. f
+    RODO), a administratorem tych danych jesteśmy my. Jeśli nie akceptujesz telemetrii, napisz
+    do nas — a do tego czasu jedyną pełną alternatywą jest niekorzystanie z aplikacji.</p>
   </div>
-  <p>Aplikacja <strong>nie zawiera reklam</strong> i nie używa identyfikatora reklamowego
-  do celów reklamowych.</p>
+  <p>Biblioteka Firebase Analytics dokłada do aplikacji systemowe uprawnienie do odczytu
+  <strong>identyfikatora reklamowego</strong> (<code>AD_ID</code>). Piszemy o tym wprost, bo widać
+  je w sklepie: <strong>aplikacja nie wyświetla reklam, nie współpracuje z żadną siecią reklamową
+  i nie używa tego identyfikatora do reklam ani do profilowania.</strong> Panel w przeglądarce
+  i portal gościa <strong>nie mają żadnej analityki</strong> — ani Google Analytics, ani innej.</p>
 
-  <h2>5. Gdzie dane są przechowywane</h2>
-  <p>Backend aplikacji to Google Firebase (Firebase Authentication, Cloud Firestore,
-  Firebase Storage, Cloud Functions, Firebase Cloud Messaging), działający w ramach Google
-  Cloud. Dane obiektu, zdjęcia i funkcje serwerowe działają w regionie
-  <code>europe-central2</code> (Warszawa) / w Unii Europejskiej. Google LLC działa jako nasz
-  podpowierzający; transfer danych regulują standardowe klauzule umowne Google Cloud.</p>
+  <h2>9. Usługi, z których korzystamy</h2>
+  <div class="tbl">
+  <table>
+    <tr><th>Usługa</th><th>Do czego</th><th>Co do niej trafia</th></tr>
+    <tr>
+      <td><strong>Google Firebase / Google Cloud</strong><br>(Authentication, Firestore, Storage,
+      Cloud Functions, Hosting)</td>
+      <td>Cały backend: baza, pliki, logowanie, funkcje serwerowe.</td>
+      <td>Wszystko, co opisano wyżej. Region <code>europe-central2</code> (Warszawa).</td>
+    </tr>
+    <tr>
+      <td><strong>Firebase Cloud Messaging</strong> i systemy powiadomień przeglądarek</td>
+      <td>Powiadomienia push do właściciela i personelu.</td>
+      <td>Treść powiadomienia — w tym imię gościa przy nowej prośbie o rezerwację
+      i komentarz właściciela przy poprawce.</td>
+    </tr>
+    <tr>
+      <td><strong>Google Cloud Translation</strong></td>
+      <td>Tłumaczenie treści portalu na EN/UA/RU.</td>
+      <td>Wyłącznie teksty napisane przez właściciela (sekcja 7).</td>
+    </tr>
+    <tr>
+      <td><strong>Resend</strong> (region Irlandia, UE)</td>
+      <td>Jeden e-mail: alarm do właściciela, gdy kalendarz rezerwacji przestał się pobierać.</td>
+      <td>Adres e-mail właściciela, nazwa obiektu, nazwa kalendarza, treść błędu, link do panelu.
+      Bez adresu kalendarza i bez danych gości.</td>
+    </tr>
+    <tr>
+      <td><strong>Serwis rezerwacyjny właściciela</strong> (Booking, Airbnb, Google Calendar)</td>
+      <td>Pobranie kalendarza iCal.</td>
+      <td>Zapytanie wychodzi od nas do adresu podanego przez właściciela; nie wysyłamy tam
+      żadnych danych z Pokoyo.</td>
+    </tr>
+    <tr>
+      <td><strong>OpenStreetMap</strong></td>
+      <td>Kafelki mapy na portalu gościa, jeśli właściciel doda sekcję z mapą.</td>
+      <td>Adres IP przeglądarki gościa (sekcja 5.5).</td>
+    </tr>
+  </table>
+  </div>
+  <p>To pełna lista. <strong>Poza tymi usługami nie przekazujemy danych nikomu</strong> — żadnych
+  sieci reklamowych, brokerów danych, narzędzi marketingowych czy analitycznych stron trzecich.</p>
 
-  <h2>6. Uprawnienia aplikacji Android</h2>
+  <h2>10. Gdzie dane są przechowywane</h2>
+  <p>Backend to Google Firebase w ramach Google Cloud. Dane obiektu, zdjęcia i funkcje serwerowe
+  działają w regionie <code>europe-central2</code> (Warszawa). Alarmy e-mail wychodzą przez Resend
+  z regionu Irlandia (eu-west-1). Google LLC i Resend działają jako nasi podpowierzający;
+  transfer danych regulują standardowe klauzule umowne tych dostawców.</p>
+
+  <h2>11. Jak długo przechowujemy dane</h2>
+  <div class="tbl">
+  <table>
+    <tr><th>Dane</th><th>Jak długo</th></tr>
+    <tr>
+      <td>Zdjęcia pokoi z checklist i usterek</td>
+      <td><strong>12 miesięcy</strong> od przesłania — potem plik kasuje automat (raz na dobę).
+      W panelu w miejscu zdjęcia pojawia się „zdjęcie usunięte po roku"; historia pracy zostaje.</td>
+    </tr>
+    <tr>
+      <td>Prośby gości o rezerwację (imię, uwaga, skrót IP, identyfikator urządzenia)</td>
+      <td>Prośba, której termin minął, automatycznie zmienia status na „wygasła", ale wpis
+      <strong>zostaje w bazie do czasu usunięcia go przez właściciela obiektu</strong> —
+      to on jako administrator decyduje, jak długo chce trzymać tę historię. Automatycznego
+      okresu retencji dla tych wpisów jeszcze nie ma; pracujemy nad nim i zaktualizujemy tę
+      politykę, gdy zostanie wdrożony.</td>
+    </tr>
+    <tr>
+      <td>Rezerwacje wellness wpisane w panelu</td>
+      <td>Do usunięcia przez właściciela. Anulowanie zmienia status, nie kasuje wpisu.</td>
+    </tr>
+    <tr>
+      <td>Wydarzenia z kalendarzy rezerwacyjnych</td>
+      <td>Do zniknięcia z kalendarza źródłowego — wtedy usuwamy je przy najbliższej synchronizacji.</td>
+    </tr>
+    <tr>
+      <td>Dane obiektu (pokoje, zadania, checklisty, kartoteka personelu)</td>
+      <td>Przez czas korzystania z aplikacji przez obiekt; usuwane na wniosek właściciela.</td>
+    </tr>
+    <tr>
+      <td>Konta techniczne personelu</td>
+      <td>Do odpięcia od kartoteki (np. przy zmianie telefonu) lub usunięcia z kartoteki.</td>
+    </tr>
+    <tr>
+      <td>Tokeny powiadomień push</td>
+      <td>Nieaktualne usuwane automatycznie po nieudanej wysyłce.</td>
+    </tr>
+    <tr>
+      <td>Zdjęcia czekające na wysyłkę w telefonie personelu</td>
+      <td>Po wysłaniu plik znika z telefonu od razu; nieudane i zakończone wpisy kolejki
+      są czyszczone po <strong>7 dniach</strong>.</td>
+    </tr>
+    <tr>
+      <td>Pamięć lokalna przeglądarki gościa</td>
+      <td>Lista wysłanych próśb — 2 dni. Identyfikator urządzenia i wybrany język zostają
+      do czasu wyczyszczenia danych przeglądarki przez gościa.</td>
+    </tr>
+    <tr>
+      <td>Telemetria (Analytics, Crashlytics)</td>
+      <td>Zgodnie z okresami retencji Firebase (maksymalnie kilkanaście miesięcy).</td>
+    </tr>
+  </table>
+  </div>
+
+  <h2>12. Uprawnienia aplikacji Android</h2>
   <div class="tbl">
   <table>
     <tr><th>Uprawnienie</th><th>Po co</th></tr>
-    <tr><td><code>INTERNET</code></td><td>Synchronizacja zadań, checklist i zdjęć z backendem.</td></tr>
+    <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Synchronizacja zadań, checklist i zdjęć z backendem.</td></tr>
     <tr><td><code>POST_NOTIFICATIONS</code></td><td>Powiadomienia o nowych zadaniach i poprawkach (Android 13+; pytamy o zgodę systemową, odmowa nie blokuje pracy).</td></tr>
+    <tr><td><code>FOREGROUND_SERVICE</code>, <code>WAKE_LOCK</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code></td><td>Dokończenie wysyłki zdjęć w tle i sygnał powiadomienia. Dokładane przez biblioteki Google (WorkManager, FCM).</td></tr>
+    <tr><td><code>AD_ID</code> i pokrewne</td><td>Dokładane przez bibliotekę Firebase Analytics. <strong>Nie używamy identyfikatora reklamowego</strong> — patrz sekcja 8.</td></tr>
   </table>
   </div>
-  <p>Aplikacja <strong>nie ma uprawnienia do aparatu ani do lokalizacji</strong>. Zdjęcia
-  robione są systemową aplikacją aparatu; zdjęcie trafia najpierw do prywatnego katalogu
-  aplikacji, a po udanym przesłaniu na serwer jest powiązane z zadaniem.</p>
+  <p>Aplikacja <strong>nie ma uprawnienia do aparatu ani do lokalizacji</strong>. Zdjęcia robione są
+  systemową aplikacją aparatu; zdjęcie trafia najpierw do prywatnego katalogu aplikacji, a po udanym
+  przesłaniu na serwer jest powiązane z zadaniem i kasowane z telefonu.</p>
 
-  <h2>7. Jak długo przechowujemy dane</h2>
+  <h2>13. Czego nie robimy</h2>
   <ul>
-    <li><strong>Zdjęcia pokoi:</strong> <strong>12 miesięcy</strong> od przesłania — potem są
-    usuwane automatycznie (reguła cyklu życia magazynu).</li>
-    <li><strong>Dane obiektu</strong> (pokoje, zadania, checklisty, kartoteka personelu):
-    przez czas korzystania z aplikacji przez obiekt; usuwane na wniosek właściciela.</li>
-    <li><strong>Konta techniczne personelu:</strong> do odpięcia od kartoteki (np. przy zmianie
-    telefonu stare powiązanie jest czyszczone) lub usunięcia z kartoteki.</li>
-    <li><strong>Tokeny push:</strong> nieaktualne usuwane automatycznie po nieudanej wysyłce.</li>
-    <li><strong>Telemetria:</strong> zgodnie z okresami retencji Firebase Analytics
-    i Crashlytics (maksymalnie kilkanaście miesięcy).</li>
-  </ul>
-
-  <h2>8. Czego nie robimy</h2>
-  <ul>
-    <li>Nie wyświetlamy reklam i nie współpracujemy z sieciami reklamowymi.</li>
-    <li>Nie sprzedajemy ani nie udostępniamy danych osobowych stronom trzecim w celach
-    marketingowych.</li>
-    <li>Nie profilujemy użytkowników do celów marketingowych.</li>
-    <li>Nie przetwarzamy danych gości obiektów.</li>
+    <li><strong>Nie sprzedajemy danych</strong> — żadnych, nikomu, w żadnej formie.</li>
+    <li><strong>Nie wyświetlamy reklam</strong> i nie współpracujemy z sieciami reklamowymi.</li>
+    <li><strong>Nie profilujemy</strong> gości ani personelu i nie podejmujemy wobec nich
+    zautomatyzowanych decyzji.</li>
+    <li><strong>Nie przekazujemy danych poza usługi wymienione w sekcji 9.</strong></li>
     <li>Nie zbieramy lokalizacji, kontaktów ani zawartości telefonu.</li>
+    <li>Nie obsługujemy meldunku, dokumentów tożsamości, danych kart ani płatności.</li>
+    <li>Nie wysyłamy gościom żadnych e-maili ani SMS-ów; jedyny e-mail, jaki Pokoyo wysyła,
+    to alarm techniczny do właściciela.</li>
+    <li>Nie używamy ciasteczek śledzących ani analityki na stronie portalu i w panelu.</li>
   </ul>
 
-  <h2>9. Twoje prawa</h2>
+  <h2>14. Bezpieczeństwo</h2>
+  <p>Dostęp do danych jest ograniczony regułami po stronie serwera, nie tylko ukrywaniem ekranów:
+  gość może odczytać wyłącznie publiczną treść portalu, sprzątaczka wyłącznie zadania swojego
+  obiektu i własną kartotekę, a prośby gości i grafik wellness — tylko właściciel. Połączenia idą
+  po HTTPS. Jako deweloper mamy techniczny dostęp administracyjny do backendu; korzystamy z niego
+  wyłącznie do utrzymania i diagnostyki.</p>
+
+  <h2>15. Twoje prawa</h2>
   <p>Zgodnie z RODO masz prawo do dostępu do swoich danych, ich sprostowania, usunięcia,
-  ograniczenia przetwarzania, przenoszenia oraz sprzeciwu wobec przetwarzania opartego na
-  prawnie uzasadnionym interesie (w tym telemetrii). W sprawach danych personelu właściwym
-  adresatem wniosku jest właściciel obiektu (administrator); w pozostałych — my. Masz też
-  prawo wnieść skargę do Prezesa Urzędu Ochrony Danych Osobowych (PUODO).</p>
+  ograniczenia przetwarzania, przenoszenia oraz sprzeciwu wobec przetwarzania opartego na prawnie
+  uzasadnionym interesie. W sprawach danych <strong>gości i personelu</strong> właściwym adresatem
+  wniosku jest <strong>właściciel obiektu</strong> (administrator) — my wykonamy to, o co poprosi.
+  W sprawach konta właściciela i telemetrii adresatem jesteśmy my. Masz też prawo wnieść skargę
+  do Prezesa Urzędu Ochrony Danych Osobowych (PUODO).</p>
 
-  <h2>10. Dzieci</h2>
-  <p>Aplikacja jest narzędziem do pracy i nie jest przeznaczona dla dzieci poniżej 16 lat.
-  Świadomie nie zbieramy danych dzieci.</p>
+  <h2>16. Dzieci</h2>
+  <p>Aplikacja i panel są narzędziami do pracy i nie są przeznaczone dla dzieci poniżej 16 lat.
+  Świadomie nie zbieramy danych dzieci. Portal gościa nie pyta o wiek — prosimy, żeby prośby
+  o rezerwację wysyłała osoba dorosła z rezerwacji.</p>
 
-  <h2>11. Zmiany tej polityki</h2>
+  <h2>17. Zmiany tej polityki</h2>
   <p>O istotnych zmianach poinformujemy w aplikacji lub na tej stronie, aktualizując datę
   „obowiązuje od". Aktualna wersja zawsze znajduje się pod adresem
   <code>https://tr0lczyk.github.io/pensjonat/privacy/</code>.</p>

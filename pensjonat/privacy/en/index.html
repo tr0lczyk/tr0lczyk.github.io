@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- BRAND --><title>Pokoyo — Privacy Policy</title>
-<meta name="description" content="Privacy policy for the Pokoyo housekeeping app (Android + web panel): what data we process, why, where it is stored and what your rights are.">
+<meta name="description" content="Pokoyo privacy policy (Android app, owner panel and guest portal): what data we process, including guest data, why, where it is stored and what your rights are.">
 <style>
   :root {
     --pk-primary: #1B5244;
@@ -58,160 +58,371 @@
 <div class="wrap">
 
   <!-- BRAND --><h1>Pokoyo — Privacy Policy</h1>
-  <p class="meta">Effective 5 August 2026 · applies to the Android app <code>com.tr0lczyk.pensjonat</code> and the owner's web panel</p>
+  <p class="meta">Effective 18 August 2026 · applies to the Android app <code>com.tr0lczyk.pensjonat</code>,
+  the owner's web panel and the public guest portal at <code>/g/…</code></p>
   <p class="lang"><a href="../">Wersja polska →</a></p>
 
-  <p>The app is made by Mateusz Olczyk, an individual developer based in Poland. Contact:
+  <p>Pokoyo is made by Mateusz Olczyk, an independent developer based in Poland. Contact:
   <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a>.</p>
 
   <div class="callout">
-    <p><strong>The short version.</strong> This is a work tool for small lodging properties,
-    not an advertising product. There are no ads, we never sell any data, and we do not
-    process hotel guests' data. We process what is needed to organise housekeeping: rooms,
-    tasks, checklists, staff first names and room photos. Everything is stored in the
-    European Union. The app also collects basic telemetry (usage statistics and crash
-    reports) — it is <strong>enabled by default</strong>, which we state plainly in
-    section 4.</p>
+    <p><strong>The short version.</strong> Pokoyo is a work tool for small lodging properties:
+    it organises housekeeping, the sauna/jacuzzi schedule and a simple information page for guests.
+    There are no ads, we never sell data, and we profile nobody.</p>
+    <p><strong>Yes, we do process guest data</strong> — exactly what a guest types into the booking
+    request form (first name, chosen room, an optional note) plus technical markers that protect the
+    form against spam. Section 5 describes this in detail. We do not handle check-in records,
+    identity documents, card numbers or payments at all.</p>
+    <p>Everything is stored in the European Union. The Android app also collects basic telemetry
+    (usage statistics and crash reports) — it is <strong>enabled by default</strong>, which we state
+    plainly in section 8.</p>
   </div>
 
-  <h2>1. Roles: who is responsible for what</h2>
-  <p>The app is a B2B tool used by a lodging property (guesthouse, villa, apartments) and its
-  staff. The roles are therefore as follows:</p>
+  <h2>1. What this policy covers</h2>
+  <p>Pokoyo has three separate surfaces and this policy describes all three:</p>
   <ul>
-    <li>The <strong>property owner</strong> is the <strong>data controller for their staff's
-    personal data</strong> (names in the staff roster, task assignments, photos taken as part
-    of work). The owner decides who is added to the roster and which tasks are assigned.</li>
-    <li><strong>We (the app developer)</strong> act in that respect as a
-    <strong>data processor</strong> — we store and process that data solely to make the app
-    work, on the property owner's behalf.</li>
-    <li>For the owner's account data (e-mail address) and for telemetry (section 4), we are
-    the data controller.</li>
+    <li><strong>The Android app for staff</strong> (<code>com.tr0lczyk.pensjonat</code>) —
+    cleaning tasks, checklists, room photos, issue reports.</li>
+    <li><strong>The owner's web panel</strong> — property setup, staff roster, sauna/jacuzzi/bike
+    schedule, booking calendars, guest portal content.</li>
+    <li><strong>The public guest portal</strong> at <code>/g/{property-name}</code> — a page with no
+    sign-in that a guest opens from a QR code or a link given by the property. This is the only place
+    where data is entered by a <em>guest</em> rather than by staff.</li>
   </ul>
-  <p>If you are a staff member and want your data corrected or deleted, contact the property
-  owner first; you can also write to us.</p>
 
-  <h2>2. Accounts and sign-in</h2>
+  <h2>2. Roles: who is responsible for what</h2>
+  <p>Pokoyo is a B2B tool: we supply the software, while the lodging property decides what data
+  enters the system and why. Therefore:</p>
+  <ul>
+    <li>The <strong>property owner</strong> is the <strong>data controller for their staff's and
+    their guests' personal data</strong>. The owner creates the staff roster, switches the guest
+    portal on (or leaves it off), decides what the booking request form collects, and views that
+    data in the panel.</li>
+    <li><strong>We (the Pokoyo developer)</strong> act in that respect as a <strong>data
+    processor</strong>: we store and process that data solely to make the app work, on the property
+    owner's instructions. We do not use staff or guest data for our own purposes.</li>
+    <li>We are the controller only for the <strong>owner's account data</strong> (e-mail address,
+    account identifier) and for <strong>Android app telemetry</strong> (section 8).</li>
+  </ul>
+  <p><strong>We do not determine the legal basis for guest and staff data</strong> — the property
+  owner does, as the controller, because the owner knows the context (contract with the guest,
+  the property's obligations, legitimate interests). We process that data only on the owner's
+  instructions and within the scope described in this policy.</p>
+  <p>Are you a guest or a staff member who wants access to, correction of, or deletion of your data?
+  Contact the property where you are staying or working first — it is the controller. You may also
+  write to us and we will pass the request on and carry it out technically.</p>
+
+  <h2>3. Accounts and sign-in</h2>
   <ul>
     <li><strong>Staff (Android app):</strong> no accounts are created. The phone receives an
-    <strong>anonymous technical account</strong> (a random Firebase Authentication identifier)
-    linked to the property after entering an invite code. We collect no staff e-mails,
-    passwords or phone numbers.</li>
-    <li><strong>Owner (web panel):</strong> signs in with an e-mail address and password or
-    with a Google account. We store the e-mail address and account identifier; passwords are
-    handled by Firebase Authentication (Google) — we never see them.</li>
+    <strong>anonymous technical account</strong> (a random Firebase Authentication identifier) linked
+    to the property after entering a 6-character invite code. We collect no staff e-mails, passwords
+    or phone numbers. The display name ("Ann", "housekeeper 1") is typed by the owner in the panel —
+    the owner decides whether it is a first name, a nickname or a number.</li>
+    <li><strong>Owner (web panel):</strong> signs in with an e-mail address and password or with a
+    Google account. We store the e-mail address and account identifier; passwords are handled by
+    Firebase Authentication (Google) — we never see them.</li>
+    <li><strong>Guest (portal):</strong> <strong>creates no account and never signs in.</strong></li>
   </ul>
 
-  <h2>3. What data we process and why</h2>
+  <h2>4. Property and staff data</h2>
   <div class="tbl">
   <table>
     <tr><th>Category</th><th>What exactly</th><th>Why</th></tr>
     <tr>
       <td><strong>Property data</strong></td>
-      <td>Property name, rooms, cleaning tasks, checklist templates and states, issue reports,
-      invite codes.</td>
-      <td>The app's core function: organising and verifying housekeeping.</td>
+      <td>Property name, rooms and spaces (sauna, jacuzzi, bikes), cleaning tasks, checklist
+      templates and states, issue reports, invite codes, guest portal content written by the owner.</td>
+      <td>The core function: organising and verifying housekeeping, plus the wellness schedule.</td>
     </tr>
     <tr>
       <td><strong>Staff roster</strong></td>
-      <td>Staff member's first name or display name, link to the technical account, task
-      assignments.</td>
+      <td>Staff member's display name, link to the technical account, task assignments, a record of
+      who ticked which checklist item and when, the owner's rework comment.</td>
       <td>So it is clear who cleans which room and whose phone to notify.</td>
     </tr>
     <tr>
       <td><strong>Room photos</strong></td>
-      <td>Photos taken by staff as part of a checklist or an issue report
-      (Firebase Storage).</td>
-      <td>Proof of completed cleaning and issue documentation for the owner.</td>
+      <td>Photos taken by staff as part of a checklist or an issue report (Firebase Storage).
+      We ask staff to photograph the room, not people.</td>
+      <td>Proof that cleaning was done and documentation of issues for the owner.</td>
+    </tr>
+    <tr>
+      <td><strong>Wellness bookings entered in the panel</strong></td>
+      <td>A guest label typed by hand by the owner (usually a room number or a surname), time,
+      price, settlement status.</td>
+      <td>The sauna/jacuzzi schedule and settling up with the guest. Visible to the
+      <strong>owner only</strong>.</td>
     </tr>
     <tr>
       <td><strong>Push notifications</strong></td>
-      <td>Device tokens (Firebase Cloud Messaging) stored in the user profile; stale tokens
-      are removed automatically.</td>
-      <td>Delivering notifications about new tasks and rework requests.</td>
+      <td>Device tokens (Firebase Cloud Messaging) stored in the user profile; stale tokens are
+      removed automatically.</td>
+      <td>Notifications about new tasks, rework, issues and guest requests.</td>
     </tr>
     <tr>
       <td><strong>Settings</strong></td>
-      <td>User role, link to the property, chosen app language.</td>
-      <td>Correct permissions and interface behaviour.</td>
+      <td>User role, link to the property, chosen language, notification preferences. On the staff
+      phone additionally: the display name and theme, in the app's own storage.</td>
+      <td>Correct permissions and interface.</td>
     </tr>
   </table>
   </div>
-  <p><strong>We do not process hotel guests' data.</strong> The app handles no bookings,
-  check-ins or any data about people staying at the property.</p>
+  <p><strong>Who sees what.</strong> A housekeeper sees only the tasks, checklists, issues and photos
+  of their own property, plus their own roster record. They <strong>do not see</strong> the rest of
+  the roster, booking calendars, the wellness schedule or any guest data. Access disappears
+  immediately once the owner deactivates them in the panel.</p>
 
-  <h2>4. Telemetry: usage statistics and crash reports</h2>
-  <p>The app uses <strong>Google Firebase Analytics</strong> (usage statistics) and
-  <strong>Firebase Crashlytics</strong> (crash reports). Collected data includes app usage
-  events, device model, OS and app version, and — on a crash — the state of the app at the
-  time of the error.</p>
+  <h2>5. The guest portal — what we collect from guests</h2>
+  <p>The guest portal is a public page with no sign-in. The owner can switch it on or leave it off;
+  it is off by default. The page carries a <code>noindex</code> marker, so it does not appear in
+  search engines — it is reachable by anyone who knows its address.</p>
+
+  <h3>5.1. What the guest types</h3>
+  <p>In exactly one place: the <strong>booking request</strong> form for the sauna, jacuzzi or a bike.
+  The guest provides:</p>
+  <ul>
+    <li>a <strong>first name</strong> (a text field, up to 80 characters — it can be just a first
+    name, initials, anything that lets reception recognise them);</li>
+    <li>their <strong>room</strong>, chosen from the property's room list;</li>
+    <li>a <strong>note</strong> — an optional text field of up to 500 characters (e.g. "there will be
+    two of us"). It is free text, so a guest can type anything into it; please do not put sensitive
+    information there.</li>
+  </ul>
+  <p>Alongside that we store the request's context: which space it concerns, the date and time, the
+  status (pending / approved / rejected / expired) and when it was sent. <strong>We do not ask for a
+  surname, e-mail, phone number, address, document number or payment</strong> and there are no fields
+  in which those could be entered.</p>
+
+  <h3>5.2. Technical anti-spam markers</h3>
+  <p>The form is public, so without safeguards it would flood the owner with junk. Along with the
+  request we store two things the guest does not type:</p>
+  <ul>
+    <li>a <strong>hash of the IP address</strong> — we <strong>do not store the raw IP address</strong>.
+    We compute a SHA-256 hash of it and keep the first 24 characters. It serves only the "at most 5
+    requests per day" limit. To be plain about it: this is a <strong>pseudonym, not
+    anonymisation</strong> — the hash is tied to a specific IP address and should not be treated as
+    fully non-personal data.</li>
+    <li>a <strong>device identifier</strong> — a random identifier (UUID) generated in the guest's
+    browser and kept in its local storage under the key <code>pokoyo-portal-device</code>. It contains
+    nothing about the guest or the phone; it serves the same daily limit. It is not created in the
+    browser's private mode.</li>
+  </ul>
+  <p>In the guest browser's local storage we also record which requests have already been sent (key
+  <code>pokoyo-portal-sent-…</code>, cleared after two days) and the chosen language
+  (<code>pokoyo-portal-lang</code>). These are not tracking cookies, they never leave the guest's
+  browser other than in the request itself, and they are not used for advertising.</p>
+
+  <h3>5.3. What the portal shows publicly</h3>
+  <p>The portal displays: the property name, the reception phone number, texts and photos entered by
+  the owner, a map of the area, the list of <strong>room names</strong> (needed for the form's room
+  picker) and the sauna/jacuzzi/bike schedule as <strong>free or taken</strong>.</p>
+  <p>The portal <strong>never shows</strong>: other guests' names or notes, who occupies which room,
+  cleaning statuses, prices, checklist room photos or anything from the internal side. A guest cannot
+  even read back their own submitted request — it goes to the owner only.</p>
+  <p>Photos the owner adds to the portal (e.g. a view of the terrace, a menu) are by their nature
+  <strong>publicly accessible</strong> at their address — like any image on a website.</p>
+
+  <h3>5.4. Who sees guest requests</h3>
+  <p>The <strong>property owner</strong> only, in their panel. Housekeeping staff have no access at
+  the database security-rule level — this is not a hidden screen but an absence of permission. The
+  content of a request (first name and time) also travels inside a <strong>push notification</strong>
+  sent to the owner, so it passes through Google's / the browser's notification infrastructure, like
+  any web push message.</p>
+
+  <h3>5.5. Maps</h3>
+  <p>If the owner adds a map section to the portal, the map tiles are fetched by the guest's browser
+  directly from <strong>OpenStreetMap</strong> servers. That means the guest's IP address and which
+  part of the map they are viewing reach the OpenStreetMap Foundation — we neither proxy nor record
+  this. Without a map section no request goes there.</p>
+
+  <h2>6. Booking calendars (Booking, Airbnb, Google Calendar)</h2>
+  <p>The owner may enter an iCal calendar address from a booking service so that a guest's departure
+  turns itself into a cleaning task. From such a calendar we fetch and store <strong>only</strong>:
+  the event's technical identifier and the arrival and departure dates.</p>
+  <p><strong>We do not store guest names from those calendars.</strong> The event summary is read (to
+  tell a reservation from a blocked date), but it never reaches the database. The calendar address is
+  treated as a secret: only the owner sees it, and we never put it into notifications or alert e-mails.</p>
+
+  <h2>7. Automatic translation of portal content</h2>
+  <p>The guest portal works in four languages: Polish, English, Ukrainian and Russian. Content written
+  by the owner is translated automatically through <strong>Google Cloud Translation</strong>. We send
+  for translation <strong>only the texts written by the owner</strong> (section titles, descriptions
+  of attractions), and only those that have changed. <strong>A guest's first name and note are never
+  sent to anyone for translation.</strong> Staff checklist items are not translated either.</p>
+
+  <h2>8. Android app telemetry</h2>
+  <p>The Android app uses <strong>Google Firebase Analytics</strong> (usage statistics) and
+  <strong>Firebase Crashlytics</strong> (crash reports). What is collected is Firebase's automatic
+  events (app open, screens viewed), the device model, the OS and app version and — on a crash — the
+  state of the app at the moment of the error. <strong>We send no custom events</strong> containing
+  task content, room names, personal names or guest data.</p>
   <div class="callout">
-    <p><strong>Important: telemetry is enabled by default.</strong> The app is an ad-free B2B
-    tool — telemetry data is used solely for diagnosing errors and improving the product,
-    never for advertising or marketing profiling. The app does not show a telemetry consent
-    dialog; the legal basis for this processing is our legitimate interest
-    (Art. 6(1)(f) GDPR). If you do not accept telemetry, write to us — until then, the only
-    complete alternative is not to use the app.</p>
+    <p><strong>Important: telemetry is enabled by default.</strong> The app is a B2B tool with no ads —
+    telemetry serves only error diagnosis and product development, never advertising or marketing
+    profiling. The app shows no telemetry consent dialog; the basis for processing is our legitimate
+    interest (Article 6(1)(f) GDPR), and we are the controller of that data. If you do not accept
+    telemetry, write to us — until then the only complete alternative is not to use the app.</p>
   </div>
-  <p>The app contains <strong>no ads</strong> and does not use the advertising ID for
-  advertising purposes.</p>
+  <p>The Firebase Analytics library adds the system permission to read the
+  <strong>advertising identifier</strong> (<code>AD_ID</code>) to the app. We say so plainly, because it
+  is visible in the store: <strong>the app shows no ads, works with no ad network, and does not use
+  that identifier for advertising or profiling.</strong> The web panel and the guest portal have
+  <strong>no analytics at all</strong> — neither Google Analytics nor anything else.</p>
 
-  <h2>5. Where data is stored</h2>
-  <p>The app's backend is Google Firebase (Firebase Authentication, Cloud Firestore,
-  Firebase Storage, Cloud Functions, Firebase Cloud Messaging), running on Google Cloud.
-  Property data, photos and server functions run in the <code>europe-central2</code> region
-  (Warsaw) / in the European Union. Google LLC acts as our sub-processor; data transfers are
-  governed by Google Cloud's standard contractual clauses.</p>
-
-  <h2>6. Android app permissions</h2>
+  <h2>9. Services we use</h2>
   <div class="tbl">
   <table>
-    <tr><th>Permission</th><th>Why</th></tr>
-    <tr><td><code>INTERNET</code></td><td>Synchronising tasks, checklists and photos with the backend.</td></tr>
-    <tr><td><code>POST_NOTIFICATIONS</code></td><td>Notifications about new tasks and rework requests (Android 13+; the system consent prompt is shown, and declining does not block work).</td></tr>
+    <tr><th>Service</th><th>What for</th><th>What reaches it</th></tr>
+    <tr>
+      <td><strong>Google Firebase / Google Cloud</strong><br>(Authentication, Firestore, Storage,
+      Cloud Functions, Hosting)</td>
+      <td>The whole backend: database, files, sign-in, server functions.</td>
+      <td>Everything described above. Region <code>europe-central2</code> (Warsaw).</td>
+    </tr>
+    <tr>
+      <td><strong>Firebase Cloud Messaging</strong> and browser push systems</td>
+      <td>Push notifications to the owner and staff.</td>
+      <td>The notification content — including a guest's first name on a new booking request and the
+      owner's comment on a rework request.</td>
+    </tr>
+    <tr>
+      <td><strong>Google Cloud Translation</strong></td>
+      <td>Translating portal content into EN/UK/RU.</td>
+      <td>Only texts written by the owner (section 7).</td>
+    </tr>
+    <tr>
+      <td><strong>Resend</strong> (Ireland region, EU)</td>
+      <td>One e-mail: an alert to the owner when a booking calendar has stopped syncing.</td>
+      <td>The owner's e-mail address, property name, calendar name, the error text, a link to the
+      panel. No calendar address and no guest data.</td>
+    </tr>
+    <tr>
+      <td><strong>The owner's booking service</strong> (Booking, Airbnb, Google Calendar)</td>
+      <td>Fetching the iCal calendar.</td>
+      <td>The request goes out from us to the address the owner supplied; we send no Pokoyo data there.</td>
+    </tr>
+    <tr>
+      <td><strong>OpenStreetMap</strong></td>
+      <td>Map tiles on the guest portal, if the owner adds a map section.</td>
+      <td>The guest browser's IP address (section 5.5).</td>
+    </tr>
   </table>
   </div>
-  <p>The app has <strong>no camera and no location permission</strong>. Photos are taken with
-  the system camera app; a photo is first saved to the app's private directory and linked to
-  the task only after a successful upload.</p>
+  <p>That is the complete list. <strong>Beyond these services we pass data to nobody</strong> — no ad
+  networks, no data brokers, no marketing or third-party analytics tools.</p>
 
-  <h2>7. How long we keep data</h2>
+  <h2>10. Where data is stored</h2>
+  <p>The backend is Google Firebase within Google Cloud. Property data, photos and server functions
+  run in the <code>europe-central2</code> region (Warsaw). Alert e-mails go out through Resend from
+  the Ireland region (eu-west-1). Google LLC and Resend act as our sub-processors; data transfers are
+  governed by those providers' standard contractual clauses.</p>
+
+  <h2>11. How long we keep data</h2>
+  <div class="tbl">
+  <table>
+    <tr><th>Data</th><th>How long</th></tr>
+    <tr>
+      <td>Room photos from checklists and issues</td>
+      <td><strong>12 months</strong> from upload — after that the file is deleted automatically (once
+      a day). In the panel the photo's place reads "photo deleted after a year"; the work history
+      stays.</td>
+    </tr>
+    <tr>
+      <td>Guest booking requests (first name, note, IP hash, device identifier)</td>
+      <td>A request whose time slot has passed automatically changes status to "expired", but the
+      record <strong>stays in the database until the property owner deletes it</strong> — as the
+      controller, the owner decides how long to keep that history. There is no automatic retention
+      period for these records yet; we are working on one and will update this policy once it ships.</td>
+    </tr>
+    <tr>
+      <td>Wellness bookings entered in the panel</td>
+      <td>Until the owner deletes them. Cancelling changes the status, it does not delete the record.</td>
+    </tr>
+    <tr>
+      <td>Events from booking calendars</td>
+      <td>Until they disappear from the source calendar — we then remove them at the next sync.</td>
+    </tr>
+    <tr>
+      <td>Property data (rooms, tasks, checklists, staff roster)</td>
+      <td>For as long as the property uses the app; deleted at the owner's request.</td>
+    </tr>
+    <tr>
+      <td>Staff technical accounts</td>
+      <td>Until unlinked from the roster (e.g. on a phone change) or removed from the roster.</td>
+    </tr>
+    <tr>
+      <td>Push notification tokens</td>
+      <td>Stale ones are removed automatically after a failed delivery.</td>
+    </tr>
+    <tr>
+      <td>Photos queued for upload on a staff phone</td>
+      <td>Once uploaded the file leaves the phone immediately; failed and completed queue entries are
+      cleaned up after <strong>7 days</strong>.</td>
+    </tr>
+    <tr>
+      <td>The guest browser's local storage</td>
+      <td>The list of sent requests — 2 days. The device identifier and chosen language remain until
+      the guest clears their browser data.</td>
+    </tr>
+    <tr>
+      <td>Telemetry (Analytics, Crashlytics)</td>
+      <td>According to Firebase's retention periods (up to somewhat over a year).</td>
+    </tr>
+  </table>
+  </div>
+
+  <h2>12. Android app permissions</h2>
+  <div class="tbl">
+  <table>
+    <tr><th>Permission</th><th>What for</th></tr>
+    <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Syncing tasks, checklists and photos with the backend.</td></tr>
+    <tr><td><code>POST_NOTIFICATIONS</code></td><td>Notifications about new tasks and rework (Android 13+; we ask for the system permission, refusing it does not block work).</td></tr>
+    <tr><td><code>FOREGROUND_SERVICE</code>, <code>WAKE_LOCK</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code></td><td>Finishing photo uploads in the background and signalling notifications. Added by Google's libraries (WorkManager, FCM).</td></tr>
+    <tr><td><code>AD_ID</code> and related</td><td>Added by the Firebase Analytics library. <strong>We do not use the advertising identifier</strong> — see section 8.</td></tr>
+  </table>
+  </div>
+  <p>The app has <strong>no camera and no location permission</strong>. Photos are taken with the
+  system camera app; a photo first lands in the app's private directory and, once uploaded
+  successfully, is linked to the task and deleted from the phone.</p>
+
+  <h2>13. What we do not do</h2>
   <ul>
-    <li><strong>Room photos:</strong> <strong>12 months</strong> from upload — then deleted
-    automatically (storage lifecycle rule).</li>
-    <li><strong>Property data</strong> (rooms, tasks, checklists, staff roster): for as long
-    as the property uses the app; deleted at the owner's request.</li>
-    <li><strong>Staff technical accounts:</strong> until unlinked from the roster (e.g. when
-    a phone is replaced, the old link is cleared) or removed from the roster.</li>
-    <li><strong>Push tokens:</strong> stale tokens are removed automatically after a failed
-    delivery.</li>
-    <li><strong>Telemetry:</strong> per Firebase Analytics and Crashlytics retention periods
-    (up to several months).</li>
+    <li><strong>We do not sell data</strong> — none of it, to nobody, in any form.</li>
+    <li><strong>We show no ads</strong> and work with no ad networks.</li>
+    <li><strong>We do not profile</strong> guests or staff and make no automated decisions about them.</li>
+    <li><strong>We pass data to nobody outside the services listed in section 9.</strong></li>
+    <li>We collect no location, contacts or phone content.</li>
+    <li>We handle no check-in records, identity documents, card data or payments.</li>
+    <li>We send guests no e-mails and no text messages; the only e-mail Pokoyo sends is a technical
+    alert to the owner.</li>
+    <li>We use no tracking cookies and no analytics on the portal page or in the panel.</li>
   </ul>
 
-  <h2>8. What we never do</h2>
-  <ul>
-    <li>No ads and no cooperation with ad networks.</li>
-    <li>No selling or sharing of personal data with third parties for marketing purposes.</li>
-    <li>No marketing profiling of users.</li>
-    <li>No processing of property guests' data.</li>
-    <li>No collection of location, contacts or phone contents.</li>
-  </ul>
+  <h2>14. Security</h2>
+  <p>Access to data is limited by server-side rules, not merely by hiding screens: a guest can read
+  only the portal's public content, a housekeeper only their own property's tasks and their own
+  roster record, and guest requests and the wellness schedule — the owner only. Connections use HTTPS.
+  As the developer we hold technical administrative access to the backend; we use it solely for
+  maintenance and diagnostics.</p>
 
-  <h2>9. Your rights</h2>
-  <p>Under the GDPR you have the right to access your data, rectify it, erase it, restrict
-  its processing, port it, and object to processing based on legitimate interest (including
-  telemetry). For staff data, the right addressee of a request is the property owner (the
-  controller); for the rest — us. You also have the right to lodge a complaint with your
-  data protection authority (in Poland: PUODO).</p>
+  <h2>15. Your rights</h2>
+  <p>Under the GDPR you have the right to access your data, to have it corrected or deleted, to
+  restrict processing, to data portability and to object to processing based on legitimate interests.
+  For <strong>guest and staff</strong> data the right addressee is the <strong>property owner</strong>
+  (the controller) — we will carry out whatever they ask. For the owner's account and telemetry the
+  addressee is us. You also have the right to lodge a complaint with a supervisory authority (in
+  Poland: the President of the Personal Data Protection Office, PUODO).</p>
 
-  <h2>10. Children</h2>
-  <p>The app is a work tool and is not intended for children under 16. We do not knowingly
-  collect children's data.</p>
+  <h2>16. Children</h2>
+  <p>The app and the panel are work tools and are not intended for children under 16. We do not
+  knowingly collect children's data. The guest portal does not ask for age — we ask that booking
+  requests be sent by an adult from the reservation.</p>
 
-  <h2>11. Changes to this policy</h2>
-  <p>We will announce material changes in the app or on this page by updating the effective
-  date. The current version always lives at
-  <code>https://tr0lczyk.github.io/pensjonat/privacy/en/</code>.</p>
+  <h2>17. Changes to this policy</h2>
+  <p>We will announce material changes in the app or on this page by updating the "effective" date.
+  The current version always lives at
+  <code>https://tr0lczyk.github.io/pensjonat/privacy/</code>.</p>
 
   <footer>
     <p>Questions? <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a> ·
