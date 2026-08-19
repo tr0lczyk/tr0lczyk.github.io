@@ -58,7 +58,7 @@
 <div class="wrap">
 
   <!-- BRAND --><h1>Pokoyo — Polityka prywatności</h1>
-  <p class="meta">Obowiązuje od 18 sierpnia 2026 · dotyczy aplikacji Android <code>com.tr0lczyk.pensjonat</code>,
+  <p class="meta">Obowiązuje od 19 sierpnia 2026 · dotyczy aplikacji Android <code>com.tr0lczyk.pensjonat</code>,
   panelu właściciela w przeglądarce oraz publicznego portalu gościa pod adresem <code>/g/…</code></p>
   <p class="lang"><a href="en/">English version →</a></p>
 
@@ -73,8 +73,11 @@
     w formularzu prośby o rezerwację (imię, wybrany pokój, opcjonalna uwaga) plus techniczne
     znaczniki chroniące formularz przed spamem. Opisujemy to szczegółowo w sekcji 5.
     Danych meldunkowych, dokumentów, numerów kart ani płatności nie obsługujemy w ogóle.</p>
-    <p>Wszystko przechowujemy w Unii Europejskiej. Aplikacja Android zbiera też podstawową
-    telemetrię (statystyki użycia i raporty awarii) — jest ona <strong>włączona domyślnie</strong>,
+    <p>Bazę, zdjęcia i funkcje serwerowe trzymamy w Unii Europejskiej, w regionie
+    <code>europe-central2</code> (Warszawa). Trzy rzeczy Google prowadzi poza tym regionem
+    i mówimy o nich wprost w sekcji 10: powiadomienia push, logowanie do panelu oraz
+    techniczne logi serwera. Aplikacja Android zbiera też podstawową telemetrię
+    (statystyki użycia i raporty awarii) — jest ona <strong>włączona domyślnie</strong>,
     o czym piszemy wprost w sekcji 8.</p>
   </div>
 
@@ -207,7 +210,16 @@
     Liczymy z niego skrót SHA-256 i przechowujemy pierwsze 24 znaki. Służy wyłącznie do limitu
     „maksymalnie 5 próśb na dobę". Mówimy wprost: jest to <strong>pseudonim, a nie anonimizacja</strong> —
     skrót jest powiązany z konkretnym adresem IP i nie należy go traktować jak danych całkowicie
-    nieosobowych.</li>
+    nieosobowych.
+    <br><br>
+    Żeby to zdanie było prawdziwe także o infrastrukturze, a nie tylko o bazie: adres IP
+    gościa musi oczywiście dotrzeć do serwera, bo inaczej nie dałoby się odesłać odpowiedzi —
+    ale <strong>nie zostaje po nim żaden zapis</strong>. Do 18 sierpnia 2026 techniczny log
+    żądań HTTP naszej funkcji portalu przechowywał surowy adres IP i pełny opis przeglądarki
+    (User-Agent) przez 30 dni. <strong>Od 19 sierpnia 2026 ten log w ogóle nie powstaje</strong> —
+    jest odfiltrowany zanim trafi gdziekolwiek. Sprawdziliśmy to pomiarem: żądanie wysłane
+    po zmianie nie zostawiło ani jednego wpisu, podczas gdy identyczne żądanie do innej
+    funkcji (używanej wyłącznie przez właściciela) zapisało się normalnie.</li>
     <li><strong>Identyfikator urządzenia</strong> — losowy identyfikator (UUID) generowany
     w przeglądarce gościa i zapisany w jej pamięci lokalnej pod kluczem
     <code>pokoyo-portal-device</code>. Nie zawiera niczego o gościu ani o telefonie; służy
@@ -257,6 +269,11 @@
   właściciela</strong> (tytuły sekcji, opisy atrakcji) i tylko te, które się zmieniły.
   <strong>Imię gościa i jego uwaga nigdy nie są nikomu wysyłane do tłumaczenia.</strong>
   Pozycje checklist personelu również nie są tłumaczone.</p>
+  <p>Od 19 sierpnia 2026 tłumaczenie odbywa się na <strong>europejskim (regionalnym)
+  punkcie dostępowym</strong> Google Cloud Translation, w regionie <code>europe-west1</code>.
+  Wcześniej używaliśmy punktu globalnego, przy którym Google mógł obsłużyć żądanie
+  w dowolnym regionie świata — było to jedyne miejsce w całym naszym backendzie
+  nieprzypięte do Europy. Teraz teksty wysyłane do tłumaczenia nie opuszczają Unii.</p>
 
   <h2>8. Telemetria aplikacji Android</h2>
   <p>Aplikacja Android korzysta z <strong>Google Firebase Analytics</strong> (statystyki użycia)
@@ -297,7 +314,15 @@
     <tr>
       <td><strong>Google Cloud Translation</strong></td>
       <td>Tłumaczenie treści portalu na EN/UA/RU.</td>
-      <td>Wyłącznie teksty napisane przez właściciela (sekcja 7).</td>
+      <td>Wyłącznie teksty napisane przez właściciela (sekcja 7). Europejski punkt
+      dostępowy, region <code>europe-west1</code>.</td>
+    </tr>
+    <tr>
+      <td><strong>Google Cloud Logging</strong></td>
+      <td>Techniczne logi działania serwera — do znajdowania awarii.</td>
+      <td>Komunikaty diagnostyczne pisane przez nas: identyfikatory obiektu, prośby, pokoju
+      i zadania, daty, liczniki oraz treść błędów. <strong>Bez imienia gościa, bez jego uwagi,
+      bez adresu IP i bez User-Agenta</strong> (sekcja 10). Przechowywane 30 dni.</td>
     </tr>
     <tr>
       <td><strong>Resend</strong> (region Irlandia, UE)</td>
@@ -323,9 +348,27 @@
 
   <h2>10. Gdzie dane są przechowywane</h2>
   <p>Backend to Google Firebase w ramach Google Cloud. Dane obiektu, zdjęcia i funkcje serwerowe
-  działają w regionie <code>europe-central2</code> (Warszawa). Alarmy e-mail wychodzą przez Resend
-  z regionu Irlandia (eu-west-1). Google LLC i Resend działają jako nasi podpowierzający;
-  transfer danych regulują standardowe klauzule umowne tych dostawców.</p>
+  działają w regionie <code>europe-central2</code> (Warszawa). Tłumaczenia portalu idą przez
+  europejski punkt dostępowy Cloud Translation (<code>europe-west1</code>). Alarmy e-mail
+  wychodzą przez Resend z regionu Irlandia (eu-west-1). Google LLC i Resend działają jako nasi
+  podpowierzający; transfer danych regulują standardowe klauzule umowne tych dostawców.</p>
+  <p><strong>Czego Google nie pozwala przypiąć do Europy</strong> — piszemy to wprost, zamiast
+  obiecywać więcej, niż da się dotrzymać:</p>
+  <ul>
+    <li><strong>Powiadomienia push</strong> (Firebase Cloud Messaging) chodzą po infrastrukturze
+    globalnej. Google nie oferuje tu wyboru regionu. Treść powiadomienia o nowej prośbie
+    zawiera imię gościa — to jedyne dane gościa, które opuszczają Europę.</li>
+    <li><strong>Logowanie do panelu</strong> (Firebase Authentication) to również usługa globalna,
+    bez wyboru regionu. Dotyczy właściciela i personelu, nie gości.</li>
+    <li><strong>Techniczne logi serwera</strong> (Cloud Logging) trafiają do standardowego
+    magazynu o lokalizacji <code>global</code> — Google nie gwarantuje dla niego regionu.
+    Trzymamy je 30 dni i używamy wyłącznie do znajdowania awarii. Od 19 sierpnia 2026
+    <strong>nie ma w nich żadnych danych gościa</strong>: log żądań portalu (jedyne miejsce
+    z surowym adresem IP i User-Agentem) w ogóle nie powstaje, a nasze własne komunikaty
+    przejrzeliśmy linia po linii i usunęliśmy z nich to, co mogło nieść dane osobowe —
+    m.in. cytat wadliwej linii kalendarza pobieranego z serwisu rezerwacyjnego, w której
+    mogło znaleźć się imię lub telefon gościa.</li>
+  </ul>
 
   <h2>11. Jak długo przechowujemy dane</h2>
   <div class="tbl">

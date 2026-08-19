@@ -58,7 +58,7 @@
 <div class="wrap">
 
   <!-- BRAND --><h1>Pokoyo — Privacy Policy</h1>
-  <p class="meta">Effective 18 August 2026 · applies to the Android app <code>com.tr0lczyk.pensjonat</code>,
+  <p class="meta">Effective 19 August 2026 · applies to the Android app <code>com.tr0lczyk.pensjonat</code>,
   the owner's web panel and the public guest portal at <code>/g/…</code></p>
   <p class="lang"><a href="../">Wersja polska →</a></p>
 
@@ -73,9 +73,11 @@
     request form (first name, chosen room, an optional note) plus technical markers that protect the
     form against spam. Section 5 describes this in detail. We do not handle check-in records,
     identity documents, card numbers or payments at all.</p>
-    <p>Everything is stored in the European Union. The Android app also collects basic telemetry
-    (usage statistics and crash reports) — it is <strong>enabled by default</strong>, which we state
-    plainly in section 8.</p>
+    <p>The database, photos and server functions are stored in the European Union, in the
+    <code>europe-central2</code> (Warsaw) region. Three things Google runs outside that region,
+    and we say so plainly in section 10: push notifications, panel sign-in and technical server
+    logs. The Android app also collects basic telemetry (usage statistics and crash reports) —
+    it is <strong>enabled by default</strong>, which we state plainly in section 8.</p>
   </div>
 
   <h2>1. What this policy covers</h2>
@@ -205,7 +207,16 @@
     We compute a SHA-256 hash of it and keep the first 24 characters. It serves only the "at most 5
     requests per day" limit. To be plain about it: this is a <strong>pseudonym, not
     anonymisation</strong> — the hash is tied to a specific IP address and should not be treated as
-    fully non-personal data.</li>
+    fully non-personal data.
+    <br><br>
+    So that this sentence is true of our infrastructure and not only of our database: the guest's
+    IP address obviously has to reach the server, otherwise no reply could be sent back — but
+    <strong>no record of it is kept</strong>. Until 18 August 2026 the technical HTTP request log
+    of our portal function retained the raw IP address and the full browser description
+    (User-Agent) for 30 days. <strong>Since 19 August 2026 that log is not produced at all</strong> —
+    it is filtered out before it reaches any storage. We verified this by measurement: a request
+    sent after the change left not a single entry, while an identical request to another function
+    (one used only by the owner) was logged as normal.</li>
     <li>a <strong>device identifier</strong> — a random identifier (UUID) generated in the guest's
     browser and kept in its local storage under the key <code>pokoyo-portal-device</code>. It contains
     nothing about the guest or the phone; it serves the same daily limit. It is not created in the
@@ -253,6 +264,11 @@
   for translation <strong>only the texts written by the owner</strong> (section titles, descriptions
   of attractions), and only those that have changed. <strong>A guest's first name and note are never
   sent to anyone for translation.</strong> Staff checklist items are not translated either.</p>
+  <p>Since 19 August 2026 translation runs on Google Cloud Translation's <strong>European
+  (regional) endpoint</strong>, in the <code>europe-west1</code> region. Previously we used the
+  global endpoint, where Google could serve the request from any region in the world — it was
+  the only place in our entire backend that was not pinned to Europe. The texts we send for
+  translation now stay inside the Union.</p>
 
   <h2>8. Android app telemetry</h2>
   <p>The Android app uses <strong>Google Firebase Analytics</strong> (usage statistics) and
@@ -292,7 +308,15 @@
     <tr>
       <td><strong>Google Cloud Translation</strong></td>
       <td>Translating portal content into EN/UK/RU.</td>
-      <td>Only texts written by the owner (section 7).</td>
+      <td>Only texts written by the owner (section 7). European endpoint,
+      <code>europe-west1</code> region.</td>
+    </tr>
+    <tr>
+      <td><strong>Google Cloud Logging</strong></td>
+      <td>Technical server logs — for finding failures.</td>
+      <td>Diagnostic messages written by us: property, request, room and task identifiers, dates,
+      counters and error text. <strong>No guest first name, no guest note, no IP address and no
+      User-Agent</strong> (section 10). Retained for 30 days.</td>
     </tr>
     <tr>
       <td><strong>Resend</strong> (Ireland region, EU)</td>
@@ -317,9 +341,26 @@
 
   <h2>10. Where data is stored</h2>
   <p>The backend is Google Firebase within Google Cloud. Property data, photos and server functions
-  run in the <code>europe-central2</code> region (Warsaw). Alert e-mails go out through Resend from
-  the Ireland region (eu-west-1). Google LLC and Resend act as our sub-processors; data transfers are
-  governed by those providers' standard contractual clauses.</p>
+  run in the <code>europe-central2</code> region (Warsaw). Portal translations go through the
+  European Cloud Translation endpoint (<code>europe-west1</code>). Alert e-mails go out through
+  Resend from the Ireland region (eu-west-1). Google LLC and Resend act as our sub-processors;
+  data transfers are governed by those providers' standard contractual clauses.</p>
+  <p><strong>What Google does not let us pin to Europe</strong> — we say this plainly rather than
+  promising more than we can keep:</p>
+  <ul>
+    <li><strong>Push notifications</strong> (Firebase Cloud Messaging) run on global
+    infrastructure. Google offers no region choice here. The notification about a new request
+    contains the guest's first name — this is the only guest data that leaves Europe.</li>
+    <li><strong>Panel sign-in</strong> (Firebase Authentication) is likewise a global service with
+    no region choice. It concerns the owner and staff, not guests.</li>
+    <li><strong>Technical server logs</strong> (Cloud Logging) land in the standard storage whose
+    location is <code>global</code> — Google guarantees no region for it. We keep them for 30 days
+    and use them only to find failures. Since 19 August 2026 there is <strong>no guest data in
+    them at all</strong>: the portal's request log (the only place holding a raw IP address and
+    User-Agent) is no longer produced, and we reviewed our own messages line by line and removed
+    what could carry personal data — among others the quoted malformed line of the calendar feed
+    pulled from a booking service, which could contain a guest's name or phone number.</li>
+  </ul>
 
   <h2>11. How long we keep data</h2>
   <div class="tbl">
