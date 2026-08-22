@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polityka prywatności — PEStka</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; background: #17181A; color: #ECE8E3; font: 16px/1.65 "Manrope", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 20px 72px; }
+  h1 { font-size: 1.7em; margin-bottom: .2em; }
+  h2 { font-size: 1.15em; margin-top: 2em; color: #F4B183; }
+  p, li { color: #C9C3BC; }
+  em { color: #8E8882; font-style: normal; font-size: .9em; }
+  a { color: #F4B183; }
+  strong { color: #ECE8E3; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: .93em; }
+  th, td { border: 1px solid #2B2C30; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { color: #F4B183; background: #222326; }
+  code { background: #2B2C30; padding: 1px 5px; border-radius: 4px; font-size: .9em; }
+  .rule { border: 0; border-top: 1px solid #2B2C30; margin: 2.2em 0; }
+</style>
+</head>
+<body>
+<main>
+<h1>Polityka prywatności — PEStka</h1>
+<p><em>Ostatnia aktualizacja: 22 sierpnia 2026 · wersja pilotażowa (testy zamknięte)</em></p>
+
+<p><strong>PEStka</strong> („Aplikacja”) to aplikacja do nauki do Państwowego Egzaminu
+Specjalizacyjnego (PES) na podstawie publicznie dostępnych pytań CEM. Administratorem danych
+jest Mateusz Olczyk (kontakt: <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a>).
+Ta polityka opisuje, co Aplikacja faktycznie przetwarza — i czego nie robi.</p>
+
+<h2>W skrócie</h2>
+<ul>
+  <li>Aplikacja <strong>nie wyświetla reklam</strong>, nie zawiera SDK reklamowych ani
+  analitycznych, nie zbiera identyfikatora reklamowego i nie raportuje awarii do zewnętrznych usług.</li>
+  <li>Treść (pytania, klucze, statystyki CEM) jest w całości <strong>na Twoim urządzeniu</strong>;
+  Aplikacja działa bez sieci.</li>
+  <li>Twój <strong>postęp nauki</strong> (dziennik odpowiedzi, powtórek i egzaminów próbnych) jest
+  zapisywany lokalnie i — pod anonimowym identyfikatorem — synchronizowany do Firebase (Google),
+  w regionie Unii Europejskiej, żeby wracał po reinstalacji i na www.</li>
+  <li>Logowanie kontem Google jest <strong>opcjonalne</strong>; bez niego Aplikacja używa konta
+  anonimowego.</li>
+</ul>
+
+<h2>Jakie dane przetwarzamy i po co</h2>
+<table>
+  <tr><th>Dane</th><th>Cel</th><th>Gdzie</th></tr>
+  <tr><td><strong>Anonimowy identyfikator konta</strong> (Firebase Authentication, losowy UID)</td>
+      <td>Rozróżnienie użytkowników przy synchronizacji postępu; działa bez podawania jakichkolwiek danych osobowych</td>
+      <td>Firebase Authentication (Google), UE</td></tr>
+  <tr><td><strong>Dziennik nauki</strong>: identyfikator pytania, wybrana odpowiedź, czy była poprawna, czas, tryb (nauka / powtórka / egzamin próbny), ocena powtórki, wyniki egzaminów próbnych, znacznik czasu, model urządzenia (np. <code>android/SM-G781B</code>)</td>
+      <td>Działanie aplikacji: powtórki (algorytm FSRS), predykcja wyniku, historia egzaminów próbnych; przywrócenie postępu po reinstalacji i na www</td>
+      <td>Lokalnie (SQLite) + Firestore (Google), region <code>europe-west3</code>, kolekcja dostępna tylko dla właściciela konta</td></tr>
+  <tr><td><strong>Adres e-mail, imię i identyfikator konta Google</strong> — tylko gdy sam zalogujesz się kontem Google</td>
+      <td>Powiązanie postępu z Twoim kontem, żeby odzyskać go na innym urządzeniu</td>
+      <td>Firebase Authentication (Google), UE</td></tr>
+  <tr><td>Ustawienia (motyw, wybrana dziedzina)</td><td>Wygoda</td><td>Tylko lokalnie</td></tr>
+</table>
+<p>Nie przetwarzamy danych pacjentów, lokalizacji, kontaktów, zdjęć ani żadnych danych
+szczególnych kategorii. Jedyne uprawnienie systemowe, o które prosi Aplikacja, to
+<strong>dostęp do Internetu</strong>.</p>
+
+<h2>Podstawa prawna i okres przechowywania</h2>
+<p>Dziennik nauki i identyfikator konta przetwarzamy w celu wykonania usługi (art. 6 ust. 1 lit. b RODO),
+a w okresie pilotażu — także w celu rozwoju produktu w agregatach (art. 6 ust. 1 lit. f RODO, raporty
+publikowane tylko w zestawieniach od 5 osób wzwyż). Dane są przechowywane do usunięcia konta.</p>
+
+<h2>Udostępnianie</h2>
+<p>Dane nie są sprzedawane ani przekazywane podmiotom trzecim w celach marketingowych. Jedynym
+podmiotem przetwarzającym jest <strong>Google (Firebase: Authentication, Cloud Firestore)</strong>,
+w ramach warunków Firebase i w regionie UE. Dostęp do danych w Firestore mają wyłącznie właściciel konta
+(reguły bezpieczeństwa) i administrator.</p>
+
+<h2>Twoje prawa i usunięcie danych</h2>
+<p>Masz prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia oraz
+sprzeciwu; przysługuje Ci skarga do Prezesa UODO. Aby <strong>usunąć konto i cały dziennik nauki</strong>,
+napisz na <a href="mailto:matt.olczyk@gmail.com?subject=PEStka%20-%20usuniecie%20danych">matt.olczyk@gmail.com</a>
+z urządzenia lub konta, którego dotyczy prośba (w Aplikacji: Profil pokazuje identyfikator konta) — dane
+usuwamy w ciągu 30 dni. Odinstalowanie Aplikacji usuwa dane lokalne, ale nie kopię w Firestore.</p>
+
+<h2>Dzieci</h2>
+<p>Aplikacja jest przeznaczona dla lekarzy przygotowujących się do PES, czyli dla osób pełnoletnich.
+Nie kierujemy jej do dzieci i świadomie nie zbieramy danych osób poniżej 18. roku życia.</p>
+
+<h2>Treść pytań</h2>
+<p>Pytania egzaminacyjne pochodzą z publicznych baz Centrum Egzaminów Medycznych (CEM) oraz archiwów
+Naczelnej Izby Lekarskiej i są prezentowane z atrybucją. Aplikacja nie jest wyrobem medycznym
+i nie wspiera decyzji klinicznych.</p>
+
+<h2>Zmiany</h2>
+<p>O istotnych zmianach polityki poinformujemy w Aplikacji. Aktualna wersja jest zawsze pod tym adresem.</p>
+
+<hr class="rule">
+<h2 id="en">English summary</h2>
+<p><strong>PEStka</strong> is a study app for the Polish medical specialty exam (PES). It shows
+<strong>no ads</strong>, has no analytics or crash-reporting SDKs and asks only for Internet access. Exam
+content is stored on your device and works offline. Your study log (question id, chosen answer, correctness,
+timing, mode, mock results, device model) is stored locally and synced under an <strong>anonymous Firebase
+UID</strong> to Cloud Firestore in the EU (<code>europe-west3</code>) so it survives reinstalls; access is
+restricted to the account owner. Signing in with Google is optional and adds your e-mail, name and Google
+account id to Firebase Authentication. The only processor is Google (Firebase). To delete your account and
+data, e-mail <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a>; deletion within 30 days.
+Intended for adults (physicians); not a medical device.</p>
+</main>
+</body>
+</html>
