@@ -24,7 +24,7 @@
 <body>
 <main>
 <h1>Polityka prywatności — PEStka</h1>
-<p><em>Ostatnia aktualizacja: 22 sierpnia 2026 · wersja pilotażowa (testy zamknięte)</em></p>
+<p><em>Ostatnia aktualizacja: 30 września 2026</em></p>
 
 <p><strong>PEStka</strong> („Aplikacja”) to aplikacja do nauki do Państwowego Egzaminu
 Specjalizacyjnego (PES) na podstawie publicznie dostępnych pytań CEM. Administratorem danych
@@ -34,7 +34,10 @@ Ta polityka opisuje, co Aplikacja faktycznie przetwarza — i czego nie robi.</p
 <h2>W skrócie</h2>
 <ul>
   <li>Aplikacja <strong>nie wyświetla reklam</strong>, nie zawiera SDK reklamowych ani
-  analitycznych, nie zbiera identyfikatora reklamowego i nie raportuje awarii do zewnętrznych usług.</li>
+  analitycznych i nie zbiera identyfikatora reklamowego.</li>
+  <li><strong>Diagnostyka błędów</strong> (Firebase Crashlytics) działa wyłącznie za Twoją zgodą.
+  Przełącznik stoi na pierwszym ekranie — jest tam <strong>domyślnie włączony</strong> i możesz go
+  wyłączyć od razu albo później, w Profilu → Ustawienia zgód. Po wyłączeniu nic nie wychodzi.</li>
   <li>Treść (pytania, klucze, statystyki CEM) jest w całości <strong>na Twoim urządzeniu</strong>;
   Aplikacja działa bez sieci.</li>
   <li>Twój <strong>postęp nauki</strong> (dziennik odpowiedzi, powtórek i egzaminów próbnych) jest
@@ -56,6 +59,12 @@ Ta polityka opisuje, co Aplikacja faktycznie przetwarza — i czego nie robi.</p
   <tr><td><strong>Adres e-mail, imię i identyfikator konta Google</strong> — tylko gdy sam zalogujesz się kontem Google</td>
       <td>Powiązanie postępu z Twoim kontem, żeby odzyskać go na innym urządzeniu</td>
       <td>Firebase Authentication (Google), UE</td></tr>
+  <tr><td><strong>Raport awarii</strong> (Firebase Crashlytics): rodzaj błędu, ślad stosu, wersja aplikacji i systemu, model urządzenia — <strong>tylko za zgodą</strong> „Diagnostyka błędów”</td>
+      <td>Naprawa awarii. Raport nie zawiera treści nauki ani tego, czego się uczysz</td>
+      <td>Firebase Crashlytics (Google)</td></tr>
+  <tr><td><strong>Twój wynik z CEM</strong>, jeśli sam go wpiszesz po egzaminie — <strong>tylko za zgodą</strong> „Wynik CEM”</td>
+      <td>Sprawdzenie, czy prognoza zdania mówiła prawdę; w raportach wyłącznie w zestawieniach</td>
+      <td>Firestore (Google), region <code>europe-west3</code></td></tr>
   <tr><td>Ustawienia (motyw, wybrana dziedzina)</td><td>Wygoda</td><td>Tylko lokalnie</td></tr>
 </table>
 <p>Nie przetwarzamy danych pacjentów, lokalizacji, kontaktów, zdjęć ani żadnych danych
@@ -64,8 +73,10 @@ szczególnych kategorii. Jedyne uprawnienie systemowe, o które prosi Aplikacja,
 
 <h2>Podstawa prawna i okres przechowywania</h2>
 <p>Dziennik nauki i identyfikator konta przetwarzamy w celu wykonania usługi (art. 6 ust. 1 lit. b RODO),
-a w okresie pilotażu — także w celu rozwoju produktu w agregatach (art. 6 ust. 1 lit. f RODO, raporty
-publikowane tylko w zestawieniach od 5 osób wzwyż). Dane są przechowywane do usunięcia konta.</p>
+a także w celu rozwoju produktu w agregatach (art. 6 ust. 1 lit. f RODO, raporty publikowane tylko
+w zestawieniach od 5 osób wzwyż). Diagnostyka błędów i wynik z CEM przetwarzane są wyłącznie na
+podstawie Twojej zgody (art. 6 ust. 1 lit. a RODO), którą możesz wycofać w każdej chwili w Profilu —
+wycofanie działa na przyszłość. Dane są przechowywane do usunięcia konta.</p>
 
 <h2>Udostępnianie</h2>
 <p>Dane nie są sprzedawane ani przekazywane podmiotom trzecim w celach marketingowych. Jedynym
