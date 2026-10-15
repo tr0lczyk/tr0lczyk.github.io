@@ -24,7 +24,7 @@
 <body>
 <main>
 <h1>Polityka prywatności — PEStka</h1>
-<p><em>Ostatnia aktualizacja: 30 września 2026</em></p>
+<p><em>Ostatnia aktualizacja: 15 października 2026</em></p>
 
 <p><strong>PEStka</strong> („Aplikacja”) to aplikacja do nauki do Państwowego Egzaminu
 Specjalizacyjnego (PES) na podstawie publicznie dostępnych pytań CEM. Administratorem danych
@@ -33,11 +33,14 @@ Ta polityka opisuje, co Aplikacja faktycznie przetwarza — i czego nie robi.</p
 
 <h2>W skrócie</h2>
 <ul>
-  <li>Aplikacja <strong>nie wyświetla reklam</strong>, nie zawiera SDK reklamowych ani
-  analitycznych i nie zbiera identyfikatora reklamowego.</li>
-  <li><strong>Diagnostyka błędów</strong> (Firebase Crashlytics) działa wyłącznie za Twoją zgodą.
-  Przełącznik stoi na pierwszym ekranie — jest tam <strong>domyślnie włączony</strong> i możesz go
-  wyłączyć od razu albo później, w Profilu → Ustawienia zgód. Po wyłączeniu nic nie wychodzi.</li>
+  <li>Aplikacja <strong>nie wyświetla reklam, nie zawiera SDK reklamowych i nie zbiera identyfikatora
+  reklamowego</strong>.</li>
+  <li><strong>Statystyki użycia</strong> (Google Analytics dla Firebase) i <strong>raporty awarii</strong>
+  (Firebase Crashlytics) działają <strong>wyłącznie za Twoją zgodą</strong>. O każdą z tych rzeczy pytamy
+  osobno, na ekranie zaraz po pierwszym uruchomieniu; <strong>obie są domyślnie wyłączone</strong>. Odmowa
+  niczego w Aplikacji nie ogranicza. Zgodę zmienisz w każdej chwili w Ustawieniach → Prywatność → Zgody (na
+  stronie pestka.app: odnośnik „Ustawienia prywatności” w stopce). Bez zgody nic z tych danych nie opuszcza
+  urządzenia.</li>
   <li>Treść (pytania, klucze, statystyki CEM) jest w całości <strong>na Twoim urządzeniu</strong>;
   Aplikacja działa bez sieci.</li>
   <li>Twój <strong>postęp nauki</strong> (dziennik odpowiedzi, powtórek i egzaminów próbnych) jest
@@ -59,37 +62,69 @@ Ta polityka opisuje, co Aplikacja faktycznie przetwarza — i czego nie robi.</p
   <tr><td><strong>Adres e-mail, imię i identyfikator konta Google</strong> — tylko gdy sam zalogujesz się kontem Google</td>
       <td>Powiązanie postępu z Twoim kontem, żeby odzyskać go na innym urządzeniu</td>
       <td>Firebase Authentication (Google), UE</td></tr>
-  <tr><td><strong>Raport awarii</strong> (Firebase Crashlytics): rodzaj błędu, ślad stosu, wersja aplikacji i systemu, model urządzenia — <strong>tylko za zgodą</strong> „Diagnostyka błędów”</td>
+  <tr><td><strong>Raport awarii</strong> (Firebase Crashlytics): rodzaj błędu, ślad stosu, wersja aplikacji i systemu, model urządzenia, identyfikator konta — <strong>tylko za zgodą „Raporty awarii”</strong></td>
       <td>Naprawa awarii. Raport nie zawiera treści nauki ani tego, czego się uczysz</td>
       <td>Firebase Crashlytics (Google)</td></tr>
+  <tr><td><strong>Statystyki użycia — tylko za zgodą „Statystyki użycia”:</strong> które ekrany i strony otwierasz; kroki takie jak wybór dziedziny, pierwsza odpowiedź, logowanie i zakup (z kwotą i walutą); kod dziedziny; wersja aplikacji; model urządzenia i system; kraj (ustalany z adresu IP; adresów IP użytkowników z UE Google Analytics nie zapisuje); losowy identyfikator instalacji aplikacji albo przeglądarki. <strong>Bez treści pytań i odpowiedzi, bez wyników, bez adresu e-mail, bez identyfikatora konta i bez identyfikatora reklamowego.</strong></td>
+      <td>Sprawdzanie, w którym miejscu Aplikacja jest niezrozumiała i gdzie ludzie rezygnują. Nie służy reklamom i nie jest łączone z Twoim kontem</td>
+      <td>Google Analytics dla Firebase (Google Ireland Ltd.)</td></tr>
+  <tr><td><strong>Identyfikator konta Apple</strong> i — jeśli go udostępnisz — adres e-mail (także adres ukryty „Hide My Email”) — tylko gdy zalogujesz się przez Apple</td>
+      <td>Powiązanie postępu z Twoim kontem</td>
+      <td>Firebase Authentication (Google), UE</td></tr>
+  <tr><td><strong>Zakup pełnego dostępu</strong>: identyfikator produktu, czas zakupu i potwierdzenie ze sklepu. Danych karty nie widzimy — płatność obsługuje Google Play albo App Store</td>
+      <td>Nadanie dostępu i jego odtworzenie na innym urządzeniu</td>
+      <td>Firestore i Cloud Functions (Google), UE</td></tr>
   <tr><td><strong>Twój wynik z CEM</strong>, jeśli sam go wpiszesz po egzaminie — <strong>tylko za zgodą</strong> „Wynik CEM”</td>
       <td>Sprawdzenie, czy prognoza zdania mówiła prawdę; w raportach wyłącznie w zestawieniach</td>
       <td>Firestore (Google), region <code>europe-west3</code></td></tr>
   <tr><td>Ustawienia (motyw, wybrana dziedzina)</td><td>Wygoda</td><td>Tylko lokalnie</td></tr>
 </table>
 <p>Nie przetwarzamy danych pacjentów, lokalizacji, kontaktów, zdjęć ani żadnych danych
-szczególnych kategorii. Jedyne uprawnienie systemowe, o które prosi Aplikacja, to
-<strong>dostęp do Internetu</strong>.</p>
+szczególnych kategorii. <strong>Aplikacja prosi wyłącznie o dostęp do Internetu i stanu sieci; nie prosi
+o uprawnienie do identyfikatora reklamowego.</strong></p>
 
 <h2>Podstawa prawna i okres przechowywania</h2>
 <p>Dziennik nauki i identyfikator konta przetwarzamy w celu wykonania usługi (art. 6 ust. 1 lit. b RODO),
-a także w celu rozwoju produktu w agregatach (art. 6 ust. 1 lit. f RODO, raporty publikowane tylko
-w zestawieniach od 5 osób wzwyż). Diagnostyka błędów i wynik z CEM przetwarzane są wyłącznie na
-podstawie Twojej zgody (art. 6 ust. 1 lit. a RODO), którą możesz wycofać w każdej chwili w Profilu —
-wycofanie działa na przyszłość. Dane są przechowywane do usunięcia konta.</p>
+a także w celu rozwoju produktu w zestawieniach (art. 6 ust. 1 lit. f RODO; raporty publikowane tylko
+w zestawieniach od 5 osób wzwyż).</p>
+<p><strong>Statystyki użycia, raporty awarii i wynik z CEM przetwarzamy wyłącznie na podstawie Twojej zgody</strong>
+(art. 6 ust. 1 lit. a RODO). Statystyki użycia i raporty awarii wymagają zapisania i odczytania informacji na
+Twoim urządzeniu — tu podstawą jest także Twoja zgoda z art. 399 Prawa komunikacji elektronicznej. Każdą zgodę
+wycofasz tak samo łatwo, jak jej udzieliłeś: w Ustawieniach → Prywatność → Zgody. Wycofanie działa na przyszłość;
+przy wycofaniu zgody na statystyki Aplikacja kasuje z urządzenia losowy identyfikator instalacji, a strona —
+ciasteczka Google Analytics.</p>
+<p><strong>Okres przechowywania.</strong> Dziennik nauki i dane konta: do usunięcia konta. Statystyki użycia:
+<strong>14 miesięcy</strong> od zdarzenia, niezależnie od konta — nie są z nim powiązane. Raporty awarii: 90 dni
+(okres Firebase Crashlytics).</p>
+
+<h2>Strona pestka.app i ciasteczka</h2>
+<p>Na stronie pestka.app <strong>przed Twoją zgodą nie pobieramy kodu Google Analytics i nie zapisujemy jego
+ciasteczek</strong>. Jeśli wybierzesz „Nauka i statystyki”, Google Analytics zapisze w przeglądarce ciasteczka
+<code>_ga</code> i <code>_ga_&lt;identyfikator&gt;</code> (losowy identyfikator przeglądarki, ważny do 2 lat). Po
+wybraniu „Tylko nauka” albo po wycofaniu zgody strona ich nie zapisuje, a istniejące kasuje. Postęp nauki strona
+trzyma w pamięci przeglądarki (IndexedDB i <code>localStorage</code>) — to jest niezbędne do działania i nie
+wymaga zgody.</p>
 
 <h2>Udostępnianie</h2>
-<p>Dane nie są sprzedawane ani przekazywane podmiotom trzecim w celach marketingowych. Jedynym
-podmiotem przetwarzającym jest <strong>Google (Firebase: Authentication, Cloud Firestore)</strong>,
-w ramach warunków Firebase i w regionie UE. Dostęp do danych w Firestore mają wyłącznie właściciel konta
-(reguły bezpieczeństwa) i administrator.</p>
+<p>Dane nie są sprzedawane ani przekazywane podmiotom trzecim w celach marketingowych. Jedynym podmiotem
+przetwarzającym jest Google (Google Ireland Ltd. i Google LLC): <strong>Firebase Authentication, Cloud Firestore
+i Cloud Functions — w regionie Unii Europejskiej — oraz, wyłącznie za Twoją zgodą, Firebase Crashlytics i Google
+Analytics dla Firebase.</strong> Dwie ostatnie usługi mogą przetwarzać dane także poza Europejskim Obszarem
+Gospodarczym, w tym w Stanach Zjednoczonych — na podstawie decyzji Komisji Europejskiej o odpowiednim stopniu
+ochrony (EU–US Data Privacy Framework) i standardowych klauzul umownych. Funkcje reklamowe Google Analytics
+(Google Signals, personalizacja reklam, połączenie z Google Ads) są wyłączone.
+Dostęp do danych w Firestore mają wyłącznie właściciel konta (reguły bezpieczeństwa) i administrator.</p>
 
 <h2 id="usuniecie">Twoje prawa i usunięcie danych</h2>
 <p>Masz prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia oraz
-sprzeciwu; przysługuje Ci skarga do Prezesa UODO. Aby <strong>usunąć konto i cały dziennik nauki</strong>,
-napisz na <a href="mailto:matt.olczyk@gmail.com?subject=PEStka%20-%20usuniecie%20danych">matt.olczyk@gmail.com</a>
-z urządzenia lub konta, którego dotyczy prośba (w Aplikacji: Profil pokazuje identyfikator konta) — dane
-usuwamy w ciągu 30 dni. Odinstalowanie Aplikacji usuwa dane lokalne, ale nie kopię w Firestore.</p>
+sprzeciwu; przysługuje Ci skarga do Prezesa UODO.</p>
+<p><strong>Konto i cały dziennik nauki usuniesz samodzielnie i od razu:</strong> w Aplikacji (Profil → Usuń konto)
+albo na stronie <a href="https://pestka.app/konto/usun">pestka.app/konto/usun</a>, po zalogowaniu kontem, którego
+dotyczy usunięcie. Usunięcie kasuje dane z serwera i z urządzenia, wyłącza statystyki użycia i kasuje identyfikator
+instalacji. Jeśli nie masz już dostępu do konta, napisz na adres kontaktowy z początku tej polityki.
+Odinstalowanie Aplikacji usuwa dane lokalne, ale nie kopię w Firestore.</p>
+<p>Statystyki użycia nie są powiązane z kontem, więc usunięcie konta ich nie obejmuje — wygasają po 14 miesiącach.
+Żeby przestały powstawać, wyłącz zgodę.</p>
 
 <h2>Dzieci</h2>
 <p>Aplikacja jest przeznaczona dla lekarzy przygotowujących się do PES, czyli dla osób pełnoletnich.
@@ -105,15 +140,22 @@ i nie wspiera decyzji klinicznych.</p>
 
 <hr class="rule">
 <h2 id="en">English summary</h2>
-<p><strong>PEStka</strong> is a study app for the Polish medical specialty exam (PES). It shows
-<strong>no ads</strong>, has no analytics or crash-reporting SDKs and asks only for Internet access. Exam
-content is stored on your device and works offline. Your study log (question id, chosen answer, correctness,
-timing, mode, mock results, device model) is stored locally and synced under an <strong>anonymous Firebase
-UID</strong> to Cloud Firestore in the EU (<code>europe-west3</code>) so it survives reinstalls; access is
-restricted to the account owner. Signing in with Google is optional and adds your e-mail, name and Google
-account id to Firebase Authentication. The only processor is Google (Firebase). To delete your account and
-data, e-mail <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a>; deletion within 30 days.
-Intended for adults (physicians); not a medical device.</p>
+<p><strong>PEStka</strong> is a study app for the Polish medical specialty exam (PES). It shows <strong>no ads,
+contains no advertising SDKs and does not collect the advertising ID</strong>. <strong>Usage statistics (Google
+Analytics for Firebase) and crash reports (Firebase Crashlytics) are collected only with your consent; both are
+off by default</strong> and each is asked separately. Usage statistics cover screens and pages opened, steps such
+as choosing a specialty, the first answer, sign-in and purchase (with amount and currency), the specialty code, app
+version, device model, country and a random installation identifier — never question content, answers, results,
+e-mail or account ID; they are not linked to your account and are kept for 14 months. On pestka.app the Google
+Analytics code is not loaded and no Google Analytics cookies are set before you consent. Exam content is stored on
+your device and works offline. Your study log (question id, chosen answer, correctness, timing, mode, mock results,
+device model) is stored locally and synced under an anonymous Firebase UID to Cloud Firestore in the EU
+(<code>europe-west3</code>) so it survives reinstalls; access is restricted to the account owner. Signing in with
+Google or Apple is optional and adds your e-mail and account id to Firebase Authentication. The only processor is
+Google (Firebase; Crashlytics and Analytics may process data outside the EEA under the EU–US Data Privacy
+Framework). <strong>You can delete your account and all data yourself, immediately: in the app (Profile → Delete
+account) or at <a href="https://pestka.app/konto/usun">pestka.app/konto/usun</a>.</strong> Intended for adults
+(physicians); not a medical device.</p>
 </main>
 </body>
 </html>
