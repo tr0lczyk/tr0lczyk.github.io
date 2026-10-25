@@ -38,7 +38,7 @@
 <div class="wrap">
 
   <h1>DeepDrill — Privacy Policy</h1>
-  <p class="meta">Effective 31 July 2026 · applies to the Android app <code>com.tr0lczyk.deepdrill</code></p>
+  <p class="meta">Effective 25 October 2026 · applies to DeepDrill for Android (<code>com.tr0lczyk.deepdrill</code>) and for iPhone (App Store id <code>6804160130</code>)</p>
 
   <p>DeepDrill is made by Mateusz Olczyk, an individual developer based in Poland. You can
   reach me at <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a>.</p>
@@ -46,8 +46,9 @@
   <div class="callout">
     <p><strong>The short version.</strong> DeepDrill has no accounts and no server of its own.
     Your game progress never leaves your phone. The only data that goes anywhere is what
-    Google's advertising and analytics SDKs collect — and analytics collection stays switched
-    off until you agree to it.</p>
+    Google's advertising and analytics SDKs collect. In the EEA and the UK, analytics and crash
+    reporting stay off until you agree to them in the consent form; everywhere, one switch in
+    Settings (“Share usage data”) turns them off.</p>
   </div>
 
   <h2>1. What stays on your device</h2>
@@ -73,12 +74,17 @@
   covered by the GDPR and similar laws, that form is how you accept or refuse personalised
   advertising. You can revisit the choice at any time: <strong>Settings → Privacy options</strong>.
   Refusing personalised ads does not lock you out of anything in the game.</p>
+  <p>On iPhone you may also see Apple's <strong>App Tracking Transparency</strong> prompt. If you
+  decline, your advertising identifier (IDFA) is not shared and ads are not personalised;
+  nothing in the game depends on your answer.</p>
 
   <h2>3. Analytics and crash reporting</h2>
   <p>DeepDrill uses <strong>Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong>
   to see which features get used and to receive crash reports.</p>
-  <p><strong>Collection is off by default.</strong> Nothing is sent until your consent status is
-  resolved, and the app enables collection only if you agreed. When enabled, these SDKs may
+  <p><strong>Where the GDPR applies (EEA and UK), collection is off until you agree.</strong>
+  Nothing is sent until you consent in Google's consent form; if you refuse, collection stays
+  off and unsent crash reports are deleted. <strong>Elsewhere, collection is on by default.</strong>
+  Anywhere, <strong>Settings → Share usage data</strong> turns it off at any time. When enabled, these SDKs may
   process pseudonymous identifiers (including the advertising ID), device model, OS version,
   app version, in-app events such as opening a screen or watching a rewarded ad, and — for
   crashes — a stack trace with device state at the moment of the crash. Crash reports never
@@ -92,6 +98,7 @@
     <tr><td><code>AD_ID</code></td><td>Access to the advertising ID, used by AdMob and Analytics. You can reset or delete it in Android's own settings.</td></tr>
     <tr><td><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code>, <code>ACCESS_ADSERVICES_*</code>, <code>READ_BASIC_PHONE_STATE</code>, install-referrer</td><td>Added automatically by the Google Play services, AdMob and Firebase libraries for their own scheduling and attribution. DeepDrill does not use them directly.</td></tr>
   </table>
+  <p>On iPhone the only permission DeepDrill asks for is App Tracking Transparency (see section 2).</p>
   <p>DeepDrill requests no sensitive permissions: no camera, no microphone, no location, no
   contacts, no storage access outside its own sandbox.</p>
 
