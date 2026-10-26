@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- BRAND --><title>Pokoyo — Polityka prywatności</title>
-<meta name="description" content="Polityka prywatności Pokoyo (aplikacja Android, panel właściciela i portal gościa): jakie dane przetwarzamy, w tym dane gości, po co, gdzie są przechowywane i jakie masz prawa.">
+<meta name="description" content="Polityka prywatności Pokoyo (aplikacja na Androida i iPhone'a, panel właściciela i portal gościa): jakie dane przetwarzamy, w tym dane gości, po co, gdzie są przechowywane i jakie masz prawa.">
 <style>
   :root {
     --pk-primary: #1B5244;
@@ -58,7 +58,7 @@
 <div class="wrap">
 
   <!-- BRAND --><h1>Pokoyo — Polityka prywatności</h1>
-  <p class="meta">Obowiązuje od 19 sierpnia 2026 · dotyczy aplikacji Android <code>com.tr0lczyk.pensjonat</code>,
+  <p class="meta">Obowiązuje od 26 października 2026 · dotyczy aplikacji dla personelu na Androida i iPhone'a <code>com.tr0lczyk.pensjonat</code>,
   panelu właściciela w przeglądarce oraz publicznego portalu gościa pod adresem <code>/g/…</code></p>
   <p class="lang"><a href="en/">English version →</a></p>
 
@@ -76,7 +76,7 @@
     <p>Bazę, zdjęcia i funkcje serwerowe trzymamy w Unii Europejskiej, w regionie
     <code>europe-central2</code> (Warszawa). Trzy rzeczy Google prowadzi poza tym regionem
     i mówimy o nich wprost w sekcji 10: powiadomienia push, logowanie do panelu oraz
-    techniczne logi serwera. Aplikacja Android zbiera też podstawową telemetrię
+    techniczne logi serwera. Aplikacja dla personelu (Android i iPhone) zbiera też podstawową telemetrię
     (statystyki użycia i raporty awarii) — jest ona <strong>włączona domyślnie</strong>,
     o czym piszemy wprost w sekcji 8.</p>
   </div>
@@ -84,7 +84,8 @@
   <h2>1. Czego dotyczy ta polityka</h2>
   <p>Pokoyo składa się z trzech osobnych powierzchni i ta polityka opisuje wszystkie trzy:</p>
   <ul>
-    <li><strong>Aplikacja Android dla personelu</strong> (<code>com.tr0lczyk.pensjonat</code>) —
+    <li><strong>Aplikacja dla personelu na Androida i iPhone'a</strong> (<code>com.tr0lczyk.pensjonat</code>
+    w Google Play i w App Store) —
     zadania sprzątania, checklisty, zdjęcia pokoi, zgłoszenia usterek.</li>
     <li><strong>Panel właściciela w przeglądarce</strong> — konfiguracja obiektu, kartoteka personelu,
     grafik sauny/jacuzzi/rowerów, kalendarze rezerwacji, treść portalu gościa.</li>
@@ -105,7 +106,7 @@
     żeby aplikacja działała, na polecenie właściciela obiektu. Nie używamy danych personelu ani
     gości do własnych celów.</li>
     <li>Administratorem jesteśmy my wyłącznie dla <strong>danych konta właściciela</strong>
-    (adres e-mail, identyfikator konta) oraz dla <strong>telemetrii aplikacji Android</strong>
+    (adres e-mail, identyfikator konta) oraz dla <strong>telemetrii aplikacji dla personelu</strong>
     (sekcja 8).</li>
   </ul>
   <p><strong>Podstawy prawnej dla danych gości i personelu nie ustalamy my</strong> — robi to
@@ -119,7 +120,7 @@
 
   <h2>3. Konta i logowanie</h2>
   <ul>
-    <li><strong>Personel (aplikacja Android):</strong> nie zakłada kont. Telefon otrzymuje
+    <li><strong>Personel (aplikacja na Androida i iPhone'a):</strong> nie zakłada kont. Telefon otrzymuje
     <strong>anonimowe konto techniczne</strong> (losowy identyfikator Firebase Authentication)
     powiązane z obiektem po wpisaniu 6-znakowego kodu zaproszenia. Nie zbieramy od personelu
     e-maili, haseł ani numerów telefonu. Nazwę wyświetlaną („Ania", „pokojówka 1") wpisuje
@@ -275,12 +276,18 @@
   w dowolnym regionie świata — było to jedyne miejsce w całym naszym backendzie
   nieprzypięte do Europy. Teraz teksty wysyłane do tłumaczenia nie opuszczają Unii.</p>
 
-  <h2>8. Telemetria aplikacji Android</h2>
-  <p>Aplikacja Android korzysta z <strong>Google Firebase Analytics</strong> (statystyki użycia)
-  oraz <strong>Firebase Crashlytics</strong> (raporty awarii). Zbierane są automatyczne zdarzenia
+  <h2>8. Telemetria aplikacji dla personelu (Android i iPhone)</h2>
+  <p>Aplikacja na obu platformach korzysta z <strong>Google Firebase Analytics</strong> (statystyki
+  użycia) oraz <strong>Firebase Crashlytics</strong> (raporty awarii). Zbierane są automatyczne zdarzenia
   Firebase (uruchomienie aplikacji, otwarte ekrany), model urządzenia, wersja systemu i aplikacji
-  oraz — przy awarii — stan aplikacji w chwili błędu. <strong>Nie wysyłamy do telemetrii żadnych
-  własnych zdarzeń</strong> z treścią zadań, nazwami pokoi, imionami ani danymi gości.</p>
+  oraz — przy awarii — stan aplikacji w chwili błędu.</p>
+  <p>Od wersji 1.8 aplikacja wysyła też <strong>9 własnych, anonimowych zdarzeń o przebiegu pracy</strong>:
+  dołączenie do obiektu (udane albo nie), wzięcie pokoju, zakończenie pokoju, odrzucony zapis,
+  zrobienie zdjęcia, utrata zdjęcia przed wysłaniem, zgłoszenie usterki i pokazanie prośby o ocenę.
+  Zdarzenia niosą wyłącznie liczby (np. liczbę pozycji checklisty i zdjęć, czas sprzątania
+  w minutach), flagi i stałe kategorie (np. rodzaj sprzątania, powód błędu).
+  <strong>Nie zawierają treści zadań, nazw pokoi, imion, identyfikatorów zadań, pracowników ani
+  obiektu, ani żadnych danych gości.</strong></p>
   <div class="callout">
     <p><strong>Ważne: telemetria jest włączona domyślnie.</strong> Aplikacja jest narzędziem B2B
     bez reklam — dane telemetryczne służą wyłącznie diagnozowaniu błędów i rozwojowi produktu,
@@ -289,11 +296,14 @@
     RODO), a administratorem tych danych jesteśmy my. Jeśli nie akceptujesz telemetrii, napisz
     do nas — a do tego czasu jedyną pełną alternatywą jest niekorzystanie z aplikacji.</p>
   </div>
-  <p>Biblioteka Firebase Analytics dokłada do aplikacji systemowe uprawnienie do odczytu
+  <p>Na Androidzie biblioteka Firebase Analytics dokłada do aplikacji systemowe uprawnienie do odczytu
   <strong>identyfikatora reklamowego</strong> (<code>AD_ID</code>). Piszemy o tym wprost, bo widać
   je w sklepie: <strong>aplikacja nie wyświetla reklam, nie współpracuje z żadną siecią reklamową
   i nie używa tego identyfikatora do reklam ani do profilowania.</strong> Panel w przeglądarce
   i portal gościa <strong>nie mają żadnej analityki</strong> — ani Google Analytics, ani innej.</p>
+  <p>Na iPhonie aplikacja używa wersji Firebase Analytics <strong>bez dostępu do identyfikatora
+  reklamowego (IDFA)</strong> i nie prosi o zgodę na śledzenie (App Tracking Transparency), bo nikogo
+  nie śledzi.</p>
 
   <h2>9. Usługi, z których korzystamy</h2>
   <div class="tbl">
@@ -429,7 +439,8 @@
   </table>
   </div>
 
-  <h2>12. Uprawnienia aplikacji Android</h2>
+  <h2>12. Uprawnienia aplikacji</h2>
+  <h3>12.1. Android</h3>
   <div class="tbl">
   <table>
     <tr><th>Uprawnienie</th><th>Po co</th></tr>
@@ -439,9 +450,24 @@
     <tr><td><code>AD_ID</code> i pokrewne</td><td>Dokładane przez bibliotekę Firebase Analytics. <strong>Nie używamy identyfikatora reklamowego</strong> — patrz sekcja 8.</td></tr>
   </table>
   </div>
-  <p>Aplikacja <strong>nie ma uprawnienia do aparatu ani do lokalizacji</strong>. Zdjęcia robione są
-  systemową aplikacją aparatu; zdjęcie trafia najpierw do prywatnego katalogu aplikacji, a po udanym
-  przesłaniu na serwer jest powiązane z zadaniem i kasowane z telefonu.</p>
+  <p>Aplikacja na Androida <strong>nie ma uprawnienia do aparatu ani do lokalizacji</strong>. Zdjęcia
+  robione są systemową aplikacją aparatu; zdjęcie trafia najpierw do prywatnego katalogu aplikacji,
+  a po udanym przesłaniu na serwer jest powiązane z zadaniem i kasowane z telefonu.</p>
+
+  <h3>12.2. iPhone</h3>
+  <div class="tbl">
+  <table>
+    <tr><th>Uprawnienie</th><th>Po co</th></tr>
+    <tr><td><strong>Aparat</strong></td><td>Zdjęcia pokoi potwierdzające sprzątanie (tam, gdzie checklista
+    wymaga zdjęcia) i zdjęcia do zgłoszeń usterek. iOS pyta o zgodę przy pierwszym zdjęciu; bez niej
+    nie da się zrobić zdjęcia, reszta aplikacji działa.</td></tr>
+    <tr><td><strong>Powiadomienia</strong></td><td>Powiadomienia o nowych zadaniach i poprawkach. Pytamy
+    o zgodę systemową; odmowa nie blokuje pracy.</td></tr>
+  </table>
+  </div>
+  <p>Zdjęcia <strong>nie trafiają do galerii telefonu</strong>: aplikacja zapisuje je w swoim prywatnym
+  katalogu, a po udanym przesłaniu na serwer kasuje je z telefonu. Aplikacja na iPhone'a <strong>nie ma
+  dostępu do lokalizacji, kontaktów ani galerii zdjęć</strong> i nie prosi o zgodę na śledzenie.</p>
 
   <h2>13. Czego nie robimy</h2>
   <ul>
