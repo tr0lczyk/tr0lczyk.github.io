@@ -24,7 +24,7 @@
 <body>
 <main>
 <h1>Polityka prywatności — PEStka</h1>
-<p><em>Ostatnia aktualizacja: 15 października 2026</em></p>
+<p><em>Ostatnia aktualizacja: 14 listopada 2026</em></p>
 
 <p><strong>PEStka</strong> („Aplikacja”) to aplikacja do nauki do Państwowego Egzaminu
 Specjalizacyjnego (PES) na podstawie publicznie dostępnych pytań CEM. Administratorem danych
@@ -56,8 +56,8 @@ Ta polityka opisuje, co Aplikacja faktycznie przetwarza — i czego nie robi.</p
   <tr><td><strong>Anonimowy identyfikator konta</strong> (Firebase Authentication, losowy UID)</td>
       <td>Rozróżnienie użytkowników przy synchronizacji postępu; działa bez podawania jakichkolwiek danych osobowych</td>
       <td>Firebase Authentication (Google), UE</td></tr>
-  <tr><td><strong>Dziennik nauki</strong>: identyfikator pytania, wybrana odpowiedź, czy była poprawna, czas, tryb (nauka / powtórka / egzamin próbny), ocena powtórki, wyniki egzaminów próbnych, znacznik czasu, model urządzenia (np. <code>android/SM-G781B</code>)</td>
-      <td>Działanie aplikacji: powtórki (algorytm FSRS), predykcja wyniku, historia egzaminów próbnych; przywrócenie postępu po reinstalacji i na www</td>
+  <tr><td><strong>Dziennik nauki</strong>: identyfikator pytania, wybrana odpowiedź, czy była poprawna, czas, tryb (nauka / powtórka / egzamin próbny), ocena powtórki, wyniki egzaminów próbnych, znacznik czasu, model urządzenia (np. <code>android/SM-G781B</code>); jeśli odpowiesz na pytanie „Skąd wiesz o PEStce?” — wybrana odpowiedź (jedna z siedmiu do wyboru albo „Pomiń”)</td>
+      <td>Działanie aplikacji: powtórki (algorytm FSRS), predykcja wyniku, historia egzaminów próbnych; przywrócenie postępu po reinstalacji i na www; odpowiedź o źródle liczymy wyłącznie w zestawieniach, żeby wiedzieć, skąd przychodzą użytkownicy</td>
       <td>Lokalnie (SQLite) + Firestore (Google), region <code>europe-west3</code>, kolekcja dostępna tylko dla właściciela konta</td></tr>
   <tr><td><strong>Adres e-mail, imię i identyfikator konta Google</strong> — tylko gdy sam zalogujesz się kontem Google</td>
       <td>Powiązanie postępu z Twoim kontem, żeby odzyskać go na innym urządzeniu</td>
@@ -65,14 +65,14 @@ Ta polityka opisuje, co Aplikacja faktycznie przetwarza — i czego nie robi.</p
   <tr><td><strong>Raport awarii</strong> (Firebase Crashlytics): rodzaj błędu, ślad stosu, wersja aplikacji i systemu, model urządzenia, identyfikator konta — <strong>tylko za zgodą „Raporty awarii”</strong></td>
       <td>Naprawa awarii. Raport nie zawiera treści nauki ani tego, czego się uczysz</td>
       <td>Firebase Crashlytics (Google)</td></tr>
-  <tr><td><strong>Statystyki użycia — tylko za zgodą „Statystyki użycia”:</strong> które ekrany i strony otwierasz; kroki takie jak wybór dziedziny, pierwsza odpowiedź, logowanie i zakup (z kwotą i walutą); kod dziedziny; wersja aplikacji; model urządzenia i system; kraj (ustalany z adresu IP; adresów IP użytkowników z UE Google Analytics nie zapisuje); losowy identyfikator instalacji aplikacji albo przeglądarki. <strong>Bez treści pytań i odpowiedzi, bez wyników, bez adresu e-mail, bez identyfikatora konta i bez identyfikatora reklamowego.</strong></td>
-      <td>Sprawdzanie, w którym miejscu Aplikacja jest niezrozumiała i gdzie ludzie rezygnują. Nie służy reklamom i nie jest łączone z Twoim kontem</td>
+  <tr><td><strong>Statystyki użycia — tylko za zgodą „Statystyki użycia”:</strong> które ekrany i strony otwierasz; kroki takie jak wybór dziedziny, pierwsza odpowiedź, logowanie i zakup (z kwotą i walutą; przy zakupie z kodu z App Store także nazwa akcji, w której rozdano kod); odpowiedź na pytanie „Skąd wiesz o PEStce?”; na stronie pestka.app — oznaczenie kampanii z adresu, którym na nią wchodzisz (parametry utm_source, utm_medium, utm_campaign); kod dziedziny; wersja aplikacji; model urządzenia i system; kraj (ustalany z adresu IP; adresów IP użytkowników z UE Google Analytics nie zapisuje); losowy identyfikator instalacji aplikacji albo przeglądarki. <strong>Bez treści pytań i odpowiedzi, bez wyników, bez adresu e-mail, bez identyfikatora konta i bez identyfikatora reklamowego.</strong></td>
+      <td>Sprawdzanie, w którym miejscu Aplikacja jest niezrozumiała i gdzie ludzie rezygnują, oraz skąd przychodzą. Nie służy reklamom i nie jest łączone z Twoim kontem</td>
       <td>Google Analytics dla Firebase (Google Ireland Ltd.)</td></tr>
   <tr><td><strong>Identyfikator konta Apple</strong> i — jeśli go udostępnisz — adres e-mail (także adres ukryty „Hide My Email”) — tylko gdy zalogujesz się przez Apple</td>
       <td>Powiązanie postępu z Twoim kontem</td>
       <td>Firebase Authentication (Google), UE</td></tr>
-  <tr><td><strong>Zakup pełnego dostępu</strong>: identyfikator produktu, czas zakupu i potwierdzenie ze sklepu. Danych karty nie widzimy — płatność obsługuje Google Play albo App Store</td>
-      <td>Nadanie dostępu i jego odtworzenie na innym urządzeniu</td>
+  <tr><td><strong>Zakup pełnego dostępu</strong>: identyfikator produktu, czas zakupu i potwierdzenie ze sklepu; przy kodzie z App Store także nazwa akcji, w której go rozdano. Danych karty nie widzimy — płatność obsługuje Google Play albo App Store</td>
+      <td>Nadanie dostępu i jego odtworzenie na innym urządzeniu; rozliczenie akcji, w których rozdajemy kody</td>
       <td>Firestore i Cloud Functions (Google), UE</td></tr>
   <tr><td><strong>Twój wynik z CEM</strong>, jeśli sam go wpiszesz po egzaminie — <strong>tylko za zgodą</strong> „Wynik CEM”</td>
       <td>Sprawdzenie, czy prognoza zdania mówiła prawdę; w raportach wyłącznie w zestawieniach</td>
@@ -144,12 +144,14 @@ i nie wspiera decyzji klinicznych.</p>
 contains no advertising SDKs and does not collect the advertising ID</strong>. <strong>Usage statistics (Google
 Analytics for Firebase) and crash reports (Firebase Crashlytics) are collected only with your consent; both are
 off by default</strong> and each is asked separately. Usage statistics cover screens and pages opened, steps such
-as choosing a specialty, the first answer, sign-in and purchase (with amount and currency), the specialty code, app
+as choosing a specialty, the first answer, sign-in and purchase (with amount and currency, and for an App Store
+offer code the name of the promotion it came from), your answer to “How did you hear about PEStka?”, the campaign tags
+(utm_…) of the address you came to pestka.app from, the specialty code, app
 version, device model, country and a random installation identifier — never question content, answers, results,
 e-mail or account ID; they are not linked to your account and are kept for 14 months. On pestka.app the Google
 Analytics code is not loaded and no Google Analytics cookies are set before you consent. Exam content is stored on
 your device and works offline. Your study log (question id, chosen answer, correctness, timing, mode, mock results,
-device model) is stored locally and synced under an anonymous Firebase UID to Cloud Firestore in the EU
+device model, and — if you answer it — where you heard about the app) is stored locally and synced under an anonymous Firebase UID to Cloud Firestore in the EU
 (<code>europe-west3</code>) so it survives reinstalls; access is restricted to the account owner. Signing in with
 Google or Apple is optional and adds your e-mail and account id to Firebase Authentication. The only processor is
 Google (Firebase; Crashlytics and Analytics may process data outside the EEA under the EU–US Data Privacy
