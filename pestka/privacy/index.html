@@ -24,7 +24,7 @@
 <body>
 <main>
 <h1>Polityka prywatności — PEStka</h1>
-<p><em>Ostatnia aktualizacja: 14 listopada 2026</em></p>
+<p><em>Ostatnia aktualizacja: 17 listopada 2026</em></p>
 
 <p><strong>PEStka</strong> („Aplikacja”) to aplikacja do nauki do Państwowego Egzaminu
 Specjalizacyjnego (PES) na podstawie publicznie dostępnych pytań CEM. Administratorem danych
@@ -56,8 +56,11 @@ Ta polityka opisuje, co Aplikacja faktycznie przetwarza — i czego nie robi.</p
   <tr><td><strong>Anonimowy identyfikator konta</strong> (Firebase Authentication, losowy UID)</td>
       <td>Rozróżnienie użytkowników przy synchronizacji postępu; działa bez podawania jakichkolwiek danych osobowych</td>
       <td>Firebase Authentication (Google), UE</td></tr>
-  <tr><td><strong>Dziennik nauki</strong>: identyfikator pytania, wybrana odpowiedź, czy była poprawna, czas, tryb (nauka / powtórka / egzamin próbny), ocena powtórki, wyniki egzaminów próbnych, znacznik czasu, model urządzenia (np. <code>android/SM-G781B</code>); jeśli odpowiesz na pytanie „Skąd wiesz o PEStce?” — wybrana odpowiedź (jedna z siedmiu do wyboru albo „Pomiń”); jeśli przerwiesz zakup w Aplikacji — jeden z czterech powodów (zamknięte okno sklepu, błąd sklepu, płatność w toku albo błąd serwera) i wybrany wariant, bez treści komunikatu; jeśli zobaczysz przypomnienie o końcu dostępu — Twój wybór: „Przedłuż” albo „Zamknij”; jeśli Aplikacja poprosi Cię o ocenę w sklepie — na którym ekranie, a jeśli wstrzyma prośbę (np. bo od poprzedniej minęło za mało czasu) — powód. Twojej oceny ani informacji, czy ją wystawiono, sklep nam nie przekazuje</td>
-      <td>Działanie aplikacji: powtórki (algorytm FSRS), predykcja wyniku, historia egzaminów próbnych; przywrócenie postępu po reinstalacji i na www; odpowiedź o źródle liczymy wyłącznie w zestawieniach, żeby wiedzieć, skąd przychodzą użytkownicy; przerwane zakupy i odpowiedzi na przypomnienie o końcu dostępu liczymy wyłącznie w zestawieniach, żeby wiedzieć, gdzie zakup się nie udaje i czy ludzie przedłużają dostęp</td>
+  <tr><td><strong>Skrót identyfikatora instalacji</strong> — tylko gdy włączysz darmową dobę pełnego dostępu. Liczymy go z identyfikatora, który nadaje system Android, a na iPhonie z losowego identyfikatora zapisanego w pęku kluczy. Ze skrótu nie da się odtworzyć identyfikatora. Tylko w Aplikacji, nie na stronie pestka.app</td>
+      <td>Sprawdzenie, czy dobę bierze wiele kont z jednego urządzenia. Skrót nie służy do reklam ani do blokowania</td>
+      <td>Firestore (Google), region <code>europe-west3</code>, przy koncie</td></tr>
+  <tr><td><strong>Dziennik nauki</strong>: identyfikator pytania, wybrana odpowiedź, czy była poprawna, czas, tryb (nauka / powtórka / egzamin próbny), ocena powtórki, wyniki egzaminów próbnych, znacznik czasu, model urządzenia (np. <code>android/SM-G781B</code>); jeśli odpowiesz na pytanie „Skąd wiesz o PEStce?” — wybrana odpowiedź (jedna z siedmiu do wyboru albo „Pomiń”); jeśli przerwiesz zakup w Aplikacji — jeden z czterech powodów (zamknięte okno sklepu, błąd sklepu, płatność w toku albo błąd serwera) i wybrany wariant, bez treści komunikatu; jeśli zobaczysz przypomnienie o końcu dostępu — Twój wybór: „Przedłuż” albo „Zamknij”; jeśli Aplikacja poprosi Cię o ocenę w sklepie — na którym ekranie, a jeśli wstrzyma prośbę (np. bo od poprzedniej minęło za mało czasu) — powód. Twojej oceny ani informacji, czy ją wystawiono, sklep nam nie przekazuje; czy Aplikacja zaproponowała Ci przypomnienia o nauce (po zestawie albo po zakupie), czy prośbę było widać bez przewijania i co wybrałeś („Przypominaj mi…” albo „Nie teraz”); które przypomnienie Aplikacja wyświetliła: sam rodzaj (powtórki, nauka kilka dni z rzędu, odnowiony limit) i dzień, bez treści; przy pytaniu „Skąd wiesz o PEStce?” — czy zadaliśmy je pierwszy, czy drugi raz</td>
+      <td>Działanie aplikacji: powtórki (algorytm FSRS), predykcja wyniku, historia egzaminów próbnych; przywrócenie postępu po reinstalacji i na www; odpowiedź o źródle liczymy wyłącznie w zestawieniach, żeby wiedzieć, skąd przychodzą użytkownicy; przerwane zakupy i odpowiedzi na przypomnienie o końcu dostępu liczymy wyłącznie w zestawieniach, żeby wiedzieć, gdzie zakup się nie udaje i czy ludzie przedłużają dostęp; prośby o przypomnienia i wyświetlone przypomnienia liczymy wyłącznie w zestawieniach, żeby wiedzieć, ile osób widzi prośbę i ile przypomnień prowadzi z powrotem do nauki</td>
       <td>Lokalnie (SQLite) + Firestore (Google), region <code>europe-west3</code>, kolekcja dostępna tylko dla właściciela konta</td></tr>
   <tr><td><strong>Adres e-mail, imię i identyfikator konta Google</strong> — tylko gdy sam zalogujesz się kontem Google</td>
       <td>Powiązanie postępu z Twoim kontem, żeby odzyskać go na innym urządzeniu</td>
@@ -65,7 +68,7 @@ Ta polityka opisuje, co Aplikacja faktycznie przetwarza — i czego nie robi.</p
   <tr><td><strong>Raport awarii</strong> (Firebase Crashlytics): rodzaj błędu, ślad stosu, wersja aplikacji i systemu, model urządzenia, identyfikator konta — <strong>tylko za zgodą „Raporty awarii”</strong></td>
       <td>Naprawa awarii. Raport nie zawiera treści nauki ani tego, czego się uczysz</td>
       <td>Firebase Crashlytics (Google)</td></tr>
-  <tr><td><strong>Statystyki użycia — tylko za zgodą „Statystyki użycia”:</strong> które ekrany i strony otwierasz; kroki takie jak wybór dziedziny, pierwsza odpowiedź, logowanie i zakup (z kwotą i walutą; przy zakupie z kodu z App Store także nazwa akcji, w której rozdano kod), w tym to, czy to kolejny zakup; przerwany zakup (jeden z czterech powodów); przypomnienie o końcu dostępu i sam koniec dostępu; to, że Aplikacja poprosiła o ocenę w sklepie, i na którym ekranie; odpowiedź na pytanie „Skąd wiesz o PEStce?”; na stronie pestka.app — oznaczenie kampanii z adresu, którym na nią wchodzisz (parametry utm_source, utm_medium, utm_campaign); kod dziedziny; wersja aplikacji; model urządzenia i system; kraj (ustalany z adresu IP; adresów IP użytkowników z UE Google Analytics nie zapisuje); losowy identyfikator instalacji aplikacji albo przeglądarki. <strong>Bez treści pytań i odpowiedzi, bez wyników, bez adresu e-mail, bez identyfikatora konta i bez identyfikatora reklamowego.</strong></td>
+  <tr><td><strong>Statystyki użycia — tylko za zgodą „Statystyki użycia”:</strong> które ekrany i strony otwierasz; kroki takie jak wybór dziedziny, pierwsza odpowiedź, logowanie i zakup (z kwotą i walutą; przy zakupie z kodu z App Store także nazwa akcji, w której rozdano kod), w tym to, czy to kolejny zakup; przerwany zakup (jeden z czterech powodów); przypomnienie o końcu dostępu i sam koniec dostępu; to, że Aplikacja poprosiła o ocenę w sklepie, i na którym ekranie; prośba o przypomnienia i wyświetlone przypomnienie; odpowiedź na pytanie „Skąd wiesz o PEStce?”; ocena wyjaśnienia („Trafne” albo „Błędne”) razem z numerem pytania CEM, którego dotyczy; na stronie pestka.app — oznaczenie kampanii z adresu, którym na nią wchodzisz (parametry utm_source, utm_medium, utm_campaign); kod dziedziny; wersja aplikacji; model urządzenia i system; kraj (ustalany z adresu IP; adresów IP użytkowników z UE Google Analytics nie zapisuje); losowy identyfikator instalacji aplikacji albo przeglądarki. <strong>Bez treści pytań i odpowiedzi, bez wyników, bez adresu e-mail, bez identyfikatora konta i bez identyfikatora reklamowego.</strong></td>
       <td>Sprawdzanie, w którym miejscu Aplikacja jest niezrozumiała i gdzie ludzie rezygnują, oraz skąd przychodzą. Nie służy reklamom i nie jest łączone z Twoim kontem</td>
       <td>Google Analytics dla Firebase (Google Ireland Ltd.)</td></tr>
   <tr><td><strong>Identyfikator konta Apple</strong> i — jeśli go udostępnisz — adres e-mail (także adres ukryty „Hide My Email”) — tylko gdy zalogujesz się przez Apple</td>
@@ -87,13 +90,14 @@ o uprawnienie do identyfikatora reklamowego.</strong></p>
 <p>Dziennik nauki i identyfikator konta przetwarzamy w celu wykonania usługi (art. 6 ust. 1 lit. b RODO),
 a także w celu rozwoju produktu w zestawieniach (art. 6 ust. 1 lit. f RODO; raporty publikowane tylko
 w zestawieniach od 5 osób wzwyż).</p>
+<p>Skrót identyfikatora instalacji przetwarzamy, żeby przeciwdziałać nadużyciom darmowej doby (art. 6 ust. 1 lit. f RODO).</p>
 <p><strong>Statystyki użycia, raporty awarii i wynik z CEM przetwarzamy wyłącznie na podstawie Twojej zgody</strong>
 (art. 6 ust. 1 lit. a RODO). Statystyki użycia i raporty awarii wymagają zapisania i odczytania informacji na
 Twoim urządzeniu — tu podstawą jest także Twoja zgoda z art. 399 Prawa komunikacji elektronicznej. Każdą zgodę
 wycofasz tak samo łatwo, jak jej udzieliłeś: w Ustawieniach → Prywatność → Zgody. Wycofanie działa na przyszłość;
 przy wycofaniu zgody na statystyki Aplikacja kasuje z urządzenia losowy identyfikator instalacji, a strona —
 ciasteczka Google Analytics.</p>
-<p><strong>Okres przechowywania.</strong> Dziennik nauki i dane konta: do usunięcia konta. Statystyki użycia:
+<p><strong>Okres przechowywania.</strong> Dziennik nauki, dane konta i skrót identyfikatora instalacji: do usunięcia konta. Statystyki użycia:
 <strong>14 miesięcy</strong> od zdarzenia, niezależnie od konta — nie są z nim powiązane. Raporty awarii: 90 dni
 (okres Firebase Crashlytics).</p>
 
