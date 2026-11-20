@@ -41,8 +41,9 @@ Ta polityka opisuje, co Aplikacja faktycznie przetwarza — i czego nie robi.</p
   niczego w Aplikacji nie ogranicza. Zgodę zmienisz w każdej chwili w Ustawieniach → Prywatność → Zgody (na
   stronie pestka.app: odnośnik „Ustawienia prywatności” w stopce). Bez zgody nic z tych danych nie opuszcza
   urządzenia.</li>
-  <li>Treść (pytania, klucze, statystyki CEM) jest w całości <strong>na Twoim urządzeniu</strong>;
-  Aplikacja działa bez sieci.</li>
+  <li>Treść (pytania, klucze, statystyki CEM) Aplikacja trzyma <strong>na Twoim urządzeniu</strong>. Przy pierwszym
+  uruchomieniu pobiera pytania wybranej dziedziny z serwera <code>paczki.pestka.app</code>, więc potrzebny jest wtedy
+  internet. Dziedzinę pobierasz raz, a potem nauka, powtórki, egzamin i prognoza działają bez internetu.</li>
   <li>Twój <strong>postęp nauki</strong> (dziennik odpowiedzi, powtórek i egzaminów próbnych) jest
   zapisywany lokalnie i — pod anonimowym identyfikatorem — synchronizowany do Firebase (Google),
   w regionie Unii Europejskiej, żeby wracał po reinstalacji i na www.</li>
@@ -164,7 +165,9 @@ offer code the name of the promotion it came from), your answer to “How did yo
 version, device model, country and a random installation identifier — never question content, answers, results,
 e-mail or account ID; they are not linked to your account and are kept for 14 months. On pestka.app the Google
 Analytics code is not loaded and no Google Analytics cookies are set before you consent. Exam content is stored on
-your device and works offline. Your study log (question id, chosen answer, correctness, timing, mode, mock results,
+your device: on first launch the app downloads the questions of your chosen specialty from
+<code>paczki.pestka.app</code> (an internet connection is needed then); after that, studying, reviews, mock exams
+and the score forecast work offline. Your study log (question id, chosen answer, correctness, timing, mode, mock results,
 device model, and — if you answer it — where you heard about the app, the reason code of an interrupted purchase and your choice in the access-ending reminder, and whether and where the app asked you to rate it in the store — the store never tells us your rating) is stored locally and synced under an anonymous Firebase UID to Cloud Firestore in the EU
 (<code>europe-west3</code>) so it survives reinstalls; access is restricted to the account owner. Signing in with
 Google or Apple is optional and adds your e-mail and account id to Firebase Authentication. Our servers count, in
