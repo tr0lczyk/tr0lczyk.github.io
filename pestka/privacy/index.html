@@ -24,7 +24,7 @@
 <body>
 <main>
 <h1>Polityka prywatności — PEStka</h1>
-<p><em>Ostatnia aktualizacja: 17 listopada 2026</em></p>
+<p><em>Ostatnia aktualizacja: 20 listopada 2026</em></p>
 
 <p><strong>PEStka</strong> („Aplikacja”) to aplikacja do nauki do Państwowego Egzaminu
 Specjalizacyjnego (PES) na podstawie publicznie dostępnych pytań CEM. Administratorem danych
@@ -41,8 +41,9 @@ Ta polityka opisuje, co Aplikacja faktycznie przetwarza — i czego nie robi.</p
   niczego w Aplikacji nie ogranicza. Zgodę zmienisz w każdej chwili w Ustawieniach → Prywatność → Zgody (na
   stronie pestka.app: odnośnik „Ustawienia prywatności” w stopce). Bez zgody nic z tych danych nie opuszcza
   urządzenia.</li>
-  <li>Treść (pytania, klucze, statystyki CEM) jest w całości <strong>na Twoim urządzeniu</strong>;
-  Aplikacja działa bez sieci.</li>
+  <li>Treść (pytania, klucze, statystyki CEM) Aplikacja trzyma <strong>na Twoim urządzeniu</strong>. Przy pierwszym
+  uruchomieniu pobiera pytania wybranej dziedziny z serwera <code>paczki.pestka.app</code>, więc potrzebny jest wtedy
+  internet. Dziedzinę pobierasz raz, a potem nauka, powtórki, egzamin i prognoza działają bez internetu.</li>
   <li>Twój <strong>postęp nauki</strong> (dziennik odpowiedzi, powtórek i egzaminów próbnych) jest
   zapisywany lokalnie i — pod anonimowym identyfikatorem — synchronizowany do Firebase (Google),
   w regionie Unii Europejskiej, żeby wracał po reinstalacji i na www.</li>
@@ -80,6 +81,9 @@ Ta polityka opisuje, co Aplikacja faktycznie przetwarza — i czego nie robi.</p
   <tr><td><strong>Twój wynik z CEM</strong>, jeśli sam go wpiszesz po egzaminie — <strong>tylko za zgodą</strong> „Wynik CEM”</td>
       <td>Sprawdzenie, czy prognoza zdania mówiła prawdę; w raportach wyłącznie w zestawieniach</td>
       <td>Firestore (Google), region <code>europe-west3</code></td></tr>
+  <tr><td><strong>Zbiorcze liczniki serwera</strong>: ile razy pobrano pakiety pytań i pliki startowe Aplikacji oraz ile razy wywołano nasze usługi (np. włączenie darmowej doby, potwierdzenie zakupu, logowanie) — w podziale na dzień, wersję i platformę Aplikacji oraz kraj. Bez identyfikatorów i bez adresów IP; na Twoim urządzeniu nic w tym celu nie zapisujemy ani nie odczytujemy</td>
+      <td>Utrzymanie i rozwój usługi: żeby wiedzieć, które pakiety są pobierane, czy usługi działają i mniej więcej ile osób korzysta z Aplikacji</td>
+      <td>U nas tylko sumy; liczymy je z danych Cloudflare (pobrania pakietów) i Google Cloud (wywołania usług)</td></tr>
   <tr><td>Ustawienia (motyw, wybrana dziedzina)</td><td>Wygoda</td><td>Tylko lokalnie</td></tr>
 </table>
 <p>Nie przetwarzamy danych pacjentów, lokalizacji, kontaktów, zdjęć ani żadnych danych
@@ -91,6 +95,9 @@ o uprawnienie do identyfikatora reklamowego.</strong></p>
 a także w celu rozwoju produktu w zestawieniach (art. 6 ust. 1 lit. f RODO; raporty publikowane tylko
 w zestawieniach od 5 osób wzwyż).</p>
 <p>Skrót identyfikatora instalacji przetwarzamy, żeby przeciwdziałać nadużyciom darmowej doby (art. 6 ust. 1 lit. f RODO).</p>
+<p>Zbiorcze liczniki serwera prowadzimy w prawnie uzasadnionym interesie, którym jest utrzymanie i rozwój usługi
+(art. 6 ust. 1 lit. f RODO). Liczymy wyłącznie zapytania, które Aplikacja i tak wysyła do serwera, żeby działać;
+same sumy nie pozwalają nikogo zidentyfikować, więc przechowujemy je bez ograniczenia czasu.</p>
 <p><strong>Statystyki użycia, raporty awarii i wynik z CEM przetwarzamy wyłącznie na podstawie Twojej zgody</strong>
 (art. 6 ust. 1 lit. a RODO). Statystyki użycia i raporty awarii wymagają zapisania i odczytania informacji na
 Twoim urządzeniu — tu podstawą jest także Twoja zgoda z art. 399 Prawa komunikacji elektronicznej. Każdą zgodę
@@ -110,10 +117,14 @@ trzyma w pamięci przeglądarki (IndexedDB i <code>localStorage</code>) — to j
 wymaga zgody.</p>
 
 <h2>Udostępnianie</h2>
-<p>Dane nie są sprzedawane ani przekazywane podmiotom trzecim w celach marketingowych. Jedynym podmiotem
-przetwarzającym jest Google (Google Ireland Ltd. i Google LLC): <strong>Firebase Authentication, Cloud Firestore
+<p>Dane nie są sprzedawane ani przekazywane podmiotom trzecim w celach marketingowych. Podmiotami
+przetwarzającymi są Google (Google Ireland Ltd. i Google LLC): <strong>Firebase Authentication, Cloud Firestore
 i Cloud Functions — w regionie Unii Europejskiej — oraz, wyłącznie za Twoją zgodą, Firebase Crashlytics i Google
-Analytics dla Firebase.</strong> Dwie ostatnie usługi mogą przetwarzać dane także poza Europejskim Obszarem
+Analytics dla Firebase</strong>, a także Cloudflare, Inc., od którego Aplikacja pobiera pakiety pytań i pliki startowe
+(adres <code>paczki.pestka.app</code>, przechowywanie w Cloudflare R2). Jak każdy serwer, Cloudflare widzi przy tym
+adres IP i nagłówki zapytania, w tym wersję i platformę Aplikacji; przetwarza je jako dostawca hostingu, w swojej
+sieci, także poza Europejskim Obszarem Gospodarczym — na podstawie EU–US Data Privacy Framework i standardowych
+klauzul umownych. Firebase Crashlytics i Google Analytics dla Firebase mogą przetwarzać dane także poza Europejskim Obszarem
 Gospodarczym, w tym w Stanach Zjednoczonych — na podstawie decyzji Komisji Europejskiej o odpowiednim stopniu
 ochrony (EU–US Data Privacy Framework) i standardowych klauzul umownych. Funkcje reklamowe Google Analytics
 (Google Signals, personalizacja reklam, połączenie z Google Ads) są wyłączone.
@@ -154,12 +165,19 @@ offer code the name of the promotion it came from), your answer to “How did yo
 version, device model, country and a random installation identifier — never question content, answers, results,
 e-mail or account ID; they are not linked to your account and are kept for 14 months. On pestka.app the Google
 Analytics code is not loaded and no Google Analytics cookies are set before you consent. Exam content is stored on
-your device and works offline. Your study log (question id, chosen answer, correctness, timing, mode, mock results,
+your device: on first launch the app downloads the questions of your chosen specialty from
+<code>paczki.pestka.app</code> (an internet connection is needed then); after that, studying, reviews, mock exams
+and the score forecast work offline. Your study log (question id, chosen answer, correctness, timing, mode, mock results,
 device model, and — if you answer it — where you heard about the app, the reason code of an interrupted purchase and your choice in the access-ending reminder, and whether and where the app asked you to rate it in the store — the store never tells us your rating) is stored locally and synced under an anonymous Firebase UID to Cloud Firestore in the EU
 (<code>europe-west3</code>) so it survives reinstalls; access is restricted to the account owner. Signing in with
-Google or Apple is optional and adds your e-mail and account id to Firebase Authentication. The only processor is
+Google or Apple is optional and adds your e-mail and account id to Firebase Authentication. Our servers count, in
+aggregate only, downloads of question packs and calls to our services (by day, app version and platform, and
+country) — without identifiers or IP addresses and without storing or reading anything on your device; the legal
+basis is our legitimate interest in maintaining and improving the service (Art. 6(1)(f) GDPR). Processors are
 Google (Firebase; Crashlytics and Analytics may process data outside the EEA under the EU–US Data Privacy
-Framework). <strong>You can delete your account and all data yourself, immediately: in the app (Profile → Delete
+Framework) and Cloudflare, Inc., which serves question packs from <code>paczki.pestka.app</code> (Cloudflare R2) and,
+as our hosting provider, processes IP addresses and request headers, also outside the EEA under the EU–US Data
+Privacy Framework and standard contractual clauses. <strong>You can delete your account and all data yourself, immediately: in the app (Profile → Delete
 account) or at <a href="https://pestka.app/konto/usun">pestka.app/konto/usun</a>.</strong> Intended for adults
 (physicians); not a medical device.</p>
 </main>
