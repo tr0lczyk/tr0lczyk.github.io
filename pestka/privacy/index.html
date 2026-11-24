@@ -24,11 +24,11 @@
 <body>
 <main>
 <h1>Polityka prywatności — PEStka</h1>
-<p><em>Ostatnia aktualizacja: 20 listopada 2026</em></p>
+<p><em>Ostatnia aktualizacja: 24 listopada 2026</em></p>
 
 <p><strong>PEStka</strong> („Aplikacja”) to aplikacja do nauki do Państwowego Egzaminu
 Specjalizacyjnego (PES) na podstawie publicznie dostępnych pytań CEM. Administratorem danych
-jest Mateusz Olczyk (kontakt: <a href="mailto:matt.olczyk@gmail.com">matt.olczyk@gmail.com</a>).
+jest Mateusz Olczyk (kontakt: <a href="mailto:kontakt@pestka.app">kontakt@pestka.app</a>).
 Ta polityka opisuje, co Aplikacja faktycznie przetwarza — i czego nie robi.</p>
 
 <h2>W skrócie</h2>
@@ -64,8 +64,12 @@ Ta polityka opisuje, co Aplikacja faktycznie przetwarza — i czego nie robi.</p
       <td>Działanie aplikacji: powtórki (algorytm FSRS), predykcja wyniku, historia egzaminów próbnych; przywrócenie postępu po reinstalacji i na www; odpowiedź o źródle liczymy wyłącznie w zestawieniach, żeby wiedzieć, skąd przychodzą użytkownicy; przerwane zakupy i odpowiedzi na przypomnienie o końcu dostępu liczymy wyłącznie w zestawieniach, żeby wiedzieć, gdzie zakup się nie udaje i czy ludzie przedłużają dostęp; prośby o przypomnienia i wyświetlone przypomnienia liczymy wyłącznie w zestawieniach, żeby wiedzieć, ile osób widzi prośbę i ile przypomnień prowadzi z powrotem do nauki</td>
       <td>Lokalnie (SQLite) + Firestore (Google), region <code>europe-west3</code>, kolekcja dostępna tylko dla właściciela konta</td></tr>
   <tr><td><strong>Adres e-mail, imię i identyfikator konta Google</strong> — tylko gdy sam zalogujesz się kontem Google</td>
-      <td>Powiązanie postępu z Twoim kontem, żeby odzyskać go na innym urządzeniu</td>
-      <td>Firebase Authentication (Google), UE</td></tr>
+      <td>Powiązanie postępu z Twoim kontem, żeby odzyskać go na innym urządzeniu.<br>Jedna wiadomość e-mail po końcu doby pełnego dostępu. Piszemy w niej, kiedy doba minęła, że Twoje odpowiedzi i postęp
+      są zapisane na koncie i ile pytań dziennie możesz dalej rozwiązywać za darmo. Wysyłamy ją raz na konto, na adres
+      z logowania Google albo Apple (także na adres ukryty „Ukryj mój adres”). Podstawa: art. 6 ust. 1 lit. b RODO,
+      czyli informacja o zmianie zakresu usługi, z której korzystasz. Przy wysłanej wiadomości zapisujemy na Twoim koncie
+      datę wysłania i numer wiadomości w Brevo. Adresu ani treści wiadomości nie zapisujemy w naszej bazie.</td>
+      <td>Firebase Authentication (Google), UE; wiadomość wysyła Brevo, UE</td></tr>
   <tr><td><strong>Raport awarii</strong> (Firebase Crashlytics): rodzaj błędu, ślad stosu, wersja aplikacji i systemu, model urządzenia, identyfikator konta — <strong>tylko za zgodą „Raporty awarii”</strong></td>
       <td>Naprawa awarii. Raport nie zawiera treści nauki ani tego, czego się uczysz</td>
       <td>Firebase Crashlytics (Google)</td></tr>
@@ -73,8 +77,12 @@ Ta polityka opisuje, co Aplikacja faktycznie przetwarza — i czego nie robi.</p
       <td>Sprawdzanie, w którym miejscu Aplikacja jest niezrozumiała i gdzie ludzie rezygnują, oraz skąd przychodzą. Nie służy reklamom i nie jest łączone z Twoim kontem</td>
       <td>Google Analytics dla Firebase (Google Ireland Ltd.)</td></tr>
   <tr><td><strong>Identyfikator konta Apple</strong> i — jeśli go udostępnisz — adres e-mail (także adres ukryty „Hide My Email”) — tylko gdy zalogujesz się przez Apple</td>
-      <td>Powiązanie postępu z Twoim kontem</td>
-      <td>Firebase Authentication (Google), UE</td></tr>
+      <td>Powiązanie postępu z Twoim kontem.<br>Jedna wiadomość e-mail po końcu doby pełnego dostępu. Piszemy w niej, kiedy doba minęła, że Twoje odpowiedzi i postęp
+      są zapisane na koncie i ile pytań dziennie możesz dalej rozwiązywać za darmo. Wysyłamy ją raz na konto, na adres
+      z logowania Google albo Apple (także na adres ukryty „Ukryj mój adres”). Podstawa: art. 6 ust. 1 lit. b RODO,
+      czyli informacja o zmianie zakresu usługi, z której korzystasz. Przy wysłanej wiadomości zapisujemy na Twoim koncie
+      datę wysłania i numer wiadomości w Brevo. Adresu ani treści wiadomości nie zapisujemy w naszej bazie.</td>
+      <td>Firebase Authentication (Google), UE; wiadomość wysyła Brevo, UE</td></tr>
   <tr><td><strong>Zakup pełnego dostępu</strong>: identyfikator produktu, czas zakupu i potwierdzenie ze sklepu; przy kodzie z App Store także nazwa akcji, w której go rozdano. Danych karty nie widzimy — płatność obsługuje Google Play albo App Store</td>
       <td>Nadanie dostępu i jego odtworzenie na innym urządzeniu; rozliczenie akcji, w których rozdajemy kody</td>
       <td>Firestore i Cloud Functions (Google), UE</td></tr>
@@ -129,6 +137,8 @@ Gospodarczym, w tym w Stanach Zjednoczonych — na podstawie decyzji Komisji Eur
 ochrony (EU–US Data Privacy Framework) i standardowych klauzul umownych. Funkcje reklamowe Google Analytics
 (Google Signals, personalizacja reklam, połączenie z Google Ads) są wyłączone.
 Dostęp do danych w Firestore mają wyłącznie właściciel konta (reguły bezpieczeństwa) i administrator.</p>
+<p><strong>Brevo</strong> (Sendinblue SAS, Francja) wysyła w naszym imieniu wiadomość po końcu doby pełnego dostępu. Dostaje Twój
+adres e-mail i treść tej jednej wiadomości. Dane zostają w Unii Europejskiej.</p>
 
 <h2 id="usuniecie">Twoje prawa i usunięcie danych</h2>
 <p>Masz prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia oraz
@@ -138,6 +148,10 @@ albo na stronie <a href="https://pestka.app/konto/usun">pestka.app/konto/usun</a
 dotyczy usunięcie. Usunięcie kasuje dane z serwera i z urządzenia, wyłącza statystyki użycia i kasuje identyfikator
 instalacji. Jeśli nie masz już dostępu do konta, napisz na adres kontaktowy z początku tej polityki.
 Odinstalowanie Aplikacji usuwa dane lokalne, ale nie kopię w Firestore.</p>
+<p><strong>Wypisanie z wiadomości.</strong> Każda wiadomość od nas ma link „Wypisz się”. Wystarczy go kliknąć albo odpisać
+„wypisz” na <a href="mailto:kontakt@pestka.app">kontakt@pestka.app</a>. Po wypisaniu nie wyślemy Ci już żadnej wiadomości.
+Żeby o tym pamiętać, zapisujemy skrót Twojego adresu (nie da się z niego odczytać adresu) i datę wypisania. Ten zapis
+zostaje także po usunięciu konta, bo tylko on chroni przed kolejną wiadomością, gdyby to samo konto powstało jeszcze raz.</p>
 <p>Statystyki użycia nie są powiązane z kontem, więc usunięcie konta ich nie obejmuje — wygasają po 14 miesiącach.
 Żeby przestały powstawać, wyłącz zgodę.</p>
 
@@ -170,16 +184,25 @@ your device: on first launch the app downloads the questions of your chosen spec
 and the score forecast work offline. Your study log (question id, chosen answer, correctness, timing, mode, mock results,
 device model, and — if you answer it — where you heard about the app, the reason code of an interrupted purchase and your choice in the access-ending reminder, and whether and where the app asked you to rate it in the store — the store never tells us your rating) is stored locally and synced under an anonymous Firebase UID to Cloud Firestore in the EU
 (<code>europe-west3</code>) so it survives reinstalls; access is restricted to the account owner. Signing in with
-Google or Apple is optional and adds your e-mail and account id to Firebase Authentication. Our servers count, in
+Google or Apple is optional and adds your e-mail and account id to Firebase Authentication. If you signed in with
+Google or Apple, we send one e-mail per account to that address (including an Apple “Hide My Email” address) when your
+full-access day ends: when it ended, that your answers and progress are saved, and how many questions a day you can
+still answer for free. Legal basis: Art. 6(1)(b) GDPR, information about a change in the scope of the service you use.
+It is sent on our behalf by Brevo (Sendinblue SAS, France), which receives your e-mail address and the content of that
+one message; the data stays in the EU. We store only the send date and the Brevo message number on your account, not
+the address or the content. Every message has an “Unsubscribe” link; you can also reply “unsubscribe” to
+<a href="mailto:kontakt@pestka.app">kontakt@pestka.app</a>. After that we will not e-mail you again; to remember this we
+keep a hash of your address (the address cannot be read from it) and the date, also after account deletion, because
+only this record prevents another message if the same account is created again. Our servers count, in
 aggregate only, downloads of question packs and calls to our services (by day, app version and platform, and
 country) — without identifiers or IP addresses and without storing or reading anything on your device; the legal
 basis is our legitimate interest in maintaining and improving the service (Art. 6(1)(f) GDPR). Processors are
 Google (Firebase; Crashlytics and Analytics may process data outside the EEA under the EU–US Data Privacy
-Framework) and Cloudflare, Inc., which serves question packs from <code>paczki.pestka.app</code> (Cloudflare R2) and,
+Framework), Brevo (e-mail after the full-access day ends, EU) and Cloudflare, Inc., which serves question packs from <code>paczki.pestka.app</code> (Cloudflare R2) and,
 as our hosting provider, processes IP addresses and request headers, also outside the EEA under the EU–US Data
 Privacy Framework and standard contractual clauses. <strong>You can delete your account and all data yourself, immediately: in the app (Profile → Delete
 account) or at <a href="https://pestka.app/konto/usun">pestka.app/konto/usun</a>.</strong> Intended for adults
-(physicians); not a medical device.</p>
+(physicians); not a medical device. Controller: Mateusz Olczyk, <a href="mailto:kontakt@pestka.app">kontakt@pestka.app</a>.</p>
 </main>
 </body>
 </html>
